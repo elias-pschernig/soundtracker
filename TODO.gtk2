@@ -1,0 +1,39 @@
+5) Single click doesn't work in the fileselector (naturally use filechooser instead);
+6) Huge CPU overhead (partially fixed);
+7) Is very unstable (partially fixed). File->exit works good, but closing the 
+main window leads to the crash;
+9) Contains a lot of obsolete code.
+10) Minor bug with selections, up and down buttons in the tracker fonts dialog
+12) MIDI works something strange (also in 0.6.8-gtk1). It doesn't work at some systems
+where it has to;
+14) some CPU-consuming code in the instrument list selection callback (really 
+in the callback);
+15) Change option-menu in keys.c with notebook (like in audioconfig.c) for better
+widget sizes' behaviour;
+16) Fix mouse click at oscilloscopes (not only channel numbers) turn off/on channels;
+17) Understand why tracker scrolling is such CPU-consuming (compared to ST-Gtk+-1). Maybe it's
+a GTK+2.6.7 and is fixed in the modern release?;
+19) Doesn't remember which font is selected for the tracker. To fix;
+21) Native Alsa 1.x driver: make Alsa 1.x the requirement instead of 0.9.x; make sound device
+opening non-blocking, but give error dialog instead when the device is busy; optimize GUI
+(maybe with table) -- no idea :-(; problems with time estimation; signedness handling;
+add avalable devices navigation (from csound->rtalsa.c);
+22) ESD driver reported to produce greater delay at start than in ST-gtk1;
+24) Chechk whether some str functions needed to be replaced with gtk_utf_(strlen,
+offset_to_pointer and so on);
+25) Return old-style tracker separation bars up to the top of the tracker (near tracker.c->660);
+26) ESC for Cancel, Enter for Ok keybindings in dialogs;
+28) Check and clean all gtk_dialog()s;
+29) Provide more info in gtk_about_dialog
+
+Regarding gtk_entry_set_text double signal: see gtkentry.c->2059, 2300 (workaround in the ST
+sources is made. But a) we need to test whether it's fixed in Gtk+-2.10 and b) we should
+push the fixes into the Gtk+-2.0 upstream. NEWS: it's at least fixed at the GTK+ upstream :)
+So we need to know from what release this will happen and make corresponding check in
+configure.in.
+
+Some remarks about asm mixer bug: at the sample end and loop points there are ugly clicks
+(ramping works badly). Also when the previous channel has amplitude > 0, the following one
+will be triggered to the minimal negative value (maybe it's a cause of the first issue
+'cause really ramping and looping is performing using additional channels. Probably the bug
+is in the mixing or post-mixing code.

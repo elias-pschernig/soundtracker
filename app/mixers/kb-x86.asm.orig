@@ -1,0 +1,2115 @@
+
+kb-x86.o.orig:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <kb_x86_updatesample>:
+       0:	53                   	push   %ebx
+       1:	ba 00 00 00 00       	mov    $0x0,%edx
+       6:	8b 5c 24 08          	mov    0x8(%esp),%ebx
+       a:	eb 0b                	jmp    17 <kb_x86_updatesample+0x17>
+       c:	83 c2 60             	add    $0x60,%edx
+       f:	81 fa 00 18 00 00    	cmp    $0x1800,%edx
+      15:	74 32                	je     49 <kb_x86_updatesample+0x49>
+      17:	39 9a 20 00 00 00    	cmp    %ebx,0x20(%edx)
+      1d:	75 ed                	jne    c <kb_x86_updatesample+0xc>
+      1f:	8b 8a 30 00 00 00    	mov    0x30(%edx),%ecx
+      25:	f6 c1 04             	test   $0x4,%cl
+      28:	74 e2                	je     c <kb_x86_updatesample+0xc>
+      2a:	8b 82 24 00 00 00    	mov    0x24(%edx),%eax
+      30:	3b 43 10             	cmp    0x10(%ebx),%eax
+      33:	74 16                	je     4b <kb_x86_updatesample+0x4b>
+      35:	83 e1 fb             	and    $0xfffffffb,%ecx
+      38:	89 8a 30 00 00 00    	mov    %ecx,0x30(%edx)
+      3e:	83 c2 60             	add    $0x60,%edx
+      41:	81 fa 00 18 00 00    	cmp    $0x1800,%edx
+      47:	75 ce                	jne    17 <kb_x86_updatesample+0x17>
+      49:	5b                   	pop    %ebx
+      4a:	c3                   	ret    
+      4b:	8b 82 2c 00 00 00    	mov    0x2c(%edx),%eax
+      51:	3b 43 04             	cmp    0x4(%ebx),%eax
+      54:	75 df                	jne    35 <kb_x86_updatesample+0x35>
+      56:	8b 82 28 00 00 00    	mov    0x28(%edx),%eax
+      5c:	3b 03                	cmp    (%ebx),%eax
+      5e:	75 d5                	jne    35 <kb_x86_updatesample+0x35>
+      60:	85 c0                	test   %eax,%eax
+      62:	89 82 28 00 00 00    	mov    %eax,0x28(%edx)
+      68:	74 a2                	je     c <kb_x86_updatesample+0xc>
+      6a:	8b 8a 60 00 00 00    	mov    0x60(%edx),%ecx
+      70:	8b 43 08             	mov    0x8(%ebx),%eax
+      73:	39 c1                	cmp    %eax,%ecx
+      75:	72 08                	jb     7f <kb_x86_updatesample+0x7f>
+      77:	8b 43 0c             	mov    0xc(%ebx),%eax
+      7a:	39 c1                	cmp    %eax,%ecx
+      7c:	72 8e                	jb     c <kb_x86_updatesample+0xc>
+      7e:	48                   	dec    %eax
+      7f:	89 82 60 00 00 00    	mov    %eax,0x60(%edx)
+      85:	c7 82 64 00 00 00 ff 	movl   $0x7fffffff,0x64(%edx)
+      8c:	ff ff 7f 
+      8f:	e9 78 ff ff ff       	jmp    c <kb_x86_updatesample+0xc>
+      94:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+      9a:	8d bf 00 00 00 00    	lea    0x0(%edi),%edi
+
+000000a0 <kb_x86_setmixformat>:
+      a0:	83 7c 24 04 10       	cmpl   $0x10,0x4(%esp)
+      a5:	b8 00 00 00 00       	mov    $0x0,%eax
+      aa:	0f 94 c0             	sete   %al
+      ad:	c3                   	ret    
+      ae:	90                   	nop    
+      af:	90                   	nop    
+      b0:	90                   	nop    
+      b1:	90                   	nop    
+      b2:	90                   	nop    
+      b3:	90                   	nop    
+      b4:	90                   	nop    
+      b5:	90                   	nop    
+      b6:	90                   	nop    
+      b7:	90                   	nop    
+      b8:	90                   	nop    
+      b9:	90                   	nop    
+      ba:	90                   	nop    
+      bb:	90                   	nop    
+      bc:	90                   	nop    
+      bd:	90                   	nop    
+      be:	90                   	nop    
+      bf:	90                   	nop    
+
+000000c0 <kb_x86_setstereo>:
+      c0:	83 7c 24 04 00       	cmpl   $0x0,0x4(%esp)
+      c5:	b8 00 00 00 00       	mov    $0x0,%eax
+      ca:	0f 95 c0             	setne  %al
+      cd:	c3                   	ret    
+      ce:	90                   	nop    
+      cf:	90                   	nop    
+      d0:	90                   	nop    
+      d1:	90                   	nop    
+      d2:	90                   	nop    
+      d3:	90                   	nop    
+      d4:	90                   	nop    
+      d5:	90                   	nop    
+      d6:	90                   	nop    
+      d7:	90                   	nop    
+      d8:	90                   	nop    
+      d9:	90                   	nop    
+      da:	90                   	nop    
+      db:	90                   	nop    
+      dc:	90                   	nop    
+      dd:	90                   	nop    
+      de:	90                   	nop    
+      df:	90                   	nop    
+
+000000e0 <kb_x86_setmixfreq>:
+      e0:	0f b7 44 24 04       	movzwl 0x4(%esp),%eax
+      e5:	a3 0c 00 00 00       	mov    %eax,0xc
+      ea:	c3                   	ret    
+      eb:	90                   	nop    
+      ec:	90                   	nop    
+      ed:	90                   	nop    
+      ee:	90                   	nop    
+      ef:	90                   	nop    
+      f0:	90                   	nop    
+      f1:	90                   	nop    
+      f2:	90                   	nop    
+      f3:	90                   	nop    
+      f4:	90                   	nop    
+      f5:	90                   	nop    
+      f6:	90                   	nop    
+      f7:	90                   	nop    
+      f8:	90                   	nop    
+      f9:	90                   	nop    
+      fa:	90                   	nop    
+      fb:	90                   	nop    
+      fc:	90                   	nop    
+      fd:	90                   	nop    
+      fe:	90                   	nop    
+      ff:	90                   	nop    
+
+00000100 <kb_x86_setampfactor>:
+     100:	d9 05 00 00 00 00    	flds   0x0
+     106:	d8 4c 24 04          	fmuls  0x4(%esp)
+     10a:	d9 1d 60 00 00 00    	fstps  0x60
+     110:	c3                   	ret    
+     111:	eb 0d                	jmp    120 <kb_x86_getclipflag>
+     113:	90                   	nop    
+     114:	90                   	nop    
+     115:	90                   	nop    
+     116:	90                   	nop    
+     117:	90                   	nop    
+     118:	90                   	nop    
+     119:	90                   	nop    
+     11a:	90                   	nop    
+     11b:	90                   	nop    
+     11c:	90                   	nop    
+     11d:	90                   	nop    
+     11e:	90                   	nop    
+     11f:	90                   	nop    
+
+00000120 <kb_x86_getclipflag>:
+     120:	a1 10 00 00 00       	mov    0x10,%eax
+     125:	c3                   	ret    
+     126:	90                   	nop    
+     127:	90                   	nop    
+     128:	90                   	nop    
+     129:	90                   	nop    
+     12a:	90                   	nop    
+     12b:	90                   	nop    
+     12c:	90                   	nop    
+     12d:	90                   	nop    
+     12e:	90                   	nop    
+     12f:	90                   	nop    
+     130:	90                   	nop    
+     131:	90                   	nop    
+     132:	90                   	nop    
+     133:	90                   	nop    
+     134:	90                   	nop    
+     135:	90                   	nop    
+     136:	90                   	nop    
+     137:	90                   	nop    
+     138:	90                   	nop    
+     139:	90                   	nop    
+     13a:	90                   	nop    
+     13b:	90                   	nop    
+     13c:	90                   	nop    
+     13d:	90                   	nop    
+     13e:	90                   	nop    
+     13f:	90                   	nop    
+
+00000140 <kb_x86_stopnote>:
+     140:	83 ec 14             	sub    $0x14,%esp
+     143:	6b 4c 24 18 60       	imul   $0x60,0x18(%esp),%ecx
+     148:	8d 91 20 00 00 00    	lea    0x20(%ecx),%edx
+     14e:	8b 42 10             	mov    0x10(%edx),%eax
+     151:	a8 10                	test   $0x10,%al
+     153:	75 79                	jne    1ce <kb_x86_stopnote+0x8e>
+     155:	89 d1                	mov    %edx,%ecx
+     157:	f6 41 10 04          	testb  $0x4,0x10(%ecx)
+     15b:	74 6d                	je     1ca <kb_x86_stopnote+0x8a>
+     15d:	39 d1                	cmp    %edx,%ecx
+     15f:	74 7f                	je     1e0 <kb_x86_stopnote+0xa0>
+     161:	83 e0 ef             	and    $0xffffffef,%eax
+     164:	89 42 10             	mov    %eax,0x10(%edx)
+     167:	dd 05 00 00 00 00    	fldl   0x0
+     16d:	da 0d 0c 00 00 00    	fimull 0xc
+     173:	83 49 10 20          	orl    $0x20,0x10(%ecx)
+     177:	d9 7c 24 0e          	fnstcw 0xe(%esp)
+     17b:	66 8b 44 24 0e       	mov    0xe(%esp),%ax
+     180:	b4 0c                	mov    $0xc,%ah
+     182:	66 89 44 24 0c       	mov    %ax,0xc(%esp)
+     187:	d9 6c 24 0c          	fldcw  0xc(%esp)
+     18b:	df 3c 24             	fistpll (%esp)
+     18e:	d9 6c 24 0e          	fldcw  0xe(%esp)
+     192:	8b 04 24             	mov    (%esp),%eax
+     195:	85 c0                	test   %eax,%eax
+     197:	89 41 2c             	mov    %eax,0x2c(%ecx)
+     19a:	74 3a                	je     1d6 <kb_x86_stopnote+0x96>
+     19c:	d9 ee                	fldz   
+     19e:	8b 41 2c             	mov    0x2c(%ecx),%eax
+     1a1:	ba 00 00 00 00       	mov    $0x0,%edx
+     1a6:	d9 51 38             	fsts   0x38(%ecx)
+     1a9:	d9 51 3c             	fsts   0x3c(%ecx)
+     1ac:	d9 41 24             	flds   0x24(%ecx)
+     1af:	52                   	push   %edx
+     1b0:	50                   	push   %eax
+     1b1:	d8 e9                	fsubr  %st(1),%st
+     1b3:	df 2c 24             	fildll (%esp)
+     1b6:	83 c4 08             	add    $0x8,%esp
+     1b9:	dc f9                	fdivr  %st,%st(1)
+     1bb:	d9 c9                	fxch   %st(1)
+     1bd:	d9 59 30             	fstps  0x30(%ecx)
+     1c0:	d9 c9                	fxch   %st(1)
+     1c2:	d8 61 28             	fsubs  0x28(%ecx)
+     1c5:	de f1                	fdivp  %st,%st(1)
+     1c7:	d9 59 34             	fstps  0x34(%ecx)
+     1ca:	83 c4 14             	add    $0x14,%esp
+     1cd:	c3                   	ret    
+     1ce:	81 c1 20 0c 00 00    	add    $0xc20,%ecx
+     1d4:	eb 81                	jmp    157 <kb_x86_stopnote+0x17>
+     1d6:	c7 41 2c 01 00 00 00 	movl   $0x1,0x2c(%ecx)
+     1dd:	eb bd                	jmp    19c <kb_x86_stopnote+0x5c>
+     1df:	90                   	nop    
+     1e0:	83 c8 10             	or     $0x10,%eax
+     1e3:	89 41 10             	mov    %eax,0x10(%ecx)
+     1e6:	e9 7c ff ff ff       	jmp    167 <kb_x86_stopnote+0x27>
+     1eb:	90                   	nop    
+     1ec:	90                   	nop    
+     1ed:	90                   	nop    
+     1ee:	90                   	nop    
+     1ef:	90                   	nop    
+     1f0:	90                   	nop    
+     1f1:	90                   	nop    
+     1f2:	90                   	nop    
+     1f3:	90                   	nop    
+     1f4:	90                   	nop    
+     1f5:	90                   	nop    
+     1f6:	90                   	nop    
+     1f7:	90                   	nop    
+     1f8:	90                   	nop    
+     1f9:	90                   	nop    
+     1fa:	90                   	nop    
+     1fb:	90                   	nop    
+     1fc:	90                   	nop    
+     1fd:	90                   	nop    
+     1fe:	90                   	nop    
+     1ff:	90                   	nop    
+
+00000200 <kb_x86_setnumch>:
+     200:	53                   	push   %ebx
+     201:	83 ec 08             	sub    $0x8,%esp
+     204:	8b 5c 24 10          	mov    0x10(%esp),%ebx
+     208:	8d 43 ff             	lea    0xffffffff(%ebx),%eax
+     20b:	83 f8 1f             	cmp    $0x1f,%eax
+     20e:	76 23                	jbe    233 <kb_x86_setnumch+0x33>
+     210:	50                   	push   %eax
+     211:	68 00 00 00 00       	push   $0x0
+     216:	68 6b 00 00 00       	push   $0x6b
+     21b:	6a 68                	push   $0x68
+     21d:	68 12 00 00 00       	push   $0x12
+     222:	68 00 00 00 00       	push   $0x0
+     227:	6a 04                	push   $0x4
+     229:	6a 00                	push   $0x0
+     22b:	e8 fc ff ff ff       	call   22c <kb_x86_setnumch+0x2c>
+     230:	83 c4 20             	add    $0x20,%esp
+     233:	89 1d 08 00 00 00    	mov    %ebx,0x8
+     239:	83 c4 08             	add    $0x8,%esp
+     23c:	5b                   	pop    %ebx
+     23d:	c3                   	ret    
+     23e:	66                   	data16
+     23f:	90                   	nop    
+
+00000240 <kb_x86_reset>:
+     240:	83 ec 10             	sub    $0x10,%esp
+     243:	68 00 18 00 00       	push   $0x1800
+     248:	6a 00                	push   $0x0
+     24a:	68 20 00 00 00       	push   $0x20
+     24f:	e8 fc ff ff ff       	call   250 <kb_x86_reset+0x10>
+     254:	d9 05 04 00 00 00    	flds   0x4
+     25a:	c7 05 10 00 00 00 00 	movl   $0x0,0x10
+     261:	00 00 00 
+     264:	d9 05 08 00 00 00    	flds   0x8
+     26a:	83 c4 10             	add    $0x10,%esp
+     26d:	ba 00 00 00 00       	mov    $0x0,%edx
+     272:	52                   	push   %edx
+     273:	dd 05 08 00 00 00    	fldl   0x8
+     279:	da 0c 24             	fimull (%esp)
+     27c:	8d 04 95 00 00 00 00 	lea    0x0(,%edx,4),%eax
+     283:	42                   	inc    %edx
+     284:	83 c4 04             	add    $0x4,%esp
+     287:	81 fa 00 01 00 00    	cmp    $0x100,%edx
+     28d:	d9 c0                	fld    %st(0)
+     28f:	d8 c9                	fmul   %st(1),%st
+     291:	d9 c1                	fld    %st(1)
+     293:	d8 c9                	fmul   %st(1),%st
+     295:	d9 c1                	fld    %st(1)
+     297:	d9 c1                	fld    %st(1)
+     299:	d8 ce                	fmul   %st(6),%st
+     29b:	d8 c1                	fadd   %st(1),%st
+     29d:	d9 c4                	fld    %st(4)
+     29f:	d8 cf                	fmul   %st(7),%st
+     2a1:	de c1                	faddp  %st,%st(1)
+     2a3:	d9 98 00 00 00 00    	fstps  0x0(%eax)
+     2a9:	dd 05 10 00 00 00    	fldl   0x10
+     2af:	d8 ca                	fmul   %st(2),%st
+     2b1:	dd 05 18 00 00 00    	fldl   0x18
+     2b7:	d8 ca                	fmul   %st(2),%st
+     2b9:	de c1                	faddp  %st,%st(1)
+     2bb:	d9 e8                	fld1   
+     2bd:	de c1                	faddp  %st,%st(1)
+     2bf:	d9 98 00 00 00 00    	fstps  0x0(%eax)
+     2c5:	d9 ca                	fxch   %st(2)
+     2c7:	d8 c0                	fadd   %st(0),%st
+     2c9:	dd 05 20 00 00 00    	fldl   0x20
+     2cf:	d8 ca                	fmul   %st(2),%st
+     2d1:	de c1                	faddp  %st,%st(1)
+     2d3:	d9 cb                	fxch   %st(3)
+     2d5:	d8 cc                	fmul   %st(4),%st
+     2d7:	de c3                	faddp  %st,%st(3)
+     2d9:	d9 ca                	fxch   %st(2)
+     2db:	d9 98 00 00 00 00    	fstps  0x0(%eax)
+     2e1:	d8 cb                	fmul   %st(3),%st
+     2e3:	d9 c9                	fxch   %st(1)
+     2e5:	d8 ca                	fmul   %st(2),%st
+     2e7:	de c1                	faddp  %st,%st(1)
+     2e9:	d9 98 00 00 00 00    	fstps  0x0(%eax)
+     2ef:	75 81                	jne    272 <kb_x86_reset+0x32>
+     2f1:	dd d8                	fstp   %st(0)
+     2f3:	dd d8                	fstp   %st(0)
+     2f5:	83 c4 0c             	add    $0xc,%esp
+     2f8:	c3                   	ret    
+     2f9:	8d b4 26 00 00 00 00 	lea    0x0(%esi),%esi
+
+00000300 <kb_x86_startnote>:
+     300:	6b 44 24 04 60       	imul   $0x60,0x4(%esp),%eax
+     305:	8b 4c 24 08          	mov    0x8(%esp),%ecx
+     309:	8d 90 20 00 00 00    	lea    0x20(%eax),%edx
+     30f:	f6 42 10 10          	testb  $0x10,0x10(%edx)
+     313:	74 06                	je     31b <kb_x86_startnote+0x1b>
+     315:	8d 90 20 0c 00 00    	lea    0xc20(%eax),%edx
+     31b:	8b 41 10             	mov    0x10(%ecx),%eax
+     31e:	89 0a                	mov    %ecx,(%edx)
+     320:	83 62 10 10          	andl   $0x10,0x10(%edx)
+     324:	89 42 04             	mov    %eax,0x4(%edx)
+     327:	8b 41 04             	mov    0x4(%ecx),%eax
+     32a:	89 42 0c             	mov    %eax,0xc(%edx)
+     32d:	8b 01                	mov    (%ecx),%eax
+     32f:	c7 42 40 00 00 00 00 	movl   $0x0,0x40(%edx)
+     336:	c7 42 44 00 00 00 00 	movl   $0x0,0x44(%edx)
+     33d:	83 f8 01             	cmp    $0x1,%eax
+     340:	89 42 08             	mov    %eax,0x8(%edx)
+     343:	c7 42 20 00 00 00 00 	movl   $0x0,0x20(%edx)
+     34a:	74 3a                	je     386 <kb_x86_startnote+0x86>
+     34c:	83 f8 02             	cmp    $0x2,%eax
+     34f:	74 2f                	je     380 <kb_x86_startnote+0x80>
+     351:	83 4a 10 0c          	orl    $0xc,0x10(%edx)
+     355:	b8 00 00 00 00       	mov    $0x0,%eax
+     35a:	c7 42 1c 01 00 00 00 	movl   $0x1,0x1c(%edx)
+     361:	c7 42 2c 00 00 00 00 	movl   $0x0,0x2c(%edx)
+     368:	89 42 54             	mov    %eax,0x54(%edx)
+     36b:	c7 42 50 00 00 80 3f 	movl   $0x3f800000,0x50(%edx)
+     372:	89 42 58             	mov    %eax,0x58(%edx)
+     375:	89 42 5c             	mov    %eax,0x5c(%edx)
+     378:	c3                   	ret    
+     379:	8d b4 26 00 00 00 00 	lea    0x0(%esi),%esi
+     380:	83 4a 10 02          	orl    $0x2,0x10(%edx)
+     384:	eb cb                	jmp    351 <kb_x86_startnote+0x51>
+     386:	83 4a 10 01          	orl    $0x1,0x10(%edx)
+     38a:	eb c5                	jmp    351 <kb_x86_startnote+0x51>
+     38c:	90                   	nop    
+     38d:	90                   	nop    
+     38e:	90                   	nop    
+     38f:	90                   	nop    
+     390:	90                   	nop    
+     391:	90                   	nop    
+     392:	90                   	nop    
+     393:	90                   	nop    
+     394:	90                   	nop    
+     395:	90                   	nop    
+     396:	90                   	nop    
+     397:	90                   	nop    
+     398:	90                   	nop    
+     399:	90                   	nop    
+     39a:	90                   	nop    
+     39b:	90                   	nop    
+     39c:	90                   	nop    
+     39d:	90                   	nop    
+     39e:	90                   	nop    
+     39f:	90                   	nop    
+
+000003a0 <kb_x86_dumpstatus>:
+     3a0:	57                   	push   %edi
+     3a1:	bf 01 00 00 00       	mov    $0x1,%edi
+     3a6:	56                   	push   %esi
+     3a7:	be 20 00 00 00       	mov    $0x20,%esi
+     3ac:	53                   	push   %ebx
+     3ad:	8b 54 24 10          	mov    0x10(%esp),%edx
+     3b1:	eb 26                	jmp    3d9 <kb_x86_dumpstatus+0x39>
+     3b3:	8b 08                	mov    (%eax),%ecx
+     3b5:	8b 40 40             	mov    0x40(%eax),%eax
+     3b8:	89 0a                	mov    %ecx,(%edx)
+     3ba:	85 c0                	test   %eax,%eax
+     3bc:	78 45                	js     403 <kb_x86_dumpstatus+0x63>
+     3be:	89 c3                	mov    %eax,%ebx
+     3c0:	8b 41 04             	mov    0x4(%ecx),%eax
+     3c3:	39 c3                	cmp    %eax,%ebx
+     3c5:	72 03                	jb     3ca <kb_x86_dumpstatus+0x2a>
+     3c7:	8d 58 ff             	lea    0xffffffff(%eax),%ebx
+     3ca:	47                   	inc    %edi
+     3cb:	89 5a 04             	mov    %ebx,0x4(%edx)
+     3ce:	83 c6 60             	add    $0x60,%esi
+     3d1:	83 c2 08             	add    $0x8,%edx
+     3d4:	83 ff 21             	cmp    $0x21,%edi
+     3d7:	74 26                	je     3ff <kb_x86_dumpstatus+0x5f>
+     3d9:	f6 46 10 10          	testb  $0x10,0x10(%esi)
+     3dd:	89 f0                	mov    %esi,%eax
+     3df:	74 06                	je     3e7 <kb_x86_dumpstatus+0x47>
+     3e1:	8d 86 00 0c 00 00    	lea    0xc00(%esi),%eax
+     3e7:	f6 40 10 04          	testb  $0x4,0x10(%eax)
+     3eb:	75 c6                	jne    3b3 <kb_x86_dumpstatus+0x13>
+     3ed:	47                   	inc    %edi
+     3ee:	c7 02 00 00 00 00    	movl   $0x0,(%edx)
+     3f4:	83 c6 60             	add    $0x60,%esi
+     3f7:	83 c2 08             	add    $0x8,%edx
+     3fa:	83 ff 21             	cmp    $0x21,%edi
+     3fd:	75 da                	jne    3d9 <kb_x86_dumpstatus+0x39>
+     3ff:	5b                   	pop    %ebx
+     400:	5e                   	pop    %esi
+     401:	5f                   	pop    %edi
+     402:	c3                   	ret    
+     403:	bb 00 00 00 00       	mov    $0x0,%ebx
+     408:	eb c0                	jmp    3ca <kb_x86_dumpstatus+0x2a>
+     40a:	90                   	nop    
+     40b:	90                   	nop    
+     40c:	90                   	nop    
+     40d:	90                   	nop    
+     40e:	90                   	nop    
+     40f:	90                   	nop    
+     410:	90                   	nop    
+     411:	90                   	nop    
+     412:	90                   	nop    
+     413:	90                   	nop    
+     414:	90                   	nop    
+     415:	90                   	nop    
+     416:	90                   	nop    
+     417:	90                   	nop    
+     418:	90                   	nop    
+     419:	90                   	nop    
+     41a:	90                   	nop    
+     41b:	90                   	nop    
+     41c:	90                   	nop    
+     41d:	90                   	nop    
+     41e:	90                   	nop    
+     41f:	90                   	nop    
+
+00000420 <kb_x86_setchreso>:
+     420:	53                   	push   %ebx
+     421:	83 ec 08             	sub    $0x8,%esp
+     424:	6b 44 24 10 60       	imul   $0x60,0x10(%esp),%eax
+     429:	8d 98 20 00 00 00    	lea    0x20(%eax),%ebx
+     42f:	f6 43 10 10          	testb  $0x10,0x10(%ebx)
+     433:	74 06                	je     43b <kb_x86_setchreso+0x1b>
+     435:	8d 98 20 0c 00 00    	lea    0xc20(%eax),%ebx
+     43b:	d9 44 24 14          	flds   0x14(%esp)
+     43f:	d9 e4                	ftst   
+     441:	df e0                	fnstsw %ax
+     443:	dd d8                	fstp   %st(0)
+     445:	9e                   	sahf   
+     446:	72 41                	jb     489 <kb_x86_setchreso+0x69>
+     448:	d9 44 24 14          	flds   0x14(%esp)
+     44c:	d8 1d 0c 00 00 00    	fcomps 0xc
+     452:	df e0                	fnstsw %ax
+     454:	9e                   	sahf   
+     455:	76 26                	jbe    47d <kb_x86_setchreso+0x5d>
+     457:	52                   	push   %edx
+     458:	68 27 00 00 00       	push   $0x27
+     45d:	68 47 00 00 00       	push   $0x47
+     462:	68 93 01 00 00       	push   $0x193
+     467:	68 12 00 00 00       	push   $0x12
+     46c:	68 00 00 00 00       	push   $0x0
+     471:	6a 04                	push   $0x4
+     473:	6a 00                	push   $0x0
+     475:	e8 fc ff ff ff       	call   476 <kb_x86_setchreso+0x56>
+     47a:	83 c4 20             	add    $0x20,%esp
+     47d:	d9 44 24 14          	flds   0x14(%esp)
+     481:	d9 5b 54             	fstps  0x54(%ebx)
+     484:	83 c4 08             	add    $0x8,%esp
+     487:	5b                   	pop    %ebx
+     488:	c3                   	ret    
+     489:	51                   	push   %ecx
+     48a:	68 1b 00 00 00       	push   $0x1b
+     48f:	68 47 00 00 00       	push   $0x47
+     494:	68 92 01 00 00       	push   $0x192
+     499:	68 12 00 00 00       	push   $0x12
+     49e:	68 00 00 00 00       	push   $0x0
+     4a3:	6a 04                	push   $0x4
+     4a5:	6a 00                	push   $0x0
+     4a7:	e8 fc ff ff ff       	call   4a8 <kb_x86_setchreso+0x88>
+     4ac:	83 c4 20             	add    $0x20,%esp
+     4af:	eb 97                	jmp    448 <kb_x86_setchreso+0x28>
+     4b1:	eb 0d                	jmp    4c0 <kb_x86_setchcutoff>
+     4b3:	90                   	nop    
+     4b4:	90                   	nop    
+     4b5:	90                   	nop    
+     4b6:	90                   	nop    
+     4b7:	90                   	nop    
+     4b8:	90                   	nop    
+     4b9:	90                   	nop    
+     4ba:	90                   	nop    
+     4bb:	90                   	nop    
+     4bc:	90                   	nop    
+     4bd:	90                   	nop    
+     4be:	90                   	nop    
+     4bf:	90                   	nop    
+
+000004c0 <kb_x86_setchcutoff>:
+     4c0:	53                   	push   %ebx
+     4c1:	83 ec 08             	sub    $0x8,%esp
+     4c4:	6b 44 24 10 60       	imul   $0x60,0x10(%esp),%eax
+     4c9:	8d 98 20 00 00 00    	lea    0x20(%eax),%ebx
+     4cf:	f6 43 10 10          	testb  $0x10,0x10(%ebx)
+     4d3:	74 06                	je     4db <kb_x86_setchcutoff+0x1b>
+     4d5:	8d 98 20 0c 00 00    	lea    0xc20(%eax),%ebx
+     4db:	d9 44 24 14          	flds   0x14(%esp)
+     4df:	d9 e4                	ftst   
+     4e1:	df e0                	fnstsw %ax
+     4e3:	dd d8                	fstp   %st(0)
+     4e5:	9e                   	sahf   
+     4e6:	72 48                	jb     530 <kb_x86_setchcutoff+0x70>
+     4e8:	d9 44 24 14          	flds   0x14(%esp)
+     4ec:	d8 1d 10 00 00 00    	fcomps 0x10
+     4f2:	df e0                	fnstsw %ax
+     4f4:	9e                   	sahf   
+     4f5:	76 26                	jbe    51d <kb_x86_setchcutoff+0x5d>
+     4f7:	50                   	push   %eax
+     4f8:	68 33 00 00 00       	push   $0x33
+     4fd:	68 58 00 00 00       	push   $0x58
+     502:	68 86 01 00 00       	push   $0x186
+     507:	68 12 00 00 00       	push   $0x12
+     50c:	68 00 00 00 00       	push   $0x0
+     511:	6a 04                	push   $0x4
+     513:	6a 00                	push   $0x0
+     515:	e8 fc ff ff ff       	call   516 <kb_x86_setchcutoff+0x56>
+     51a:	83 c4 20             	add    $0x20,%esp
+     51d:	d9 44 24 14          	flds   0x14(%esp)
+     521:	c7 43 54 00 00 00 00 	movl   $0x0,0x54(%ebx)
+     528:	d9 5b 50             	fstps  0x50(%ebx)
+     52b:	83 c4 08             	add    $0x8,%esp
+     52e:	5b                   	pop    %ebx
+     52f:	c3                   	ret    
+     530:	c7 43 50 00 00 80 3f 	movl   $0x3f800000,0x50(%ebx)
+     537:	c7 43 54 00 00 00 00 	movl   $0x0,0x54(%ebx)
+     53e:	83 c4 08             	add    $0x8,%esp
+     541:	5b                   	pop    %ebx
+     542:	c3                   	ret    
+     543:	90                   	nop    
+     544:	90                   	nop    
+     545:	90                   	nop    
+     546:	90                   	nop    
+     547:	90                   	nop    
+     548:	90                   	nop    
+     549:	90                   	nop    
+     54a:	90                   	nop    
+     54b:	90                   	nop    
+     54c:	90                   	nop    
+     54d:	90                   	nop    
+     54e:	90                   	nop    
+     54f:	90                   	nop    
+     550:	90                   	nop    
+     551:	90                   	nop    
+     552:	90                   	nop    
+     553:	90                   	nop    
+     554:	90                   	nop    
+     555:	90                   	nop    
+     556:	90                   	nop    
+     557:	90                   	nop    
+     558:	90                   	nop    
+     559:	90                   	nop    
+     55a:	90                   	nop    
+     55b:	90                   	nop    
+     55c:	90                   	nop    
+     55d:	90                   	nop    
+     55e:	90                   	nop    
+     55f:	90                   	nop    
+
+00000560 <kb_x86_setvolume>:
+     560:	53                   	push   %ebx
+     561:	83 ec 18             	sub    $0x18,%esp
+     564:	6b 44 24 20 60       	imul   $0x60,0x20(%esp),%eax
+     569:	d9 44 24 24          	flds   0x24(%esp)
+     56d:	8d 98 20 00 00 00    	lea    0x20(%eax),%ebx
+     573:	f6 43 10 10          	testb  $0x10,0x10(%ebx)
+     577:	74 06                	je     57f <kb_x86_setvolume+0x1f>
+     579:	8d 98 20 0c 00 00    	lea    0xc20(%eax),%ebx
+     57f:	d9 53 14             	fsts   0x14(%ebx)
+     582:	d9 e8                	fld1   
+     584:	d8 63 18             	fsubs  0x18(%ebx)
+     587:	de c9                	fmulp  %st,%st(1)
+     589:	d9 53 38             	fsts   0x38(%ebx)
+     58c:	d9 43 18             	flds   0x18(%ebx)
+     58f:	d8 4b 14             	fmuls  0x14(%ebx)
+     592:	d9 5b 3c             	fstps  0x3c(%ebx)
+     595:	d9 e4                	ftst   
+     597:	df e0                	fnstsw %ax
+     599:	9e                   	sahf   
+     59a:	0f 82 ed 00 00 00    	jb     68d <kb_x86_setvolume+0x12d>
+     5a0:	d8 1d 14 00 00 00    	fcomps 0x14
+     5a6:	df e0                	fnstsw %ax
+     5a8:	9e                   	sahf   
+     5a9:	76 26                	jbe    5d1 <kb_x86_setvolume+0x71>
+     5ab:	50                   	push   %eax
+     5ac:	68 30 00 00 00       	push   $0x30
+     5b1:	68 16 00 00 00       	push   $0x16
+     5b6:	68 57 01 00 00       	push   $0x157
+     5bb:	68 12 00 00 00       	push   $0x12
+     5c0:	68 00 00 00 00       	push   $0x0
+     5c5:	6a 04                	push   $0x4
+     5c7:	6a 00                	push   $0x0
+     5c9:	e8 fc ff ff ff       	call   5ca <kb_x86_setvolume+0x6a>
+     5ce:	83 c4 20             	add    $0x20,%esp
+     5d1:	d9 43 3c             	flds   0x3c(%ebx)
+     5d4:	d9 e4                	ftst   
+     5d6:	df e0                	fnstsw %ax
+     5d8:	9e                   	sahf   
+     5d9:	72 0b                	jb     5e6 <kb_x86_setvolume+0x86>
+     5db:	d8 15 14 00 00 00    	fcoms  0x14
+     5e1:	df e0                	fnstsw %ax
+     5e3:	9e                   	sahf   
+     5e4:	76 2b                	jbe    611 <kb_x86_setvolume+0xb1>
+     5e6:	dd d8                	fstp   %st(0)
+     5e8:	50                   	push   %eax
+     5e9:	68 64 00 00 00       	push   $0x64
+     5ee:	68 16 00 00 00       	push   $0x16
+     5f3:	68 58 01 00 00       	push   $0x158
+     5f8:	68 12 00 00 00       	push   $0x12
+     5fd:	68 00 00 00 00       	push   $0x0
+     602:	6a 04                	push   $0x4
+     604:	6a 00                	push   $0x0
+     606:	e8 fc ff ff ff       	call   607 <kb_x86_setvolume+0xa7>
+     60b:	d9 43 3c             	flds   0x3c(%ebx)
+     60e:	83 c4 20             	add    $0x20,%esp
+     611:	f6 43 10 08          	testb  $0x8,0x10(%ebx)
+     615:	74 0e                	je     625 <kb_x86_setvolume+0xc5>
+     617:	8b 43 38             	mov    0x38(%ebx),%eax
+     61a:	d9 5b 28             	fstps  0x28(%ebx)
+     61d:	89 43 24             	mov    %eax,0x24(%ebx)
+     620:	83 c4 18             	add    $0x18,%esp
+     623:	5b                   	pop    %ebx
+     624:	c3                   	ret    
+     625:	dd 05 28 00 00 00    	fldl   0x28
+     62b:	d9 7c 24 16          	fnstcw 0x16(%esp)
+     62f:	da 0d 0c 00 00 00    	fimull 0xc
+     635:	66 8b 44 24 16       	mov    0x16(%esp),%ax
+     63a:	b4 0c                	mov    $0xc,%ah
+     63c:	66 89 44 24 14       	mov    %ax,0x14(%esp)
+     641:	d9 6c 24 14          	fldcw  0x14(%esp)
+     645:	df 7c 24 08          	fistpll 0x8(%esp)
+     649:	d9 6c 24 16          	fldcw  0x16(%esp)
+     64d:	8b 44 24 08          	mov    0x8(%esp),%eax
+     651:	85 c0                	test   %eax,%eax
+     653:	89 43 2c             	mov    %eax,0x2c(%ebx)
+     656:	74 2c                	je     684 <kb_x86_setvolume+0x124>
+     658:	d9 43 38             	flds   0x38(%ebx)
+     65b:	ba 00 00 00 00       	mov    $0x0,%edx
+     660:	8b 43 2c             	mov    0x2c(%ebx),%eax
+     663:	d8 63 24             	fsubs  0x24(%ebx)
+     666:	52                   	push   %edx
+     667:	50                   	push   %eax
+     668:	df 2c 24             	fildll (%esp)
+     66b:	83 c4 08             	add    $0x8,%esp
+     66e:	dc f9                	fdivr  %st,%st(1)
+     670:	d9 c9                	fxch   %st(1)
+     672:	d9 5b 30             	fstps  0x30(%ebx)
+     675:	d9 c9                	fxch   %st(1)
+     677:	d8 63 28             	fsubs  0x28(%ebx)
+     67a:	de f1                	fdivp  %st,%st(1)
+     67c:	d9 5b 34             	fstps  0x34(%ebx)
+     67f:	83 c4 18             	add    $0x18,%esp
+     682:	5b                   	pop    %ebx
+     683:	c3                   	ret    
+     684:	c7 43 2c 01 00 00 00 	movl   $0x1,0x2c(%ebx)
+     68b:	eb cb                	jmp    658 <kb_x86_setvolume+0xf8>
+     68d:	dd d8                	fstp   %st(0)
+     68f:	e9 17 ff ff ff       	jmp    5ab <kb_x86_setvolume+0x4b>
+     694:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+     69a:	8d bf 00 00 00 00    	lea    0x0(%edi),%edi
+
+000006a0 <kb_x86_setfreq>:
+     6a0:	83 ec 14             	sub    $0x14,%esp
+     6a3:	6b 44 24 18 60       	imul   $0x60,0x18(%esp),%eax
+     6a8:	8d 88 20 00 00 00    	lea    0x20(%eax),%ecx
+     6ae:	f6 41 10 10          	testb  $0x10,0x10(%ecx)
+     6b2:	74 06                	je     6ba <kb_x86_setfreq+0x1a>
+     6b4:	8d 88 20 0c 00 00    	lea    0xc20(%eax),%ecx
+     6ba:	d9 44 24 1c          	flds   0x1c(%esp)
+     6be:	d9 7c 24 0e          	fnstcw 0xe(%esp)
+     6c2:	da 35 0c 00 00 00    	fidivl 0xc
+     6c8:	ba 00 00 00 00       	mov    $0x0,%edx
+     6cd:	66 8b 44 24 0e       	mov    0xe(%esp),%ax
+     6d2:	b4 04                	mov    $0x4,%ah
+     6d4:	66 89 44 24 0c       	mov    %ax,0xc(%esp)
+     6d9:	66 8b 44 24 0e       	mov    0xe(%esp),%ax
+     6de:	b4 0c                	mov    $0xc,%ah
+     6e0:	66 89 44 24 0a       	mov    %ax,0xa(%esp)
+     6e5:	d9 c0                	fld    %st(0)
+     6e7:	d9 6c 24 0c          	fldcw  0xc(%esp)
+     6eb:	d9 fc                	frndint 
+     6ed:	d9 6c 24 0e          	fldcw  0xe(%esp)
+     6f1:	d9 6c 24 0a          	fldcw  0xa(%esp)
+     6f5:	df 3c 24             	fistpll (%esp)
+     6f8:	d9 6c 24 0e          	fldcw  0xe(%esp)
+     6fc:	8b 04 24             	mov    (%esp),%eax
+     6ff:	89 41 48             	mov    %eax,0x48(%ecx)
+     702:	52                   	push   %edx
+     703:	50                   	push   %eax
+     704:	df 2c 24             	fildll (%esp)
+     707:	de e9                	fsubrp %st,%st(1)
+     709:	d9 05 18 00 00 00    	flds   0x18
+     70f:	de c9                	fmulp  %st,%st(1)
+     711:	d9 6c 24 12          	fldcw  0x12(%esp)
+     715:	df 7c 24 08          	fistpll 0x8(%esp)
+     719:	d9 6c 24 16          	fldcw  0x16(%esp)
+     71d:	8b 44 24 08          	mov    0x8(%esp),%eax
+     721:	89 41 4c             	mov    %eax,0x4c(%ecx)
+     724:	83 c4 1c             	add    $0x1c,%esp
+     727:	c3                   	ret    
+     728:	90                   	nop    
+     729:	90                   	nop    
+     72a:	90                   	nop    
+     72b:	90                   	nop    
+     72c:	90                   	nop    
+     72d:	90                   	nop    
+     72e:	90                   	nop    
+     72f:	90                   	nop    
+     730:	90                   	nop    
+     731:	90                   	nop    
+     732:	90                   	nop    
+     733:	90                   	nop    
+     734:	90                   	nop    
+     735:	90                   	nop    
+     736:	90                   	nop    
+     737:	90                   	nop    
+     738:	90                   	nop    
+     739:	90                   	nop    
+     73a:	90                   	nop    
+     73b:	90                   	nop    
+     73c:	90                   	nop    
+     73d:	90                   	nop    
+     73e:	90                   	nop    
+     73f:	90                   	nop    
+
+00000740 <kb_x86_setsmplend>:
+     740:	6b 54 24 04 60       	imul   $0x60,0x4(%esp),%edx
+     745:	8b 4c 24 08          	mov    0x8(%esp),%ecx
+     749:	8d 82 20 00 00 00    	lea    0x20(%edx),%eax
+     74f:	f6 40 10 10          	testb  $0x10,0x10(%eax)
+     753:	74 06                	je     75b <kb_x86_setsmplend+0x1b>
+     755:	8d 82 20 0c 00 00    	lea    0xc20(%edx),%eax
+     75b:	8b 10                	mov    (%eax),%edx
+     75d:	85 d2                	test   %edx,%edx
+     75f:	74 0f                	je     770 <kb_x86_setsmplend+0x30>
+     761:	83 78 10 00          	cmpl   $0x0,0x10(%eax)
+     765:	74 09                	je     770 <kb_x86_setsmplend+0x30>
+     767:	83 78 40 00          	cmpl   $0x0,0x40(%eax)
+     76b:	74 04                	je     771 <kb_x86_setsmplend+0x31>
+     76d:	89 48 20             	mov    %ecx,0x20(%eax)
+     770:	c3                   	ret    
+     771:	3b 4a 04             	cmp    0x4(%edx),%ecx
+     774:	73 fa                	jae    770 <kb_x86_setsmplend+0x30>
+     776:	89 48 20             	mov    %ecx,0x20(%eax)
+     779:	eb f5                	jmp    770 <kb_x86_setsmplend+0x30>
+     77b:	90                   	nop    
+     77c:	8d 74 26 00          	lea    0x0(%esi),%esi
+
+00000780 <kb_x86_setsmplpos>:
+     780:	53                   	push   %ebx
+     781:	6b 54 24 08 60       	imul   $0x60,0x8(%esp),%edx
+     786:	8b 5c 24 0c          	mov    0xc(%esp),%ebx
+     78a:	8d 82 20 00 00 00    	lea    0x20(%edx),%eax
+     790:	f6 40 10 10          	testb  $0x10,0x10(%eax)
+     794:	74 06                	je     79c <kb_x86_setsmplpos+0x1c>
+     796:	8d 82 20 0c 00 00    	lea    0xc20(%edx),%eax
+     79c:	8b 08                	mov    (%eax),%ecx
+     79e:	85 c9                	test   %ecx,%ecx
+     7a0:	74 2c                	je     7ce <kb_x86_setsmplpos+0x4e>
+     7a2:	8b 50 10             	mov    0x10(%eax),%edx
+     7a5:	85 d2                	test   %edx,%edx
+     7a7:	74 25                	je     7ce <kb_x86_setsmplpos+0x4e>
+     7a9:	39 59 04             	cmp    %ebx,0x4(%ecx)
+     7ac:	76 22                	jbe    7d0 <kb_x86_setsmplpos+0x50>
+     7ae:	f6 c2 08             	test   $0x8,%dl
+     7b1:	89 58 40             	mov    %ebx,0x40(%eax)
+     7b4:	c7 40 44 00 00 00 00 	movl   $0x0,0x44(%eax)
+     7bb:	c7 40 1c 01 00 00 00 	movl   $0x1,0x1c(%eax)
+     7c2:	74 0a                	je     7ce <kb_x86_setsmplpos+0x4e>
+     7c4:	85 db                	test   %ebx,%ebx
+     7c6:	74 06                	je     7ce <kb_x86_setsmplpos+0x4e>
+     7c8:	83 ca 40             	or     $0x40,%edx
+     7cb:	89 50 10             	mov    %edx,0x10(%eax)
+     7ce:	5b                   	pop    %ebx
+     7cf:	c3                   	ret    
+     7d0:	83 e2 10             	and    $0x10,%edx
+     7d3:	89 50 10             	mov    %edx,0x10(%eax)
+     7d6:	5b                   	pop    %ebx
+     7d7:	c3                   	ret    
+     7d8:	90                   	nop    
+     7d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi),%esi
+
+000007e0 <kb_x86_mix>:
+     7e0:	55                   	push   %ebp
+     7e1:	57                   	push   %edi
+     7e2:	56                   	push   %esi
+     7e3:	53                   	push   %ebx
+     7e4:	81 ec cc 00 00 00    	sub    $0xcc,%esp
+     7ea:	8b 84 24 e4 00 00 00 	mov    0xe4(%esp),%eax
+     7f1:	39 05 00 00 00 00    	cmp    %eax,0x0
+     7f7:	0f 82 26 0f 00 00    	jb     1723 <kb_x86_mix+0xf43>
+     7fd:	8b 8c 24 e4 00 00 00 	mov    0xe4(%esp),%ecx
+     804:	fc                   	cld    
+     805:	8b 3d 04 00 00 00    	mov    0x4,%edi
+     80b:	b8 00 00 00 00       	mov    $0x0,%eax
+     810:	c1 e1 03             	shl    $0x3,%ecx
+     813:	c1 e9 02             	shr    $0x2,%ecx
+     816:	f3 ab                	repz stos %eax,%es:(%edi)
+     818:	8b 8c 24 e4 00 00 00 	mov    0xe4(%esp),%ecx
+     81f:	c7 44 24 18 00 00 00 	movl   $0x0,0x18(%esp)
+     826:	00 
+     827:	8b 84 24 ec 00 00 00 	mov    0xec(%esp),%eax
+     82e:	c7 44 24 64 00 00 00 	movl   $0x0,0x64(%esp)
+     835:	00 
+     836:	01 c9                	add    %ecx,%ecx
+     838:	01 c0                	add    %eax,%eax
+     83a:	89 4c 24 30          	mov    %ecx,0x30(%esp)
+     83e:	89 44 24 14          	mov    %eax,0x14(%esp)
+     842:	8b 54 24 18          	mov    0x18(%esp),%edx
+     846:	8b 1d 04 00 00 00    	mov    0x4,%ebx
+     84c:	83 e2 1f             	and    $0x1f,%edx
+     84f:	3b 15 08 00 00 00    	cmp    0x8,%edx
+     855:	89 5c 24 1c          	mov    %ebx,0x1c(%esp)
+     859:	0f 8d a9 06 00 00    	jge    f08 <kb_x86_mix+0x728>
+     85f:	8b b4 24 e8 00 00 00 	mov    0xe8(%esp),%esi
+     866:	85 f6                	test   %esi,%esi
+     868:	74 1d                	je     887 <kb_x86_mix+0xa7>
+     86a:	83 7c 24 18 1f       	cmpl   $0x1f,0x18(%esp)
+     86f:	0f 8e 9b 09 00 00    	jle    1210 <kb_x86_mix+0xa30>
+     875:	6b 44 24 18 60       	imul   $0x60,0x18(%esp),%eax
+     87a:	f6 80 30 f4 ff ff 10 	testb  $0x10,0xfffff430(%eax)
+     881:	0f 85 89 09 00 00    	jne    1210 <kb_x86_mix+0xa30>
+     887:	c7 44 24 24 00 00 00 	movl   $0x0,0x24(%esp)
+     88e:	00 
+     88f:	8b 54 24 64          	mov    0x64(%esp),%edx
+     893:	8b 82 30 00 00 00    	mov    0x30(%edx),%eax
+     899:	a8 04                	test   $0x4,%al
+     89b:	0f 84 4c 06 00 00    	je     eed <kb_x86_mix+0x70d>
+     8a1:	a8 08                	test   $0x8,%al
+     8a3:	0f 84 99 00 00 00    	je     942 <kb_x86_mix+0x162>
+     8a9:	a8 40                	test   $0x40,%al
+     8ab:	0f 84 86 00 00 00    	je     937 <kb_x86_mix+0x157>
+     8b1:	db 05 0c 00 00 00    	fildl  0xc
+     8b7:	d9 7c 24 76          	fnstcw 0x76(%esp)
+     8bb:	dc 0d 30 00 00 00    	fmull  0x30
+     8c1:	66 8b 44 24 76       	mov    0x76(%esp),%ax
+     8c6:	8b 4c 24 64          	mov    0x64(%esp),%ecx
+     8ca:	b4 0c                	mov    $0xc,%ah
+     8cc:	66 89 44 24 74       	mov    %ax,0x74(%esp)
+     8d1:	d9 6c 24 74          	fldcw  0x74(%esp)
+     8d5:	df 7c 24 68          	fistpll 0x68(%esp)
+     8d9:	d9 6c 24 76          	fldcw  0x76(%esp)
+     8dd:	8b 44 24 68          	mov    0x68(%esp),%eax
+     8e1:	85 c0                	test   %eax,%eax
+     8e3:	89 81 4c 00 00 00    	mov    %eax,0x4c(%ecx)
+     8e9:	75 0a                	jne    8f5 <kb_x86_mix+0x115>
+     8eb:	c7 81 4c 00 00 00 01 	movl   $0x1,0x4c(%ecx)
+     8f2:	00 00 00 
+     8f5:	8b 5c 24 64          	mov    0x64(%esp),%ebx
+     8f9:	b8 00 00 00 00       	mov    $0x0,%eax
+     8fe:	ba 00 00 00 00       	mov    $0x0,%edx
+     903:	52                   	push   %edx
+     904:	89 83 44 00 00 00    	mov    %eax,0x44(%ebx)
+     90a:	89 83 48 00 00 00    	mov    %eax,0x48(%ebx)
+     910:	8b 83 4c 00 00 00    	mov    0x4c(%ebx),%eax
+     916:	50                   	push   %eax
+     917:	df 2c 24             	fildll (%esp)
+     91a:	d9 83 58 00 00 00    	flds   0x58(%ebx)
+     920:	83 c4 08             	add    $0x8,%esp
+     923:	d8 f1                	fdiv   %st(1),%st
+     925:	d9 9b 50 00 00 00    	fstps  0x50(%ebx)
+     92b:	d8 bb 5c 00 00 00    	fdivrs 0x5c(%ebx)
+     931:	d9 9b 54 00 00 00    	fstps  0x54(%ebx)
+     937:	8b 74 24 64          	mov    0x64(%esp),%esi
+     93b:	83 a6 30 00 00 00 f7 	andl   $0xfffffff7,0x30(%esi)
+     942:	8b 7c 24 64          	mov    0x64(%esp),%edi
+     946:	8b 87 20 00 00 00    	mov    0x20(%edi),%eax
+     94c:	8b 50 14             	mov    0x14(%eax),%edx
+     94f:	85 d2                	test   %edx,%edx
+     951:	0f 84 31 0d 00 00    	je     1688 <kb_x86_mix+0xea8>
+     957:	a1 00 00 00 00       	mov    0x0,%eax
+     95c:	85 c0                	test   %eax,%eax
+     95e:	0f 85 fb 0b 00 00    	jne    155f <kb_x86_mix+0xd7f>
+     964:	8b 84 24 e4 00 00 00 	mov    0xe4(%esp),%eax
+     96b:	85 c0                	test   %eax,%eax
+     96d:	0f 84 71 09 00 00    	je     12e4 <kb_x86_mix+0xb04>
+     973:	8b 4c 24 64          	mov    0x64(%esp),%ecx
+     977:	8b 99 30 00 00 00    	mov    0x30(%ecx),%ebx
+     97d:	f6 c3 04             	test   $0x4,%bl
+     980:	0f 84 5e 09 00 00    	je     12e4 <kb_x86_mix+0xb04>
+     986:	8b b4 24 e4 00 00 00 	mov    0xe4(%esp),%esi
+     98d:	89 74 24 20          	mov    %esi,0x20(%esp)
+     991:	e9 c7 04 00 00       	jmp    e5d <kb_x86_mix+0x67d>
+     996:	8b 4c 24 20          	mov    0x20(%esp),%ecx
+     99a:	39 d1                	cmp    %edx,%ecx
+     99c:	89 4c 24 2c          	mov    %ecx,0x2c(%esp)
+     9a0:	0f 86 df 04 00 00    	jbe    e85 <kb_x86_mix+0x6a5>
+     9a6:	8b 74 24 64          	mov    0x64(%esp),%esi
+     9aa:	89 54 24 2c          	mov    %edx,0x2c(%esp)
+     9ae:	8b 8e 40 00 00 00    	mov    0x40(%esi),%ecx
+     9b4:	85 c9                	test   %ecx,%ecx
+     9b6:	0f 85 db 04 00 00    	jne    e97 <kb_x86_mix+0x6b7>
+     9bc:	8d 74 26 00          	lea    0x0(%esi),%esi
+     9c0:	f6 c3 03             	test   $0x3,%bl
+     9c3:	0f 84 ce 04 00 00    	je     e97 <kb_x86_mix+0x6b7>
+     9c9:	83 e3 02             	and    $0x2,%ebx
+     9cc:	0f 84 55 08 00 00    	je     1227 <kb_x86_mix+0xa47>
+     9d2:	c7 44 24 48 01 00 00 	movl   $0x1,0x48(%esp)
+     9d9:	00 
+     9da:	c7 44 24 4c 01 00 00 	movl   $0x1,0x4c(%esp)
+     9e1:	00 
+     9e2:	8b 7c 24 64          	mov    0x64(%esp),%edi
+     9e6:	ba 00 00 00 00       	mov    $0x0,%edx
+     9eb:	8b 5c 24 64          	mov    0x64(%esp),%ebx
+     9ef:	c7 44 24 3c 00 00 00 	movl   $0x0,0x3c(%esp)
+     9f6:	00 
+     9f7:	8b bf 20 00 00 00    	mov    0x20(%edi),%edi
+     9fd:	8b 9b 60 00 00 00    	mov    0x60(%ebx),%ebx
+     a03:	8b 47 08             	mov    0x8(%edi),%eax
+     a06:	89 7c 24 0c          	mov    %edi,0xc(%esp)
+     a0a:	89 5c 24 38          	mov    %ebx,0x38(%esp)
+     a0e:	bf 00 00 00 00       	mov    $0x0,%edi
+     a13:	89 c2                	mov    %eax,%edx
+     a15:	b8 00 00 00 00       	mov    $0x0,%eax
+     a1a:	89 44 24 40          	mov    %eax,0x40(%esp)
+     a1e:	8b 44 24 64          	mov    0x64(%esp),%eax
+     a22:	89 5c 24 10          	mov    %ebx,0x10(%esp)
+     a26:	8b 5c 24 64          	mov    0x64(%esp),%ebx
+     a2a:	8b b0 68 00 00 00    	mov    0x68(%eax),%esi
+     a30:	89 54 24 44          	mov    %edx,0x44(%esp)
+     a34:	8b 80 6c 00 00 00    	mov    0x6c(%eax),%eax
+     a3a:	ba 00 00 00 00       	mov    $0x0,%edx
+     a3f:	89 f7                	mov    %esi,%edi
+     a41:	be 00 00 00 00       	mov    $0x0,%esi
+     a46:	01 c6                	add    %eax,%esi
+     a48:	8b 44 24 38          	mov    0x38(%esp),%eax
+     a4c:	11 d7                	adc    %edx,%edi
+     a4e:	8b 54 24 3c          	mov    0x3c(%esp),%edx
+     a52:	89 c2                	mov    %eax,%edx
+     a54:	b8 00 00 00 00       	mov    $0x0,%eax
+     a59:	89 44 24 38          	mov    %eax,0x38(%esp)
+     a5d:	8b 83 64 00 00 00    	mov    0x64(%ebx),%eax
+     a63:	89 54 24 3c          	mov    %edx,0x3c(%esp)
+     a67:	ba 00 00 00 00       	mov    $0x0,%edx
+     a6c:	01 44 24 38          	add    %eax,0x38(%esp)
+     a70:	11 54 24 3c          	adc    %edx,0x3c(%esp)
+     a74:	85 c9                	test   %ecx,%ecx
+     a76:	0f 84 55 04 00 00    	je     ed1 <kb_x86_mix+0x6f1>
+     a7c:	89 4c 24 34          	mov    %ecx,0x34(%esp)
+     a80:	8b 4c 24 64          	mov    0x64(%esp),%ecx
+     a84:	8b 44 24 28          	mov    0x28(%esp),%eax
+     a88:	8b 99 44 00 00 00    	mov    0x44(%ecx),%ebx
+     a8e:	8b 89 48 00 00 00    	mov    0x48(%ecx),%ecx
+     a94:	85 c0                	test   %eax,%eax
+     a96:	89 5c 24 7c          	mov    %ebx,0x7c(%esp)
+     a9a:	89 8c 24 80 00 00 00 	mov    %ecx,0x80(%esp)
+     aa1:	0f 85 05 04 00 00    	jne    eac <kb_x86_mix+0x6cc>
+     aa7:	8b 4c 24 64          	mov    0x64(%esp),%ecx
+     aab:	b8 00 00 00 00       	mov    $0x0,%eax
+     ab0:	89 84 24 84 00 00 00 	mov    %eax,0x84(%esp)
+     ab7:	89 84 24 88 00 00 00 	mov    %eax,0x88(%esp)
+     abe:	83 b9 3c 00 00 00 01 	cmpl   $0x1,0x3c(%ecx)
+     ac5:	8b 81 64 00 00 00    	mov    0x64(%ecx),%eax
+     acb:	89 84 24 90 00 00 00 	mov    %eax,0x90(%esp)
+     ad2:	0f 84 3d 06 00 00    	je     1115 <kb_x86_mix+0x935>
+     ad8:	89 f1                	mov    %esi,%ecx
+     ada:	89 fb                	mov    %edi,%ebx
+     adc:	f7 d9                	neg    %ecx
+     ade:	83 d3 00             	adc    $0x0,%ebx
+     ae1:	89 c8                	mov    %ecx,%eax
+     ae3:	f7 db                	neg    %ebx
+     ae5:	89 8c 24 98 00 00 00 	mov    %ecx,0x98(%esp)
+     aec:	89 da                	mov    %ebx,%edx
+     aee:	89 d0                	mov    %edx,%eax
+     af0:	89 c2                	mov    %eax,%edx
+     af2:	89 84 24 94 00 00 00 	mov    %eax,0x94(%esp)
+     af9:	c1 fa 1f             	sar    $0x1f,%edx
+     afc:	8b 54 24 64          	mov    0x64(%esp),%edx
+     b00:	c7 84 24 bc 00 00 00 	movl   $0x8,0xbc(%esp)
+     b07:	08 00 00 00 
+     b0b:	8b 44 24 24          	mov    0x24(%esp),%eax
+     b0f:	8b 5c 24 1c          	mov    0x1c(%esp),%ebx
+     b13:	89 84 24 b8 00 00 00 	mov    %eax,0xb8(%esp)
+     b1a:	8b 82 74 00 00 00    	mov    0x74(%edx),%eax
+     b20:	d9 e8                	fld1   
+     b22:	89 84 24 ac 00 00 00 	mov    %eax,0xac(%esp)
+     b29:	8b 82 70 00 00 00    	mov    0x70(%edx),%eax
+     b2f:	89 9c 24 9c 00 00 00 	mov    %ebx,0x9c(%esp)
+     b36:	89 84 24 a8 00 00 00 	mov    %eax,0xa8(%esp)
+     b3d:	8b 82 78 00 00 00    	mov    0x78(%edx),%eax
+     b43:	89 84 24 b0 00 00 00 	mov    %eax,0xb0(%esp)
+     b4a:	8b 82 7c 00 00 00    	mov    0x7c(%edx),%eax
+     b50:	89 84 24 b4 00 00 00 	mov    %eax,0xb4(%esp)
+     b57:	d8 9c 24 a8 00 00 00 	fcomps 0xa8(%esp)
+     b5e:	df e0                	fnstsw %ax
+     b60:	9e                   	sahf   
+     b61:	75 1d                	jne    b80 <kb_x86_mix+0x3a0>
+     b63:	d9 ee                	fldz   
+     b65:	d8 9c 24 ac 00 00 00 	fcomps 0xac(%esp)
+     b6c:	df e0                	fnstsw %ax
+     b6e:	9e                   	sahf   
+     b6f:	75 0f                	jne    b80 <kb_x86_mix+0x3a0>
+     b71:	c7 84 24 bc 00 00 00 	movl   $0x0,0xbc(%esp)
+     b78:	00 00 00 00 
+     b7c:	8d 74 26 00          	lea    0x0(%esi),%esi
+     b80:	8b 84 24 b8 00 00 00 	mov    0xb8(%esp),%eax
+     b87:	85 c0                	test   %eax,%eax
+     b89:	74 08                	je     b93 <kb_x86_mix+0x3b3>
+     b8b:	83 8c 24 bc 00 00 00 	orl    $0x10,0xbc(%esp)
+     b92:	10 
+     b93:	8b 6c 24 28          	mov    0x28(%esp),%ebp
+     b97:	85 ed                	test   %ebp,%ebp
+     b99:	74 08                	je     ba3 <kb_x86_mix+0x3c3>
+     b9b:	83 8c 24 bc 00 00 00 	orl    $0x20,0xbc(%esp)
+     ba2:	20 
+     ba3:	8b 54 24 64          	mov    0x64(%esp),%edx
+     ba7:	8b aa 3c 00 00 00    	mov    0x3c(%edx),%ebp
+     bad:	83 fd 01             	cmp    $0x1,%ebp
+     bb0:	0f 84 b3 03 00 00    	je     f69 <kb_x86_mix+0x789>
+     bb6:	83 fd ff             	cmp    $0xffffffff,%ebp
+     bb9:	0f 84 88 05 00 00    	je     1147 <kb_x86_mix+0x967>
+     bbf:	8b 54 24 0c          	mov    0xc(%esp),%edx
+     bc3:	89 f9                	mov    %edi,%ecx
+     bc5:	8b 44 24 2c          	mov    0x2c(%esp),%eax
+     bc9:	8b 6a 08             	mov    0x8(%edx),%ebp
+     bcc:	0f af c8             	imul   %eax,%ecx
+     bcf:	8b 5c 24 3c          	mov    0x3c(%esp),%ebx
+     bd3:	f7 e6                	mul    %esi
+     bd5:	8d 14 11             	lea    (%ecx,%edx,1),%edx
+     bd8:	8b 4c 24 38          	mov    0x38(%esp),%ecx
+     bdc:	29 c1                	sub    %eax,%ecx
+     bde:	19 d3                	sbb    %edx,%ebx
+     be0:	89 c8                	mov    %ecx,%eax
+     be2:	89 da                	mov    %ebx,%edx
+     be4:	8d 4d 03             	lea    0x3(%ebp),%ecx
+     be7:	89 d0                	mov    %edx,%eax
+     be9:	89 c2                	mov    %eax,%edx
+     beb:	c1 fa 1f             	sar    $0x1f,%edx
+     bee:	39 c1                	cmp    %eax,%ecx
+     bf0:	0f 8e 6a 03 00 00    	jle    f60 <kb_x86_mix+0x780>
+     bf6:	8b 4c 24 38          	mov    0x38(%esp),%ecx
+     bfa:	89 e8                	mov    %ebp,%eax
+     bfc:	8b 5c 24 3c          	mov    0x3c(%esp),%ebx
+     c00:	83 c0 03             	add    $0x3,%eax
+     c03:	57                   	push   %edi
+     c04:	ba 00 00 00 00       	mov    $0x0,%edx
+     c09:	83 d2 00             	adc    $0x0,%edx
+     c0c:	89 c2                	mov    %eax,%edx
+     c0e:	b8 00 00 00 00       	mov    $0x0,%eax
+     c13:	29 c1                	sub    %eax,%ecx
+     c15:	19 d3                	sbb    %edx,%ebx
+     c17:	56                   	push   %esi
+     c18:	53                   	push   %ebx
+     c19:	51                   	push   %ecx
+     c1a:	e8 fc ff ff ff       	call   c1b <kb_x86_mix+0x43b>
+     c1f:	8d 68 01             	lea    0x1(%eax),%ebp
+     c22:	83 c4 10             	add    $0x10,%esp
+     c25:	85 ed                	test   %ebp,%ebp
+     c27:	0f 8e 50 09 00 00    	jle    157d <kb_x86_mix+0xd9d>
+     c2d:	89 ea                	mov    %ebp,%edx
+     c2f:	89 fb                	mov    %edi,%ebx
+     c31:	c1 fa 1f             	sar    $0x1f,%edx
+     c34:	89 e8                	mov    %ebp,%eax
+     c36:	89 d1                	mov    %edx,%ecx
+     c38:	0f af dd             	imul   %ebp,%ebx
+     c3b:	0f af ce             	imul   %esi,%ecx
+     c3e:	01 d9                	add    %ebx,%ecx
+     c40:	8b 5c 24 3c          	mov    0x3c(%esp),%ebx
+     c44:	f7 e6                	mul    %esi
+     c46:	8d 14 11             	lea    (%ecx,%edx,1),%edx
+     c49:	8b 4c 24 38          	mov    0x38(%esp),%ecx
+     c4d:	29 c1                	sub    %eax,%ecx
+     c4f:	19 d3                	sbb    %edx,%ebx
+     c51:	8b 54 24 0c          	mov    0xc(%esp),%edx
+     c55:	8b 42 08             	mov    0x8(%edx),%eax
+     c58:	ba 00 00 00 00       	mov    $0x0,%edx
+     c5d:	83 c0 03             	add    $0x3,%eax
+     c60:	89 c2                	mov    %eax,%edx
+     c62:	b8 00 00 00 00       	mov    $0x0,%eax
+     c67:	39 d3                	cmp    %edx,%ebx
+     c69:	7c 3a                	jl     ca5 <kb_x86_mix+0x4c5>
+     c6b:	7f 04                	jg     c71 <kb_x86_mix+0x491>
+     c6d:	39 c1                	cmp    %eax,%ecx
+     c6f:	72 34                	jb     ca5 <kb_x86_mix+0x4c5>
+     c71:	50                   	push   %eax
+     c72:	68 40 01 00 00       	push   $0x140
+     c77:	68 38 00 00 00       	push   $0x38
+     c7c:	68 9d 02 00 00       	push   $0x29d
+     c81:	68 12 00 00 00       	push   $0x12
+     c86:	68 00 00 00 00       	push   $0x0
+     c8b:	6a 04                	push   $0x4
+     c8d:	6a 00                	push   $0x0
+     c8f:	e8 fc ff ff ff       	call   c90 <kb_x86_mix+0x4b0>
+     c94:	83 c4 20             	add    $0x20,%esp
+     c97:	8b 4c 24 64          	mov    0x64(%esp),%ecx
+     c9b:	8b 89 20 00 00 00    	mov    0x20(%ecx),%ecx
+     ca1:	89 4c 24 0c          	mov    %ecx,0xc(%esp)
+     ca5:	8d 45 ff             	lea    0xffffffff(%ebp),%eax
+     ca8:	89 fb                	mov    %edi,%ebx
+     caa:	89 c2                	mov    %eax,%edx
+     cac:	c1 fa 1f             	sar    $0x1f,%edx
+     caf:	89 d1                	mov    %edx,%ecx
+     cb1:	0f af d8             	imul   %eax,%ebx
+     cb4:	0f af ce             	imul   %esi,%ecx
+     cb7:	01 d9                	add    %ebx,%ecx
+     cb9:	8b 5c 24 3c          	mov    0x3c(%esp),%ebx
+     cbd:	f7 e6                	mul    %esi
+     cbf:	8b 74 24 0c          	mov    0xc(%esp),%esi
+     cc3:	8d 14 11             	lea    (%ecx,%edx,1),%edx
+     cc6:	8b 4c 24 38          	mov    0x38(%esp),%ecx
+     cca:	29 c1                	sub    %eax,%ecx
+     ccc:	8b 46 08             	mov    0x8(%esi),%eax
+     ccf:	19 d3                	sbb    %edx,%ebx
+     cd1:	ba 00 00 00 00       	mov    $0x0,%edx
+     cd6:	83 c0 03             	add    $0x3,%eax
+     cd9:	89 c2                	mov    %eax,%edx
+     cdb:	b8 00 00 00 00       	mov    $0x0,%eax
+     ce0:	39 d3                	cmp    %edx,%ebx
+     ce2:	7f 3a                	jg     d1e <kb_x86_mix+0x53e>
+     ce4:	7c 04                	jl     cea <kb_x86_mix+0x50a>
+     ce6:	39 c1                	cmp    %eax,%ecx
+     ce8:	73 34                	jae    d1e <kb_x86_mix+0x53e>
+     cea:	50                   	push   %eax
+     ceb:	68 ac 01 00 00       	push   $0x1ac
+     cf0:	68 38 00 00 00       	push   $0x38
+     cf5:	68 9e 02 00 00       	push   $0x29e
+     cfa:	68 12 00 00 00       	push   $0x12
+     cff:	68 00 00 00 00       	push   $0x0
+     d04:	6a 04                	push   $0x4
+     d06:	6a 00                	push   $0x0
+     d08:	e8 fc ff ff ff       	call   d09 <kb_x86_mix+0x529>
+     d0d:	83 c4 20             	add    $0x20,%esp
+     d10:	8b 7c 24 64          	mov    0x64(%esp),%edi
+     d14:	8b bf 20 00 00 00    	mov    0x20(%edi),%edi
+     d1a:	89 7c 24 0c          	mov    %edi,0xc(%esp)
+     d1e:	8b 54 24 2c          	mov    0x2c(%esp),%edx
+     d22:	39 ea                	cmp    %ebp,%edx
+     d24:	76 02                	jbe    d28 <kb_x86_mix+0x548>
+     d26:	89 ea                	mov    %ebp,%edx
+     d28:	8b 44 24 10          	mov    0x10(%esp),%eax
+     d2c:	89 94 24 a0 00 00 00 	mov    %edx,0xa0(%esp)
+     d33:	8b 4c 24 0c          	mov    0xc(%esp),%ecx
+     d37:	89 d6                	mov    %edx,%esi
+     d39:	01 c0                	add    %eax,%eax
+     d3b:	03 41 10             	add    0x10(%ecx),%eax
+     d3e:	83 8c 24 bc 00 00 00 	orl    $0x4,0xbc(%esp)
+     d45:	04 
+     d46:	89 84 24 8c 00 00 00 	mov    %eax,0x8c(%esp)
+     d4d:	83 ec 0c             	sub    $0xc,%esp
+     d50:	8d 9c 24 88 00 00 00 	lea    0x88(%esp),%ebx
+     d57:	53                   	push   %ebx
+     d58:	e8 fc ff ff ff       	call   d59 <kb_x86_mix+0x579>
+     d5d:	8b 7c 24 74          	mov    0x74(%esp),%edi
+     d61:	8b 9c 24 8c 00 00 00 	mov    0x8c(%esp),%ebx
+     d68:	8b 8c 24 90 00 00 00 	mov    0x90(%esp),%ecx
+     d6f:	83 c4 10             	add    $0x10,%esp
+     d72:	89 9f 44 00 00 00    	mov    %ebx,0x44(%edi)
+     d78:	89 8f 48 00 00 00    	mov    %ecx,0x48(%edi)
+     d7e:	8b 44 24 64          	mov    0x64(%esp),%eax
+     d82:	8b 90 20 00 00 00    	mov    0x20(%eax),%edx
+     d88:	8b 84 24 8c 00 00 00 	mov    0x8c(%esp),%eax
+     d8f:	2b 42 10             	sub    0x10(%edx),%eax
+     d92:	8b 54 24 64          	mov    0x64(%esp),%edx
+     d96:	d1 f8                	sar    %eax
+     d98:	89 8a 48 00 00 00    	mov    %ecx,0x48(%edx)
+     d9e:	89 82 60 00 00 00    	mov    %eax,0x60(%edx)
+     da4:	8b 84 24 90 00 00 00 	mov    0x90(%esp),%eax
+     dab:	8d 0c f5 00 00 00 00 	lea    0x0(,%esi,8),%ecx
+     db2:	89 82 64 00 00 00    	mov    %eax,0x64(%edx)
+     db8:	8b 84 24 b0 00 00 00 	mov    0xb0(%esp),%eax
+     dbf:	89 9a 44 00 00 00    	mov    %ebx,0x44(%edx)
+     dc5:	89 82 78 00 00 00    	mov    %eax,0x78(%edx)
+     dcb:	8b 84 24 b4 00 00 00 	mov    0xb4(%esp),%eax
+     dd2:	89 82 7c 00 00 00    	mov    %eax,0x7c(%edx)
+     dd8:	89 f2                	mov    %esi,%edx
+     dda:	8b 7c 24 28          	mov    0x28(%esp),%edi
+     dde:	85 ff                	test   %edi,%edi
+     de0:	74 41                	je     e23 <kb_x86_mix+0x643>
+     de2:	8b 5c 24 64          	mov    0x64(%esp),%ebx
+     de6:	8b 83 4c 00 00 00    	mov    0x4c(%ebx),%eax
+     dec:	29 d0                	sub    %edx,%eax
+     dee:	85 c0                	test   %eax,%eax
+     df0:	89 83 4c 00 00 00    	mov    %eax,0x4c(%ebx)
+     df6:	75 2b                	jne    e23 <kb_x86_mix+0x643>
+     df8:	8b 83 58 00 00 00    	mov    0x58(%ebx),%eax
+     dfe:	89 83 44 00 00 00    	mov    %eax,0x44(%ebx)
+     e04:	8b 83 5c 00 00 00    	mov    0x5c(%ebx),%eax
+     e0a:	89 83 48 00 00 00    	mov    %eax,0x48(%ebx)
+     e10:	8b 83 30 00 00 00    	mov    0x30(%ebx),%eax
+     e16:	a8 20                	test   $0x20,%al
+     e18:	74 09                	je     e23 <kb_x86_mix+0x643>
+     e1a:	83 e0 10             	and    $0x10,%eax
+     e1d:	89 83 30 00 00 00    	mov    %eax,0x30(%ebx)
+     e23:	8b 74 24 24          	mov    0x24(%esp),%esi
+     e27:	29 54 24 20          	sub    %edx,0x20(%esp)
+     e2b:	85 f6                	test   %esi,%esi
+     e2d:	74 0b                	je     e3a <kb_x86_mix+0x65a>
+     e2f:	8b 74 24 24          	mov    0x24(%esp),%esi
+     e33:	8d 34 56             	lea    (%esi,%edx,2),%esi
+     e36:	89 74 24 24          	mov    %esi,0x24(%esp)
+     e3a:	8b 5c 24 20          	mov    0x20(%esp),%ebx
+     e3e:	85 db                	test   %ebx,%ebx
+     e40:	0f 84 9e 04 00 00    	je     12e4 <kb_x86_mix+0xb04>
+     e46:	8b 7c 24 64          	mov    0x64(%esp),%edi
+     e4a:	8b 9f 30 00 00 00    	mov    0x30(%edi),%ebx
+     e50:	f6 c3 04             	test   $0x4,%bl
+     e53:	0f 84 8b 04 00 00    	je     12e4 <kb_x86_mix+0xb04>
+     e59:	01 4c 24 1c          	add    %ecx,0x1c(%esp)
+     e5d:	8b 7c 24 64          	mov    0x64(%esp),%edi
+     e61:	b8 00 00 00 00       	mov    $0x0,%eax
+     e66:	8b 97 4c 00 00 00    	mov    0x4c(%edi),%edx
+     e6c:	85 d2                	test   %edx,%edx
+     e6e:	0f 95 c0             	setne  %al
+     e71:	85 c0                	test   %eax,%eax
+     e73:	89 44 24 28          	mov    %eax,0x28(%esp)
+     e77:	0f 85 19 fb ff ff    	jne    996 <kb_x86_mix+0x1b6>
+     e7d:	8b 44 24 20          	mov    0x20(%esp),%eax
+     e81:	89 44 24 2c          	mov    %eax,0x2c(%esp)
+     e85:	8b 74 24 64          	mov    0x64(%esp),%esi
+     e89:	8b 8e 40 00 00 00    	mov    0x40(%esi),%ecx
+     e8f:	85 c9                	test   %ecx,%ecx
+     e91:	0f 84 29 fb ff ff    	je     9c0 <kb_x86_mix+0x1e0>
+     e97:	c7 44 24 48 00 00 00 	movl   $0x0,0x48(%esp)
+     e9e:	00 
+     e9f:	c7 44 24 4c 00 00 00 	movl   $0x0,0x4c(%esp)
+     ea6:	00 
+     ea7:	e9 36 fb ff ff       	jmp    9e2 <kb_x86_mix+0x202>
+     eac:	8b 54 24 64          	mov    0x64(%esp),%edx
+     eb0:	8b 82 50 00 00 00    	mov    0x50(%edx),%eax
+     eb6:	89 d1                	mov    %edx,%ecx
+     eb8:	89 84 24 84 00 00 00 	mov    %eax,0x84(%esp)
+     ebf:	8b 82 54 00 00 00    	mov    0x54(%edx),%eax
+     ec5:	89 84 24 88 00 00 00 	mov    %eax,0x88(%esp)
+     ecc:	e9 ed fb ff ff       	jmp    abe <kb_x86_mix+0x2de>
+     ed1:	8b 44 24 4c          	mov    0x4c(%esp),%eax
+     ed5:	85 c0                	test   %eax,%eax
+     ed7:	0f 84 57 02 00 00    	je     1134 <kb_x86_mix+0x954>
+     edd:	8b 44 24 0c          	mov    0xc(%esp),%eax
+     ee1:	8b 40 0c             	mov    0xc(%eax),%eax
+     ee4:	89 44 24 34          	mov    %eax,0x34(%esp)
+     ee8:	e9 93 fb ff ff       	jmp    a80 <kb_x86_mix+0x2a0>
+     eed:	8b 5c 24 24          	mov    0x24(%esp),%ebx
+     ef1:	85 db                	test   %ebx,%ebx
+     ef3:	74 13                	je     f08 <kb_x86_mix+0x728>
+     ef5:	51                   	push   %ecx
+     ef6:	ff 74 24 34          	pushl  0x34(%esp)
+     efa:	6a 00                	push   $0x0
+     efc:	ff 74 24 30          	pushl  0x30(%esp)
+     f00:	e8 fc ff ff ff       	call   f01 <kb_x86_mix+0x721>
+     f05:	83 c4 10             	add    $0x10,%esp
+     f08:	ff 44 24 18          	incl   0x18(%esp)
+     f0c:	83 44 24 64 60       	addl   $0x60,0x64(%esp)
+     f11:	83 7c 24 18 40       	cmpl   $0x40,0x18(%esp)
+     f16:	0f 85 26 f9 ff ff    	jne    842 <kb_x86_mix+0x62>
+     f1c:	ff 35 60 00 00 00    	pushl  0x60
+     f22:	ff b4 24 e8 00 00 00 	pushl  0xe8(%esp)
+     f29:	ff b4 24 e8 00 00 00 	pushl  0xe8(%esp)
+     f30:	ff 35 04 00 00 00    	pushl  0x4
+     f36:	e8 fc ff ff ff       	call   f37 <kb_x86_mix+0x757>
+     f3b:	8b 9c 24 f4 00 00 00 	mov    0xf4(%esp),%ebx
+     f42:	a3 10 00 00 00       	mov    %eax,0x10
+     f47:	8b b4 24 f0 00 00 00 	mov    0xf0(%esp),%esi
+     f4e:	81 c4 dc 00 00 00    	add    $0xdc,%esp
+     f54:	8d 04 9e             	lea    (%esi,%ebx,4),%eax
+     f57:	5b                   	pop    %ebx
+     f58:	5e                   	pop    %esi
+     f59:	5f                   	pop    %edi
+     f5a:	5d                   	pop    %ebp
+     f5b:	c3                   	ret    
+     f5c:	8d 74 26 00          	lea    0x0(%esi),%esi
+     f60:	8b 54 24 2c          	mov    0x2c(%esp),%edx
+     f64:	e9 bf fd ff ff       	jmp    d28 <kb_x86_mix+0x548>
+     f69:	8b 5c 24 34          	mov    0x34(%esp),%ebx
+     f6d:	83 eb 03             	sub    $0x3,%ebx
+     f70:	39 5c 24 10          	cmp    %ebx,0x10(%esp)
+     f74:	0f 8d e1 01 00 00    	jge    115b <kb_x86_mix+0x97b>
+     f7a:	8b 44 24 2c          	mov    0x2c(%esp),%eax
+     f7e:	89 f9                	mov    %edi,%ecx
+     f80:	0f af c8             	imul   %eax,%ecx
+     f83:	f7 e6                	mul    %esi
+     f85:	03 44 24 38          	add    0x38(%esp),%eax
+     f89:	8d 14 11             	lea    (%ecx,%edx,1),%edx
+     f8c:	13 54 24 3c          	adc    0x3c(%esp),%edx
+     f90:	89 d0                	mov    %edx,%eax
+     f92:	ba 00 00 00 00       	mov    $0x0,%edx
+     f97:	39 c3                	cmp    %eax,%ebx
+     f99:	0f 87 85 03 00 00    	ja     1324 <kb_x86_mix+0xb44>
+     f9f:	8b 44 24 34          	mov    0x34(%esp),%eax
+     fa3:	89 c2                	mov    %eax,%edx
+     fa5:	c1 fa 1f             	sar    $0x1f,%edx
+     fa8:	89 c2                	mov    %eax,%edx
+     faa:	b8 00 00 00 00       	mov    $0x0,%eax
+     faf:	89 44 24 58          	mov    %eax,0x58(%esp)
+     fb3:	89 f0                	mov    %esi,%eax
+     fb5:	89 54 24 5c          	mov    %edx,0x5c(%esp)
+     fb9:	83 c0 ff             	add    $0xffffffff,%eax
+     fbc:	89 fa                	mov    %edi,%edx
+     fbe:	83 d2 fc             	adc    $0xfffffffc,%edx
+     fc1:	2b 44 24 38          	sub    0x38(%esp),%eax
+     fc5:	1b 54 24 3c          	sbb    0x3c(%esp),%edx
+     fc9:	03 44 24 58          	add    0x58(%esp),%eax
+     fcd:	13 54 24 5c          	adc    0x5c(%esp),%edx
+     fd1:	57                   	push   %edi
+     fd2:	56                   	push   %esi
+     fd3:	52                   	push   %edx
+     fd4:	50                   	push   %eax
+     fd5:	e8 fc ff ff ff       	call   fd6 <kb_x86_mix+0x7f6>
+     fda:	83 c4 10             	add    $0x10,%esp
+     fdd:	85 c0                	test   %eax,%eax
+     fdf:	89 c5                	mov    %eax,%ebp
+     fe1:	0f 8e fb 06 00 00    	jle    16e2 <kb_x86_mix+0xf02>
+     fe7:	8b 54 24 58          	mov    0x58(%esp),%edx
+     feb:	89 fb                	mov    %edi,%ebx
+     fed:	8b 4c 24 5c          	mov    0x5c(%esp),%ecx
+     ff1:	89 e8                	mov    %ebp,%eax
+     ff3:	83 ea 00             	sub    $0x0,%edx
+     ff6:	89 54 24 50          	mov    %edx,0x50(%esp)
+     ffa:	89 ea                	mov    %ebp,%edx
+     ffc:	83 d9 03             	sbb    $0x3,%ecx
+     fff:	c1 fa 1f             	sar    $0x1f,%edx
+    1002:	89 4c 24 54          	mov    %ecx,0x54(%esp)
+    1006:	89 d1                	mov    %edx,%ecx
+    1008:	0f af ce             	imul   %esi,%ecx
+    100b:	0f af dd             	imul   %ebp,%ebx
+    100e:	01 d9                	add    %ebx,%ecx
+    1010:	f7 e6                	mul    %esi
+    1012:	03 44 24 38          	add    0x38(%esp),%eax
+    1016:	8d 14 11             	lea    (%ecx,%edx,1),%edx
+    1019:	13 54 24 3c          	adc    0x3c(%esp),%edx
+    101d:	3b 54 24 54          	cmp    0x54(%esp),%edx
+    1021:	77 2e                	ja     1051 <kb_x86_mix+0x871>
+    1023:	72 06                	jb     102b <kb_x86_mix+0x84b>
+    1025:	3b 44 24 50          	cmp    0x50(%esp),%eax
+    1029:	73 26                	jae    1051 <kb_x86_mix+0x871>
+    102b:	50                   	push   %eax
+    102c:	68 98 00 00 00       	push   $0x98
+    1031:	68 38 00 00 00       	push   $0x38
+    1036:	68 89 02 00 00       	push   $0x289
+    103b:	68 12 00 00 00       	push   $0x12
+    1040:	68 00 00 00 00       	push   $0x0
+    1045:	6a 04                	push   $0x4
+    1047:	6a 00                	push   $0x0
+    1049:	e8 fc ff ff ff       	call   104a <kb_x86_mix+0x86a>
+    104e:	83 c4 20             	add    $0x20,%esp
+    1051:	8d 45 ff             	lea    0xffffffff(%ebp),%eax
+    1054:	89 fb                	mov    %edi,%ebx
+    1056:	89 c2                	mov    %eax,%edx
+    1058:	c1 fa 1f             	sar    $0x1f,%edx
+    105b:	89 d1                	mov    %edx,%ecx
+    105d:	0f af d8             	imul   %eax,%ebx
+    1060:	0f af ce             	imul   %esi,%ecx
+    1063:	01 d9                	add    %ebx,%ecx
+    1065:	f7 e6                	mul    %esi
+    1067:	03 44 24 38          	add    0x38(%esp),%eax
+    106b:	8d 14 11             	lea    (%ecx,%edx,1),%edx
+    106e:	13 54 24 3c          	adc    0x3c(%esp),%edx
+    1072:	39 54 24 54          	cmp    %edx,0x54(%esp)
+    1076:	77 2e                	ja     10a6 <kb_x86_mix+0x8c6>
+    1078:	72 06                	jb     1080 <kb_x86_mix+0x8a0>
+    107a:	39 44 24 50          	cmp    %eax,0x50(%esp)
+    107e:	77 26                	ja     10a6 <kb_x86_mix+0x8c6>
+    1080:	50                   	push   %eax
+    1081:	68 e8 00 00 00       	push   $0xe8
+    1086:	68 38 00 00 00       	push   $0x38
+    108b:	68 8a 02 00 00       	push   $0x28a
+    1090:	68 12 00 00 00       	push   $0x12
+    1095:	68 00 00 00 00       	push   $0x0
+    109a:	6a 04                	push   $0x4
+    109c:	6a 00                	push   $0x0
+    109e:	e8 fc ff ff ff       	call   109f <kb_x86_mix+0x8bf>
+    10a3:	83 c4 20             	add    $0x20,%esp
+    10a6:	3b 6c 24 2c          	cmp    0x2c(%esp),%ebp
+    10aa:	89 ea                	mov    %ebp,%edx
+    10ac:	0f 86 98 04 00 00    	jbe    154a <kb_x86_mix+0xd6a>
+    10b2:	8b 4c 24 64          	mov    0x64(%esp),%ecx
+    10b6:	8b 54 24 2c          	mov    0x2c(%esp),%edx
+    10ba:	8b 89 20 00 00 00    	mov    0x20(%ecx),%ecx
+    10c0:	89 4c 24 0c          	mov    %ecx,0xc(%esp)
+    10c4:	89 ce                	mov    %ecx,%esi
+    10c6:	8b 44 24 10          	mov    0x10(%esp),%eax
+    10ca:	89 94 24 a0 00 00 00 	mov    %edx,0xa0(%esp)
+    10d1:	01 c0                	add    %eax,%eax
+    10d3:	03 46 10             	add    0x10(%esi),%eax
+    10d6:	89 d6                	mov    %edx,%esi
+    10d8:	89 84 24 8c 00 00 00 	mov    %eax,0x8c(%esp)
+    10df:	83 ec 0c             	sub    $0xc,%esp
+    10e2:	8d bc 24 88 00 00 00 	lea    0x88(%esp),%edi
+    10e9:	57                   	push   %edi
+    10ea:	e8 fc ff ff ff       	call   10eb <kb_x86_mix+0x90b>
+    10ef:	8b 44 24 74          	mov    0x74(%esp),%eax
+    10f3:	8b 9c 24 8c 00 00 00 	mov    0x8c(%esp),%ebx
+    10fa:	8b 8c 24 90 00 00 00 	mov    0x90(%esp),%ecx
+    1101:	83 c4 10             	add    $0x10,%esp
+    1104:	89 98 44 00 00 00    	mov    %ebx,0x44(%eax)
+    110a:	89 88 48 00 00 00    	mov    %ecx,0x48(%eax)
+    1110:	e9 69 fc ff ff       	jmp    d7e <kb_x86_mix+0x59e>
+    1115:	8b 81 68 00 00 00    	mov    0x68(%ecx),%eax
+    111b:	89 84 24 94 00 00 00 	mov    %eax,0x94(%esp)
+    1122:	8b 81 6c 00 00 00    	mov    0x6c(%ecx),%eax
+    1128:	89 84 24 98 00 00 00 	mov    %eax,0x98(%esp)
+    112f:	e9 c8 f9 ff ff       	jmp    afc <kb_x86_mix+0x31c>
+    1134:	8b 54 24 64          	mov    0x64(%esp),%edx
+    1138:	8b 92 2c 00 00 00    	mov    0x2c(%edx),%edx
+    113e:	89 54 24 34          	mov    %edx,0x34(%esp)
+    1142:	e9 39 f9 ff ff       	jmp    a80 <kb_x86_mix+0x2a0>
+    1147:	8b 54 24 0c          	mov    0xc(%esp),%edx
+    114b:	8b 42 08             	mov    0x8(%edx),%eax
+    114e:	83 c0 03             	add    $0x3,%eax
+    1151:	39 44 24 10          	cmp    %eax,0x10(%esp)
+    1155:	0f 8d 64 fa ff ff    	jge    bbf <kb_x86_mix+0x3df>
+    115b:	8b 74 24 48          	mov    0x48(%esp),%esi
+    115f:	85 f6                	test   %esi,%esi
+    1161:	0f 84 d9 00 00 00    	je     1240 <kb_x86_mix+0xa60>
+    1167:	8b 74 24 64          	mov    0x64(%esp),%esi
+    116b:	bb 00 00 00 00       	mov    $0x0,%ebx
+    1170:	8b 7c 24 0c          	mov    0xc(%esp),%edi
+    1174:	ba 00 00 00 00       	mov    $0x0,%edx
+    1179:	8b 8e 60 00 00 00    	mov    0x60(%esi),%ecx
+    117f:	8b 86 64 00 00 00    	mov    0x64(%esi),%eax
+    1185:	89 ee                	mov    %ebp,%esi
+    1187:	89 cb                	mov    %ecx,%ebx
+    1189:	b9 00 00 00 00       	mov    $0x0,%ecx
+    118e:	01 c1                	add    %eax,%ecx
+    1190:	8b 47 0c             	mov    0xc(%edi),%eax
+    1193:	11 d3                	adc    %edx,%ebx
+    1195:	ba 00 00 00 00       	mov    $0x0,%edx
+    119a:	89 c2                	mov    %eax,%edx
+    119c:	b8 00 00 00 00       	mov    $0x0,%eax
+    11a1:	83 c0 ff             	add    $0xffffffff,%eax
+    11a4:	bf 00 00 00 00       	mov    $0x0,%edi
+    11a9:	83 d2 ff             	adc    $0xffffffff,%edx
+    11ac:	83 fe 01             	cmp    $0x1,%esi
+    11af:	0f 84 06 01 00 00    	je     12bb <kb_x86_mix+0xadb>
+    11b5:	83 fe ff             	cmp    $0xffffffff,%esi
+    11b8:	0f 85 4f 05 00 00    	jne    170d <kb_x86_mix+0xf2d>
+    11be:	3b 5c 24 44          	cmp    0x44(%esp),%ebx
+    11c2:	0f 8c c8 00 00 00    	jl     1290 <kb_x86_mix+0xab0>
+    11c8:	7f 0a                	jg     11d4 <kb_x86_mix+0x9f4>
+    11ca:	3b 4c 24 40          	cmp    0x40(%esp),%ecx
+    11ce:	0f 82 bc 00 00 00    	jb     1290 <kb_x86_mix+0xab0>
+    11d4:	8b 44 24 64          	mov    0x64(%esp),%eax
+    11d8:	c7 80 3c 00 00 00 ff 	movl   $0xffffffff,0x3c(%eax)
+    11df:	ff ff ff 
+    11e2:	85 ff                	test   %edi,%edi
+    11e4:	0f 84 47 01 00 00    	je     1331 <kb_x86_mix+0xb51>
+    11ea:	8b 54 24 64          	mov    0x64(%esp),%edx
+    11ee:	89 8a 64 00 00 00    	mov    %ecx,0x64(%edx)
+    11f4:	89 d9                	mov    %ebx,%ecx
+    11f6:	89 cb                	mov    %ecx,%ebx
+    11f8:	89 8a 60 00 00 00    	mov    %ecx,0x60(%edx)
+    11fe:	c1 fb 1f             	sar    $0x1f,%ebx
+    1201:	ba 00 00 00 00       	mov    $0x0,%edx
+    1206:	b9 00 00 00 00       	mov    $0x0,%ecx
+    120b:	e9 ca fb ff ff       	jmp    dda <kb_x86_mix+0x5fa>
+    1210:	8b b4 24 e8 00 00 00 	mov    0xe8(%esp),%esi
+    1217:	8b 7c 24 14          	mov    0x14(%esp),%edi
+    121b:	03 3c 96             	add    (%esi,%edx,4),%edi
+    121e:	89 7c 24 24          	mov    %edi,0x24(%esp)
+    1222:	e9 68 f6 ff ff       	jmp    88f <kb_x86_mix+0xaf>
+    1227:	c7 44 24 48 00 00 00 	movl   $0x0,0x48(%esp)
+    122e:	00 
+    122f:	c7 44 24 4c 01 00 00 	movl   $0x1,0x4c(%esp)
+    1236:	00 
+    1237:	e9 a6 f7 ff ff       	jmp    9e2 <kb_x86_mix+0x202>
+    123c:	8d 74 26 00          	lea    0x0(%esi),%esi
+    1240:	8b 5c 24 4c          	mov    0x4c(%esp),%ebx
+    1244:	85 db                	test   %ebx,%ebx
+    1246:	0f 84 50 02 00 00    	je     149c <kb_x86_mix+0xcbc>
+    124c:	8b 4c 24 0c          	mov    0xc(%esp),%ecx
+    1250:	8b 5c 24 0c          	mov    0xc(%esp),%ebx
+    1254:	8b 41 0c             	mov    0xc(%ecx),%eax
+    1257:	8b 54 24 10          	mov    0x10(%esp),%edx
+    125b:	89 c1                	mov    %eax,%ecx
+    125d:	2b 4b 08             	sub    0x8(%ebx),%ecx
+    1260:	39 d0                	cmp    %edx,%eax
+    1262:	0f 87 c9 00 00 00    	ja     1331 <kb_x86_mix+0xb51>
+    1268:	89 c8                	mov    %ecx,%eax
+    126a:	8b 74 24 64          	mov    0x64(%esp),%esi
+    126e:	8b 7c 24 0c          	mov    0xc(%esp),%edi
+    1272:	f7 d8                	neg    %eax
+    1274:	01 c2                	add    %eax,%edx
+    1276:	89 96 60 00 00 00    	mov    %edx,0x60(%esi)
+    127c:	3b 57 0c             	cmp    0xc(%edi),%edx
+    127f:	73 f3                	jae    1274 <kb_x86_mix+0xa94>
+    1281:	ba 00 00 00 00       	mov    $0x0,%edx
+    1286:	b9 00 00 00 00       	mov    $0x0,%ecx
+    128b:	e9 4a fb ff ff       	jmp    dda <kb_x86_mix+0x5fa>
+    1290:	8b 74 24 40          	mov    0x40(%esp),%esi
+    1294:	8b 7c 24 44          	mov    0x44(%esp),%edi
+    1298:	29 ce                	sub    %ecx,%esi
+    129a:	19 df                	sbb    %ebx,%edi
+    129c:	89 f1                	mov    %esi,%ecx
+    129e:	89 fb                	mov    %edi,%ebx
+    12a0:	03 4c 24 40          	add    0x40(%esp),%ecx
+    12a4:	13 5c 24 44          	adc    0x44(%esp),%ebx
+    12a8:	be 01 00 00 00       	mov    $0x1,%esi
+    12ad:	83 fe 01             	cmp    $0x1,%esi
+    12b0:	bf 01 00 00 00       	mov    $0x1,%edi
+    12b5:	0f 85 fa fe ff ff    	jne    11b5 <kb_x86_mix+0x9d5>
+    12bb:	39 d3                	cmp    %edx,%ebx
+    12bd:	0f 8c 74 02 00 00    	jl     1537 <kb_x86_mix+0xd57>
+    12c3:	7f 08                	jg     12cd <kb_x86_mix+0xaed>
+    12c5:	39 c1                	cmp    %eax,%ecx
+    12c7:	0f 82 6a 02 00 00    	jb     1537 <kb_x86_mix+0xd57>
+    12cd:	89 c6                	mov    %eax,%esi
+    12cf:	89 d7                	mov    %edx,%edi
+    12d1:	29 ce                	sub    %ecx,%esi
+    12d3:	19 df                	sbb    %ebx,%edi
+    12d5:	89 f1                	mov    %esi,%ecx
+    12d7:	89 fb                	mov    %edi,%ebx
+    12d9:	01 c1                	add    %eax,%ecx
+    12db:	11 d3                	adc    %edx,%ebx
+    12dd:	be ff ff ff ff       	mov    $0xffffffff,%esi
+    12e2:	eb c9                	jmp    12ad <kb_x86_mix+0xacd>
+    12e4:	8b 15 00 00 00 00    	mov    0x0,%edx
+    12ea:	85 d2                	test   %edx,%edx
+    12ec:	0f 84 16 fc ff ff    	je     f08 <kb_x86_mix+0x728>
+    12f2:	83 ec 0c             	sub    $0xc,%esp
+    12f5:	8b 54 24 70          	mov    0x70(%esp),%edx
+    12f9:	8b 82 20 00 00 00    	mov    0x20(%edx),%eax
+    12ff:	ff 70 14             	pushl  0x14(%eax)
+    1302:	ff 15 0c 00 00 00    	call   *0xc
+    1308:	83 c4 10             	add    $0x10,%esp
+    130b:	ff 44 24 18          	incl   0x18(%esp)
+    130f:	83 44 24 64 60       	addl   $0x60,0x64(%esp)
+    1314:	83 7c 24 18 40       	cmpl   $0x40,0x18(%esp)
+    1319:	0f 85 23 f5 ff ff    	jne    842 <kb_x86_mix+0x62>
+    131f:	e9 f8 fb ff ff       	jmp    f1c <kb_x86_mix+0x73c>
+    1324:	8b 54 24 2c          	mov    0x2c(%esp),%edx
+    1328:	8b 74 24 0c          	mov    0xc(%esp),%esi
+    132c:	e9 95 fd ff ff       	jmp    10c6 <kb_x86_mix+0x8e6>
+    1331:	8b 5c 24 0c          	mov    0xc(%esp),%ebx
+    1335:	8b 4c 24 10          	mov    0x10(%esp),%ecx
+    1339:	3b 4b 0c             	cmp    0xc(%ebx),%ecx
+    133c:	0f 83 bf 02 00 00    	jae    1601 <kb_x86_mix+0xe21>
+    1342:	8b 54 24 48          	mov    0x48(%esp),%edx
+    1346:	85 d2                	test   %edx,%edx
+    1348:	0f 84 75 01 00 00    	je     14c3 <kb_x86_mix+0xce3>
+    134e:	8b 7c 24 64          	mov    0x64(%esp),%edi
+    1352:	8b 97 3c 00 00 00    	mov    0x3c(%edi),%edx
+    1358:	83 fa ff             	cmp    $0xffffffff,%edx
+    135b:	0f 84 52 03 00 00    	je     16b3 <kb_x86_mix+0xed3>
+    1361:	8b 44 24 0c          	mov    0xc(%esp),%eax
+    1365:	8d 3c 12             	lea    (%edx,%edx,1),%edi
+    1368:	8b 4c 24 10          	mov    0x10(%esp),%ecx
+    136c:	4a                   	dec    %edx
+    136d:	8b 70 10             	mov    0x10(%eax),%esi
+    1370:	8d ac 24 c0 00 00 00 	lea    0xc0(%esp),%ebp
+    1377:	66 8b 04 4e          	mov    (%esi,%ecx,2),%ax
+    137b:	66 89 84 24 c0 00 00 	mov    %ax,0xc0(%esp)
+    1382:	00 
+    1383:	0f 84 b1 02 00 00    	je     163a <kb_x86_mix+0xe5a>
+    1389:	8b 54 24 10          	mov    0x10(%esp),%edx
+    138d:	89 e8                	mov    %ebp,%eax
+    138f:	8b 5c 24 0c          	mov    0xc(%esp),%ebx
+    1393:	4a                   	dec    %edx
+    1394:	3b 53 08             	cmp    0x8(%ebx),%edx
+    1397:	0f 8d b1 02 00 00    	jge    164e <kb_x86_mix+0xe6e>
+    139d:	8b 4c 24 10          	mov    0x10(%esp),%ecx
+    13a1:	8d 1c 38             	lea    (%eax,%edi,1),%ebx
+    13a4:	66 8b 04 4e          	mov    (%esi,%ecx,2),%ax
+    13a8:	8d 51 01             	lea    0x1(%ecx),%edx
+    13ab:	66 89 03             	mov    %ax,(%ebx)
+    13ae:	8b 44 24 0c          	mov    0xc(%esp),%eax
+    13b2:	39 50 0c             	cmp    %edx,0xc(%eax)
+    13b5:	0f 86 ad 02 00 00    	jbe    1668 <kb_x86_mix+0xe88>
+    13bb:	66 8b 04 56          	mov    (%esi,%edx,2),%ax
+    13bf:	01 fb                	add    %edi,%ebx
+    13c1:	8b 4c 24 0c          	mov    0xc(%esp),%ecx
+    13c5:	66 89 03             	mov    %ax,(%ebx)
+    13c8:	8d 42 01             	lea    0x1(%edx),%eax
+    13cb:	3b 41 0c             	cmp    0xc(%ecx),%eax
+    13ce:	72 02                	jb     13d2 <kb_x86_mix+0xbf2>
+    13d0:	89 d0                	mov    %edx,%eax
+    13d2:	66 8b 04 46          	mov    (%esi,%eax,2),%ax
+    13d6:	66 89 04 1f          	mov    %ax,(%edi,%ebx,1)
+    13da:	8b 44 24 64          	mov    0x64(%esp),%eax
+    13de:	8d 54 24 7c          	lea    0x7c(%esp),%edx
+    13e2:	c7 84 24 a0 00 00 00 	movl   $0x1,0xa0(%esp)
+    13e9:	01 00 00 00 
+    13ed:	83 b8 3c 00 00 00 01 	cmpl   $0x1,0x3c(%eax)
+    13f4:	0f 84 bc 01 00 00    	je     15b6 <kb_x86_mix+0xdd6>
+    13fa:	8d 84 24 c6 00 00 00 	lea    0xc6(%esp),%eax
+    1401:	83 8c 24 bc 00 00 00 	orl    $0x4,0xbc(%esp)
+    1408:	04 
+    1409:	89 84 24 8c 00 00 00 	mov    %eax,0x8c(%esp)
+    1410:	83 ec 0c             	sub    $0xc,%esp
+    1413:	52                   	push   %edx
+    1414:	e8 fc ff ff ff       	call   1415 <kb_x86_mix+0xc35>
+    1419:	8b 84 24 9c 00 00 00 	mov    0x9c(%esp),%eax
+    1420:	8b 4c 24 74          	mov    0x74(%esp),%ecx
+    1424:	29 e8                	sub    %ebp,%eax
+    1426:	8b 9c 24 8c 00 00 00 	mov    0x8c(%esp),%ebx
+    142d:	83 e8 06             	sub    $0x6,%eax
+    1430:	8b 74 24 74          	mov    0x74(%esp),%esi
+    1434:	d1 f8                	sar    %eax
+    1436:	89 99 44 00 00 00    	mov    %ebx,0x44(%ecx)
+    143c:	03 44 24 20          	add    0x20(%esp),%eax
+    1440:	8b 8c 24 90 00 00 00 	mov    0x90(%esp),%ecx
+    1447:	83 c4 10             	add    $0x10,%esp
+    144a:	89 8e 48 00 00 00    	mov    %ecx,0x48(%esi)
+    1450:	89 86 60 00 00 00    	mov    %eax,0x60(%esi)
+    1456:	8b 7c 24 64          	mov    0x64(%esp),%edi
+    145a:	ba 01 00 00 00       	mov    $0x1,%edx
+    145f:	8b 84 24 90 00 00 00 	mov    0x90(%esp),%eax
+    1466:	89 8f 48 00 00 00    	mov    %ecx,0x48(%edi)
+    146c:	b9 08 00 00 00       	mov    $0x8,%ecx
+    1471:	89 87 64 00 00 00    	mov    %eax,0x64(%edi)
+    1477:	8b 84 24 b0 00 00 00 	mov    0xb0(%esp),%eax
+    147e:	89 9f 44 00 00 00    	mov    %ebx,0x44(%edi)
+    1484:	89 87 78 00 00 00    	mov    %eax,0x78(%edi)
+    148a:	8b 84 24 b4 00 00 00 	mov    0xb4(%esp),%eax
+    1491:	89 87 7c 00 00 00    	mov    %eax,0x7c(%edi)
+    1497:	e9 3e f9 ff ff       	jmp    dda <kb_x86_mix+0x5fa>
+    149c:	8b 44 24 64          	mov    0x64(%esp),%eax
+    14a0:	8b 54 24 34          	mov    0x34(%esp),%edx
+    14a4:	39 90 60 00 00 00    	cmp    %edx,0x60(%eax)
+    14aa:	72 23                	jb     14cf <kb_x86_mix+0xcef>
+    14ac:	8b 54 24 2c          	mov    0x2c(%esp),%edx
+    14b0:	83 a0 30 00 00 00 10 	andl   $0x10,0x30(%eax)
+    14b7:	8d 0c d5 00 00 00 00 	lea    0x0(,%edx,8),%ecx
+    14be:	e9 17 f9 ff ff       	jmp    dda <kb_x86_mix+0x5fa>
+    14c3:	8b 44 24 4c          	mov    0x4c(%esp),%eax
+    14c7:	85 c0                	test   %eax,%eax
+    14c9:	0f 85 89 02 00 00    	jne    1758 <kb_x86_mix+0xf78>
+    14cf:	8b 4c 24 0c          	mov    0xc(%esp),%ecx
+    14d3:	8b 74 24 10          	mov    0x10(%esp),%esi
+    14d7:	8b 59 10             	mov    0x10(%ecx),%ebx
+    14da:	89 f1                	mov    %esi,%ecx
+    14dc:	41                   	inc    %ecx
+    14dd:	66 8b 04 73          	mov    (%ebx,%esi,2),%ax
+    14e1:	39 4c 24 34          	cmp    %ecx,0x34(%esp)
+    14e5:	66 89 84 24 c0 00 00 	mov    %ax,0xc0(%esp)
+    14ec:	00 
+    14ed:	7f 02                	jg     14f1 <kb_x86_mix+0xd11>
+    14ef:	89 f1                	mov    %esi,%ecx
+    14f1:	8d 51 01             	lea    0x1(%ecx),%edx
+    14f4:	66 8b 04 4b          	mov    (%ebx,%ecx,2),%ax
+    14f8:	39 54 24 34          	cmp    %edx,0x34(%esp)
+    14fc:	66 89 84 24 c2 00 00 	mov    %ax,0xc2(%esp)
+    1503:	00 
+    1504:	7f 02                	jg     1508 <kb_x86_mix+0xd28>
+    1506:	89 ca                	mov    %ecx,%edx
+    1508:	66 8b 04 53          	mov    (%ebx,%edx,2),%ax
+    150c:	66 89 84 24 c4 00 00 	mov    %ax,0xc4(%esp)
+    1513:	00 
+    1514:	8d 42 01             	lea    0x1(%edx),%eax
+    1517:	39 44 24 34          	cmp    %eax,0x34(%esp)
+    151b:	7f 02                	jg     151f <kb_x86_mix+0xd3f>
+    151d:	89 d0                	mov    %edx,%eax
+    151f:	66 8b 04 43          	mov    (%ebx,%eax,2),%ax
+    1523:	8d ac 24 c0 00 00 00 	lea    0xc0(%esp),%ebp
+    152a:	66 89 84 24 c6 00 00 	mov    %ax,0xc6(%esp)
+    1531:	00 
+    1532:	e9 a3 fe ff ff       	jmp    13da <kb_x86_mix+0xbfa>
+    1537:	8b 44 24 64          	mov    0x64(%esp),%eax
+    153b:	c7 80 3c 00 00 00 01 	movl   $0x1,0x3c(%eax)
+    1542:	00 00 00 
+    1545:	e9 98 fc ff ff       	jmp    11e2 <kb_x86_mix+0xa02>
+    154a:	8b 5c 24 64          	mov    0x64(%esp),%ebx
+    154e:	8b 9b 20 00 00 00    	mov    0x20(%ebx),%ebx
+    1554:	89 de                	mov    %ebx,%esi
+    1556:	89 5c 24 0c          	mov    %ebx,0xc(%esp)
+    155a:	e9 67 fb ff ff       	jmp    10c6 <kb_x86_mix+0x8e6>
+    155f:	83 ec 0c             	sub    $0xc,%esp
+    1562:	8b 54 24 70          	mov    0x70(%esp),%edx
+    1566:	8b 82 20 00 00 00    	mov    0x20(%edx),%eax
+    156c:	ff 70 14             	pushl  0x14(%eax)
+    156f:	ff 15 04 00 00 00    	call   *0x4
+    1575:	83 c4 10             	add    $0x10,%esp
+    1578:	e9 e7 f3 ff ff       	jmp    964 <kb_x86_mix+0x184>
+    157d:	50                   	push   %eax
+    157e:	68 6a 00 00 00       	push   $0x6a
+    1583:	68 38 00 00 00       	push   $0x38
+    1588:	68 9c 02 00 00       	push   $0x29c
+    158d:	68 12 00 00 00       	push   $0x12
+    1592:	68 00 00 00 00       	push   $0x0
+    1597:	6a 04                	push   $0x4
+    1599:	6a 00                	push   $0x0
+    159b:	e8 fc ff ff ff       	call   159c <kb_x86_mix+0xdbc>
+    15a0:	83 c4 20             	add    $0x20,%esp
+    15a3:	8b 5c 24 64          	mov    0x64(%esp),%ebx
+    15a7:	8b 9b 20 00 00 00    	mov    0x20(%ebx),%ebx
+    15ad:	89 5c 24 0c          	mov    %ebx,0xc(%esp)
+    15b1:	e9 77 f6 ff ff       	jmp    c2d <kb_x86_mix+0x44d>
+    15b6:	89 ac 24 8c 00 00 00 	mov    %ebp,0x8c(%esp)
+    15bd:	83 ec 0c             	sub    $0xc,%esp
+    15c0:	52                   	push   %edx
+    15c1:	e8 fc ff ff ff       	call   15c2 <kb_x86_mix+0xde2>
+    15c6:	8b 84 24 9c 00 00 00 	mov    0x9c(%esp),%eax
+    15cd:	8b 54 24 74          	mov    0x74(%esp),%edx
+    15d1:	29 e8                	sub    %ebp,%eax
+    15d3:	8b 9c 24 8c 00 00 00 	mov    0x8c(%esp),%ebx
+    15da:	d1 f8                	sar    %eax
+    15dc:	8b 8c 24 90 00 00 00 	mov    0x90(%esp),%ecx
+    15e3:	03 44 24 20          	add    0x20(%esp),%eax
+    15e7:	83 c4 10             	add    $0x10,%esp
+    15ea:	89 9a 44 00 00 00    	mov    %ebx,0x44(%edx)
+    15f0:	89 8a 48 00 00 00    	mov    %ecx,0x48(%edx)
+    15f6:	89 82 60 00 00 00    	mov    %eax,0x60(%edx)
+    15fc:	e9 55 fe ff ff       	jmp    1456 <kb_x86_mix+0xc76>
+    1601:	51                   	push   %ecx
+    1602:	68 50 00 00 00       	push   $0x50
+    1607:	68 38 00 00 00       	push   $0x38
+    160c:	68 3b 02 00 00       	push   $0x23b
+    1611:	68 12 00 00 00       	push   $0x12
+    1616:	68 00 00 00 00       	push   $0x0
+    161b:	6a 04                	push   $0x4
+    161d:	6a 00                	push   $0x0
+    161f:	e8 fc ff ff ff       	call   1620 <kb_x86_mix+0xe40>
+    1624:	83 c4 20             	add    $0x20,%esp
+    1627:	8b 74 24 64          	mov    0x64(%esp),%esi
+    162b:	8b b6 20 00 00 00    	mov    0x20(%esi),%esi
+    1631:	89 74 24 0c          	mov    %esi,0xc(%esp)
+    1635:	e9 08 fd ff ff       	jmp    1342 <kb_x86_mix+0xb62>
+    163a:	8b 44 24 0c          	mov    0xc(%esp),%eax
+    163e:	41                   	inc    %ecx
+    163f:	3b 48 0c             	cmp    0xc(%eax),%ecx
+    1642:	0f 82 d4 00 00 00    	jb     171c <kb_x86_mix+0xf3c>
+    1648:	8b 54 24 10          	mov    0x10(%esp),%edx
+    164c:	89 e8                	mov    %ebp,%eax
+    164e:	8d 1c 38             	lea    (%eax,%edi,1),%ebx
+    1651:	66 8b 04 56          	mov    (%esi,%edx,2),%ax
+    1655:	8d 4a ff             	lea    0xffffffff(%edx),%ecx
+    1658:	66 89 03             	mov    %ax,(%ebx)
+    165b:	8b 44 24 0c          	mov    0xc(%esp),%eax
+    165f:	39 48 08             	cmp    %ecx,0x8(%eax)
+    1662:	0f 8f 53 fd ff ff    	jg     13bb <kb_x86_mix+0xbdb>
+    1668:	66 8b 04 4e          	mov    (%esi,%ecx,2),%ax
+    166c:	01 fb                	add    %edi,%ebx
+    166e:	8b 54 24 0c          	mov    0xc(%esp),%edx
+    1672:	66 89 03             	mov    %ax,(%ebx)
+    1675:	8d 41 ff             	lea    0xffffffff(%ecx),%eax
+    1678:	3b 42 08             	cmp    0x8(%edx),%eax
+    167b:	0f 8d 51 fd ff ff    	jge    13d2 <kb_x86_mix+0xbf2>
+    1681:	89 c8                	mov    %ecx,%eax
+    1683:	e9 4a fd ff ff       	jmp    13d2 <kb_x86_mix+0xbf2>
+    1688:	50                   	push   %eax
+    1689:	68 3f 00 00 00       	push   $0x3f
+    168e:	68 2d 00 00 00       	push   $0x2d
+    1693:	68 e7 02 00 00       	push   $0x2e7
+    1698:	68 12 00 00 00       	push   $0x12
+    169d:	68 00 00 00 00       	push   $0x0
+    16a2:	6a 04                	push   $0x4
+    16a4:	6a 00                	push   $0x0
+    16a6:	e8 fc ff ff ff       	call   16a7 <kb_x86_mix+0xec7>
+    16ab:	83 c4 20             	add    $0x20,%esp
+    16ae:	e9 a4 f2 ff ff       	jmp    957 <kb_x86_mix+0x177>
+    16b3:	8b 7c 24 0c          	mov    0xc(%esp),%edi
+    16b7:	8d ac 24 c0 00 00 00 	lea    0xc0(%esp),%ebp
+    16be:	8b 54 24 10          	mov    0x10(%esp),%edx
+    16c2:	8b 77 10             	mov    0x10(%edi),%esi
+    16c5:	bf fe ff ff ff       	mov    $0xfffffffe,%edi
+    16ca:	66 8b 04 56          	mov    (%esi,%edx,2),%ax
+    16ce:	66 89 84 24 c6 00 00 	mov    %ax,0xc6(%esp)
+    16d5:	00 
+    16d6:	8d 84 24 c6 00 00 00 	lea    0xc6(%esp),%eax
+    16dd:	e9 ad fc ff ff       	jmp    138f <kb_x86_mix+0xbaf>
+    16e2:	50                   	push   %eax
+    16e3:	68 6a 00 00 00       	push   $0x6a
+    16e8:	68 38 00 00 00       	push   $0x38
+    16ed:	68 88 02 00 00       	push   $0x288
+    16f2:	68 12 00 00 00       	push   $0x12
+    16f7:	68 00 00 00 00       	push   $0x0
+    16fc:	6a 04                	push   $0x4
+    16fe:	6a 00                	push   $0x0
+    1700:	e8 fc ff ff ff       	call   1701 <kb_x86_mix+0xf21>
+    1705:	83 c4 20             	add    $0x20,%esp
+    1708:	e9 da f8 ff ff       	jmp    fe7 <kb_x86_mix+0x807>
+    170d:	8b 44 24 64          	mov    0x64(%esp),%eax
+    1711:	89 b0 3c 00 00 00    	mov    %esi,0x3c(%eax)
+    1717:	e9 c6 fa ff ff       	jmp    11e2 <kb_x86_mix+0xa02>
+    171c:	89 e8                	mov    %ebp,%eax
+    171e:	e9 7e fc ff ff       	jmp    13a1 <kb_x86_mix+0xbc1>
+    1723:	83 ec 0c             	sub    $0xc,%esp
+    1726:	ff 35 04 00 00 00    	pushl  0x4
+    172c:	e8 fc ff ff ff       	call   172d <kb_x86_mix+0xf4d>
+    1731:	8b 94 24 f4 00 00 00 	mov    0xf4(%esp),%edx
+    1738:	89 d0                	mov    %edx,%eax
+    173a:	89 15 00 00 00 00    	mov    %edx,0x0
+    1740:	c1 e0 03             	shl    $0x3,%eax
+    1743:	89 04 24             	mov    %eax,(%esp)
+    1746:	e8 fc ff ff ff       	call   1747 <kb_x86_mix+0xf67>
+    174b:	83 c4 10             	add    $0x10,%esp
+    174e:	a3 04 00 00 00       	mov    %eax,0x4
+    1753:	e9 a5 f0 ff ff       	jmp    7fd <kb_x86_mix+0x1d>
+    1758:	8b 5c 24 0c          	mov    0xc(%esp),%ebx
+    175c:	8d ac 24 c0 00 00 00 	lea    0xc0(%esp),%ebp
+    1763:	8b 54 24 10          	mov    0x10(%esp),%edx
+    1767:	b9 01 00 00 00       	mov    $0x1,%ecx
+    176c:	8b 73 10             	mov    0x10(%ebx),%esi
+    176f:	89 eb                	mov    %ebp,%ebx
+    1771:	66 8b 04 56          	mov    (%esi,%edx,2),%ax
+    1775:	42                   	inc    %edx
+    1776:	39 54 24 34          	cmp    %edx,0x34(%esp)
+    177a:	66 89 03             	mov    %ax,(%ebx)
+    177d:	7f 0c                	jg     178b <kb_x86_mix+0xfab>
+    177f:	8b 7c 24 0c          	mov    0xc(%esp),%edi
+    1783:	8b 47 0c             	mov    0xc(%edi),%eax
+    1786:	2b 47 08             	sub    0x8(%edi),%eax
+    1789:	29 c2                	sub    %eax,%edx
+    178b:	41                   	inc    %ecx
+    178c:	83 c3 02             	add    $0x2,%ebx
+    178f:	83 f9 05             	cmp    $0x5,%ecx
+    1792:	75 dd                	jne    1771 <kb_x86_mix+0xf91>
+    1794:	e9 41 fc ff ff       	jmp    13da <kb_x86_mix+0xbfa>
+    1799:	8d b4 26 00 00 00 00 	lea    0x0(%esi),%esi
+
+000017a0 <kb_x86_loadchsettings>:
+    17a0:	53                   	push   %ebx
+    17a1:	83 ec 18             	sub    $0x18,%esp
+    17a4:	8b 5c 24 20          	mov    0x20(%esp),%ebx
+    17a8:	39 1d 08 00 00 00    	cmp    %ebx,0x8
+    17ae:	0f 8e a1 01 00 00    	jle    1955 <kb_x86_loadchsettings+0x1b5>
+    17b4:	83 ec 0c             	sub    $0xc,%esp
+    17b7:	53                   	push   %ebx
+    17b8:	e8 fc ff ff ff       	call   17b9 <kb_x86_loadchsettings+0x19>
+    17bd:	89 c2                	mov    %eax,%edx
+    17bf:	83 c4 10             	add    $0x10,%esp
+    17c2:	6b c3 60             	imul   $0x60,%ebx,%eax
+    17c5:	8d 98 20 00 00 00    	lea    0x20(%eax),%ebx
+    17cb:	f6 43 10 10          	testb  $0x10,0x10(%ebx)
+    17cf:	74 06                	je     17d7 <kb_x86_loadchsettings+0x37>
+    17d1:	8d 98 20 0c 00 00    	lea    0xc20(%eax),%ebx
+    17d7:	8b 02                	mov    (%edx),%eax
+    17d9:	89 03                	mov    %eax,(%ebx)
+    17db:	8b 42 04             	mov    0x4(%edx),%eax
+    17de:	89 43 04             	mov    %eax,0x4(%ebx)
+    17e1:	8b 42 08             	mov    0x8(%edx),%eax
+    17e4:	89 43 08             	mov    %eax,0x8(%ebx)
+    17e7:	8b 42 0c             	mov    0xc(%edx),%eax
+    17ea:	89 43 0c             	mov    %eax,0xc(%ebx)
+    17ed:	8b 42 14             	mov    0x14(%edx),%eax
+    17f0:	89 43 14             	mov    %eax,0x14(%ebx)
+    17f3:	8b 42 1c             	mov    0x1c(%edx),%eax
+    17f6:	d9 42 18             	flds   0x18(%edx)
+    17f9:	89 43 1c             	mov    %eax,0x1c(%ebx)
+    17fc:	8b 42 20             	mov    0x20(%edx),%eax
+    17ff:	d9 53 18             	fsts   0x18(%ebx)
+    1802:	89 43 20             	mov    %eax,0x20(%ebx)
+    1805:	8b 42 24             	mov    0x24(%edx),%eax
+    1808:	d9 e8                	fld1   
+    180a:	89 43 40             	mov    %eax,0x40(%ebx)
+    180d:	8b 42 28             	mov    0x28(%edx),%eax
+    1810:	d8 e1                	fsub   %st(1),%st
+    1812:	89 43 44             	mov    %eax,0x44(%ebx)
+    1815:	d8 4b 14             	fmuls  0x14(%ebx)
+    1818:	8b 42 2c             	mov    0x2c(%edx),%eax
+    181b:	89 43 48             	mov    %eax,0x48(%ebx)
+    181e:	8b 42 30             	mov    0x30(%edx),%eax
+    1821:	89 43 4c             	mov    %eax,0x4c(%ebx)
+    1824:	8b 42 34             	mov    0x34(%edx),%eax
+    1827:	8b 4a 10             	mov    0x10(%edx),%ecx
+    182a:	89 43 50             	mov    %eax,0x50(%ebx)
+    182d:	8b 42 38             	mov    0x38(%edx),%eax
+    1830:	89 ca                	mov    %ecx,%edx
+    1832:	83 e2 01             	and    $0x1,%edx
+    1835:	d9 53 38             	fsts   0x38(%ebx)
+    1838:	d9 c9                	fxch   %st(1)
+    183a:	89 43 54             	mov    %eax,0x54(%ebx)
+    183d:	8b 43 10             	mov    0x10(%ebx),%eax
+    1840:	d8 4b 14             	fmuls  0x14(%ebx)
+    1843:	83 e0 10             	and    $0x10,%eax
+    1846:	09 d0                	or     %edx,%eax
+    1848:	89 ca                	mov    %ecx,%edx
+    184a:	83 c8 08             	or     $0x8,%eax
+    184d:	83 e2 02             	and    $0x2,%edx
+    1850:	09 d0                	or     %edx,%eax
+    1852:	83 e1 04             	and    $0x4,%ecx
+    1855:	09 c8                	or     %ecx,%eax
+    1857:	89 43 10             	mov    %eax,0x10(%ebx)
+    185a:	d9 5b 3c             	fstps  0x3c(%ebx)
+    185d:	d9 e4                	ftst   
+    185f:	df e0                	fnstsw %ax
+    1861:	9e                   	sahf   
+    1862:	0f 82 18 01 00 00    	jb     1980 <kb_x86_loadchsettings+0x1e0>
+    1868:	d8 1d 1c 00 00 00    	fcomps 0x1c
+    186e:	df e0                	fnstsw %ax
+    1870:	9e                   	sahf   
+    1871:	76 26                	jbe    1899 <kb_x86_loadchsettings+0xf9>
+    1873:	50                   	push   %eax
+    1874:	68 30 00 00 00       	push   $0x30
+    1879:	68 16 00 00 00       	push   $0x16
+    187e:	68 57 01 00 00       	push   $0x157
+    1883:	68 12 00 00 00       	push   $0x12
+    1888:	68 00 00 00 00       	push   $0x0
+    188d:	6a 04                	push   $0x4
+    188f:	6a 00                	push   $0x0
+    1891:	e8 fc ff ff ff       	call   1892 <kb_x86_loadchsettings+0xf2>
+    1896:	83 c4 20             	add    $0x20,%esp
+    1899:	d9 43 3c             	flds   0x3c(%ebx)
+    189c:	d9 e4                	ftst   
+    189e:	df e0                	fnstsw %ax
+    18a0:	9e                   	sahf   
+    18a1:	72 0b                	jb     18ae <kb_x86_loadchsettings+0x10e>
+    18a3:	d8 15 1c 00 00 00    	fcoms  0x1c
+    18a9:	df e0                	fnstsw %ax
+    18ab:	9e                   	sahf   
+    18ac:	76 2b                	jbe    18d9 <kb_x86_loadchsettings+0x139>
+    18ae:	dd d8                	fstp   %st(0)
+    18b0:	50                   	push   %eax
+    18b1:	68 64 00 00 00       	push   $0x64
+    18b6:	68 16 00 00 00       	push   $0x16
+    18bb:	68 58 01 00 00       	push   $0x158
+    18c0:	68 12 00 00 00       	push   $0x12
+    18c5:	68 00 00 00 00       	push   $0x0
+    18ca:	6a 04                	push   $0x4
+    18cc:	6a 00                	push   $0x0
+    18ce:	e8 fc ff ff ff       	call   18cf <kb_x86_loadchsettings+0x12f>
+    18d3:	d9 43 3c             	flds   0x3c(%ebx)
+    18d6:	83 c4 20             	add    $0x20,%esp
+    18d9:	f6 43 10 08          	testb  $0x8,0x10(%ebx)
+    18dd:	74 0e                	je     18ed <kb_x86_loadchsettings+0x14d>
+    18df:	8b 43 38             	mov    0x38(%ebx),%eax
+    18e2:	d9 5b 28             	fstps  0x28(%ebx)
+    18e5:	89 43 24             	mov    %eax,0x24(%ebx)
+    18e8:	83 c4 18             	add    $0x18,%esp
+    18eb:	5b                   	pop    %ebx
+    18ec:	c3                   	ret    
+    18ed:	dd 05 38 00 00 00    	fldl   0x38
+    18f3:	d9 7c 24 16          	fnstcw 0x16(%esp)
+    18f7:	da 0d 0c 00 00 00    	fimull 0xc
+    18fd:	66 8b 44 24 16       	mov    0x16(%esp),%ax
+    1902:	b4 0c                	mov    $0xc,%ah
+    1904:	66 89 44 24 14       	mov    %ax,0x14(%esp)
+    1909:	d9 6c 24 14          	fldcw  0x14(%esp)
+    190d:	df 7c 24 08          	fistpll 0x8(%esp)
+    1911:	d9 6c 24 16          	fldcw  0x16(%esp)
+    1915:	8b 44 24 08          	mov    0x8(%esp),%eax
+    1919:	85 c0                	test   %eax,%eax
+    191b:	89 43 2c             	mov    %eax,0x2c(%ebx)
+    191e:	74 2c                	je     194c <kb_x86_loadchsettings+0x1ac>
+    1920:	d9 43 38             	flds   0x38(%ebx)
+    1923:	ba 00 00 00 00       	mov    $0x0,%edx
+    1928:	8b 43 2c             	mov    0x2c(%ebx),%eax
+    192b:	d8 63 24             	fsubs  0x24(%ebx)
+    192e:	52                   	push   %edx
+    192f:	50                   	push   %eax
+    1930:	df 2c 24             	fildll (%esp)
+    1933:	83 c4 08             	add    $0x8,%esp
+    1936:	dc f9                	fdivr  %st,%st(1)
+    1938:	d9 c9                	fxch   %st(1)
+    193a:	d9 5b 30             	fstps  0x30(%ebx)
+    193d:	d9 c9                	fxch   %st(1)
+    193f:	d8 63 28             	fsubs  0x28(%ebx)
+    1942:	de f1                	fdivp  %st,%st(1)
+    1944:	d9 5b 34             	fstps  0x34(%ebx)
+    1947:	83 c4 18             	add    $0x18,%esp
+    194a:	5b                   	pop    %ebx
+    194b:	c3                   	ret    
+    194c:	c7 43 2c 01 00 00 00 	movl   $0x1,0x2c(%ebx)
+    1953:	eb cb                	jmp    1920 <kb_x86_loadchsettings+0x180>
+    1955:	50                   	push   %eax
+    1956:	68 7a 00 00 00       	push   $0x7a
+    195b:	68 00 00 00 00       	push   $0x0
+    1960:	68 2d 03 00 00       	push   $0x32d
+    1965:	68 12 00 00 00       	push   $0x12
+    196a:	68 00 00 00 00       	push   $0x0
+    196f:	6a 04                	push   $0x4
+    1971:	6a 00                	push   $0x0
+    1973:	e8 fc ff ff ff       	call   1974 <kb_x86_loadchsettings+0x1d4>
+    1978:	83 c4 20             	add    $0x20,%esp
+    197b:	e9 34 fe ff ff       	jmp    17b4 <kb_x86_loadchsettings+0x14>
+    1980:	dd d8                	fstp   %st(0)
+    1982:	e9 ec fe ff ff       	jmp    1873 <kb_x86_loadchsettings+0xd3>
+    1987:	90                   	nop    
+    1988:	90                   	nop    
+    1989:	90                   	nop    
+    198a:	90                   	nop    
+    198b:	90                   	nop    
+    198c:	90                   	nop    
+    198d:	90                   	nop    
+    198e:	90                   	nop    
+    198f:	90                   	nop    
+    1990:	90                   	nop    
+    1991:	90                   	nop    
+    1992:	90                   	nop    
+    1993:	90                   	nop    
+    1994:	90                   	nop    
+    1995:	90                   	nop    
+    1996:	90                   	nop    
+    1997:	90                   	nop    
+    1998:	90                   	nop    
+    1999:	90                   	nop    
+    199a:	90                   	nop    
+    199b:	90                   	nop    
+    199c:	90                   	nop    
+    199d:	90                   	nop    
+    199e:	90                   	nop    
+    199f:	90                   	nop    
+
+000019a0 <kb_x86_setpanning>:
+    19a0:	53                   	push   %ebx
+    19a1:	83 ec 18             	sub    $0x18,%esp
+    19a4:	6b 44 24 20 60       	imul   $0x60,0x20(%esp),%eax
+    19a9:	8d 98 20 00 00 00    	lea    0x20(%eax),%ebx
+    19af:	f6 43 10 10          	testb  $0x10,0x10(%ebx)
+    19b3:	74 06                	je     19bb <kb_x86_setpanning+0x1b>
+    19b5:	8d 98 20 0c 00 00    	lea    0xc20(%eax),%ebx
+    19bb:	d9 e8                	fld1   
+    19bd:	d9 c0                	fld    %st(0)
+    19bf:	d8 44 24 24          	fadds  0x24(%esp)
+    19c3:	d8 0d 24 00 00 00    	fmuls  0x24
+    19c9:	d9 53 18             	fsts   0x18(%ebx)
+    19cc:	dc e9                	fsubr  %st,%st(1)
+    19ce:	d9 c9                	fxch   %st(1)
+    19d0:	d8 4b 14             	fmuls  0x14(%ebx)
+    19d3:	d9 53 38             	fsts   0x38(%ebx)
+    19d6:	d9 c9                	fxch   %st(1)
+    19d8:	d8 4b 14             	fmuls  0x14(%ebx)
+    19db:	d9 5b 3c             	fstps  0x3c(%ebx)
+    19de:	d9 e4                	ftst   
+    19e0:	df e0                	fnstsw %ax
+    19e2:	9e                   	sahf   
+    19e3:	0f 82 ed 00 00 00    	jb     1ad6 <kb_x86_setpanning+0x136>
+    19e9:	d8 1d 20 00 00 00    	fcomps 0x20
+    19ef:	df e0                	fnstsw %ax
+    19f1:	9e                   	sahf   
+    19f2:	76 26                	jbe    1a1a <kb_x86_setpanning+0x7a>
+    19f4:	50                   	push   %eax
+    19f5:	68 30 00 00 00       	push   $0x30
+    19fa:	68 16 00 00 00       	push   $0x16
+    19ff:	68 57 01 00 00       	push   $0x157
+    1a04:	68 12 00 00 00       	push   $0x12
+    1a09:	68 00 00 00 00       	push   $0x0
+    1a0e:	6a 04                	push   $0x4
+    1a10:	6a 00                	push   $0x0
+    1a12:	e8 fc ff ff ff       	call   1a13 <kb_x86_setpanning+0x73>
+    1a17:	83 c4 20             	add    $0x20,%esp
+    1a1a:	d9 43 3c             	flds   0x3c(%ebx)
+    1a1d:	d9 e4                	ftst   
+    1a1f:	df e0                	fnstsw %ax
+    1a21:	9e                   	sahf   
+    1a22:	72 0b                	jb     1a2f <kb_x86_setpanning+0x8f>
+    1a24:	d8 15 20 00 00 00    	fcoms  0x20
+    1a2a:	df e0                	fnstsw %ax
+    1a2c:	9e                   	sahf   
+    1a2d:	76 2b                	jbe    1a5a <kb_x86_setpanning+0xba>
+    1a2f:	dd d8                	fstp   %st(0)
+    1a31:	50                   	push   %eax
+    1a32:	68 64 00 00 00       	push   $0x64
+    1a37:	68 16 00 00 00       	push   $0x16
+    1a3c:	68 58 01 00 00       	push   $0x158
+    1a41:	68 12 00 00 00       	push   $0x12
+    1a46:	68 00 00 00 00       	push   $0x0
+    1a4b:	6a 04                	push   $0x4
+    1a4d:	6a 00                	push   $0x0
+    1a4f:	e8 fc ff ff ff       	call   1a50 <kb_x86_setpanning+0xb0>
+    1a54:	d9 43 3c             	flds   0x3c(%ebx)
+    1a57:	83 c4 20             	add    $0x20,%esp
+    1a5a:	f6 43 10 08          	testb  $0x8,0x10(%ebx)
+    1a5e:	74 0e                	je     1a6e <kb_x86_setpanning+0xce>
+    1a60:	8b 43 38             	mov    0x38(%ebx),%eax
+    1a63:	d9 5b 28             	fstps  0x28(%ebx)
+    1a66:	89 43 24             	mov    %eax,0x24(%ebx)
+    1a69:	83 c4 18             	add    $0x18,%esp
+    1a6c:	5b                   	pop    %ebx
+    1a6d:	c3                   	ret    
+    1a6e:	dd 05 40 00 00 00    	fldl   0x40
+    1a74:	d9 7c 24 16          	fnstcw 0x16(%esp)
+    1a78:	da 0d 0c 00 00 00    	fimull 0xc
+    1a7e:	66 8b 44 24 16       	mov    0x16(%esp),%ax
+    1a83:	b4 0c                	mov    $0xc,%ah
+    1a85:	66 89 44 24 14       	mov    %ax,0x14(%esp)
+    1a8a:	d9 6c 24 14          	fldcw  0x14(%esp)
+    1a8e:	df 7c 24 08          	fistpll 0x8(%esp)
+    1a92:	d9 6c 24 16          	fldcw  0x16(%esp)
+    1a96:	8b 44 24 08          	mov    0x8(%esp),%eax
+    1a9a:	85 c0                	test   %eax,%eax
+    1a9c:	89 43 2c             	mov    %eax,0x2c(%ebx)
+    1a9f:	74 2c                	je     1acd <kb_x86_setpanning+0x12d>
+    1aa1:	d9 43 38             	flds   0x38(%ebx)
+    1aa4:	ba 00 00 00 00       	mov    $0x0,%edx
+    1aa9:	8b 43 2c             	mov    0x2c(%ebx),%eax
+    1aac:	d8 63 24             	fsubs  0x24(%ebx)
+    1aaf:	52                   	push   %edx
+    1ab0:	50                   	push   %eax
+    1ab1:	df 2c 24             	fildll (%esp)
+    1ab4:	83 c4 08             	add    $0x8,%esp
+    1ab7:	dc f9                	fdivr  %st,%st(1)
+    1ab9:	d9 c9                	fxch   %st(1)
+    1abb:	d9 5b 30             	fstps  0x30(%ebx)
+    1abe:	d9 c9                	fxch   %st(1)
+    1ac0:	d8 63 28             	fsubs  0x28(%ebx)
+    1ac3:	de f1                	fdivp  %st,%st(1)
+    1ac5:	d9 5b 34             	fstps  0x34(%ebx)
+    1ac8:	83 c4 18             	add    $0x18,%esp
+    1acb:	5b                   	pop    %ebx
+    1acc:	c3                   	ret    
+    1acd:	c7 43 2c 01 00 00 00 	movl   $0x1,0x2c(%ebx)
+    1ad4:	eb cb                	jmp    1aa1 <kb_x86_setpanning+0x101>
+    1ad6:	dd d8                	fstp   %st(0)
+    1ad8:	e9 17 ff ff ff       	jmp    19f4 <kb_x86_setpanning+0x54>

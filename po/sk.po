@@ -1,0 +1,2189 @@
+# translation of soundtracker-0.6.7-pre5.sk.po to Slovak
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Andrej Kacian <andrej@kacian.sk>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: soundtracker 0.6.7-pre5.sk\n"
+"Report-Msgid-Bugs-To: soundtracker-discuss@soundtracker.org\n"
+"POT-Creation-Date: 2008-01-14 13:34+0300\n"
+"PO-Revision-Date: 2003-09-08 11:43+0200\n"
+"Last-Translator: Andrej Kacian <andrej@kacian.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
+
+#: app/audioconfig.c:63
+msgid "Playback Output"
+msgstr "Výstup pre prehrávanie"
+
+#: app/audioconfig.c:70
+msgid "Editing Output"
+msgstr "Výstup pre editáciu"
+
+#: app/audioconfig.c:77
+msgid "Sampling"
+msgstr "Vzorkovanie"
+
+#: app/audioconfig.c:203
+msgid "Driver Module"
+msgstr "Modul ovládaèa"
+
+#: app/audioconfig.c:253
+msgid "Mixer Module"
+msgstr "Modul mixéru"
+
+#: app/audioconfig.c:254
+msgid "Description"
+msgstr "Popis"
+
+#: app/audioconfig.c:264 app/audioconfig.c:267
+msgid "Audio Configuration"
+msgstr "Nastavenie zvuku"
+
+#: app/audioconfig.c:291
+msgid "Mixers"
+msgstr "Mixéry"
+
+#: app/drivers/alsa-input.c:126 app/drivers/alsa-output.c:135
+#: app/drivers/alsa2-input.c:126 app/drivers/alsa2-output.c:136
+#, c-format
+msgid "(%d bytes)"
+msgstr "(%d bajtov)"
+
+#: app/drivers/alsa-input.c:129 app/drivers/alsa2-input.c:129
+#, c-format
+msgid "Estimated audio delay: %f microseconds"
+msgstr "Predpokladanie oneskorenie zvuku: %f mikrosekúnd"
+
+#: app/drivers/alsa-input.c:194 app/drivers/alsa-output.c:200
+#: app/drivers/alsa2-input.c:194 app/drivers/alsa2-output.c:199
+#: app/drivers/oss-output.c:207 app/drivers/sun-output.c:199
+msgid "These changes won't take effect until you restart playing."
+msgstr "Tieto zmeny nadobudnú platnos» a¾ keï znovu spustíte prehrávanie."
+
+#: app/drivers/alsa-input.c:206 app/drivers/alsa-output.c:212
+#: app/drivers/alsa2-input.c:206 app/drivers/alsa2-output.c:211
+#: app/drivers/oss-output.c:235 app/drivers/sun-output.c:227
+#: app/sample-editor.c:1619
+msgid "Resolution:"
+msgstr "Rozlí¹enie:"
+
+#: app/drivers/alsa-input.c:216 app/drivers/alsa-output.c:222
+#: app/drivers/alsa2-input.c:216 app/drivers/alsa2-output.c:221
+#: app/drivers/oss-output.c:245 app/drivers/sun-output.c:238
+#: app/sample-editor.c:1649
+msgid "Channels:"
+msgstr "Kanály:"
+
+#: app/drivers/alsa-input.c:226 app/drivers/alsa-output.c:232
+#: app/drivers/alsa2-input.c:226 app/drivers/alsa2-output.c:231
+#: app/drivers/oss-output.c:255 app/drivers/sun-output.c:249
+msgid "Frequency [Hz]:"
+msgstr "Frekvencia [Hz]:"
+
+#: app/drivers/alsa-input.c:236 app/drivers/alsa-output.c:242
+#: app/drivers/alsa2-input.c:236 app/drivers/alsa2-output.c:241
+#: app/drivers/oss-output.c:265 app/drivers/sun-output.c:260
+msgid "Buffer Size:"
+msgstr "Veµkos» zásobníka:"
+
+#: app/drivers/alsa-input.c:269 app/drivers/alsa-output.c:275
+#: app/drivers/alsa2-input.c:269 app/drivers/alsa2-output.c:274
+msgid "ALSA card number:"
+msgstr "Èíslo karty ALSA:"
+
+#: app/drivers/alsa-input.c:284 app/drivers/alsa-output.c:290
+#: app/drivers/alsa2-input.c:284 app/drivers/alsa2-output.c:289
+msgid "ALSA device number:"
+msgstr "Èíslo zariadenia ALSA:"
+
+#: app/drivers/alsa-input.c:375
+#, c-format
+msgid ""
+"Couldn't open ALSA device for sound input (card:%d, device:%d):\n"
+"%s"
+msgstr ""
+"Nemô¾em otvori» zariadenie ALSA pre zvukový vstup (karta %d, zariadenie %"
+"d):\n"
+"%s"
+
+#: app/drivers/alsa-input.c:427 app/drivers/alsa-output.c:427
+#: app/drivers/oss-input.c:269 app/drivers/oss-output.c:426
+msgid "Required sound output format not supported.\n"
+msgstr "Po¾adovaný formát zvukového výstupu nie je podporovaný.\n"
+
+#: app/drivers/alsa-input.c:440 app/drivers/alsa-output.c:442
+msgid "Required sound output parameters not supported.\n"
+msgstr "Po¾adované parametre zvukového výstupu nie sú podporované.\n"
+
+#: app/drivers/alsa-output.c:138 app/drivers/alsa2-output.c:139
+#: app/drivers/oss-output.c:151 app/drivers/sun-output.c:139
+#, c-format
+msgid "Estimated audio delay: %f milliseconds"
+msgstr "Predpokladanie oneskorenie zvuku: %f milisekúnd"
+
+#: app/drivers/alsa-output.c:378 app/drivers/alsa2-input.c:376
+#: app/drivers/alsa2-output.c:380
+#, c-format
+msgid ""
+"Couldn't open ALSA device for sound output (card:%d, device:%d):\n"
+"%s"
+msgstr ""
+"Nemô¾em otvori» zariadenie ALSA pre zvukový výstup (karta %d, zariadenie %"
+"d):\n"
+"%s"
+
+#: app/drivers/alsa2-input.c:437 app/drivers/alsa2-output.c:441
+msgid "Required output-channel parameters not supported.\n"
+msgstr "Po¾adované parametre výstupného kanálu nie sú podporované.\n"
+
+#: app/drivers/alsa2-input.c:442 app/drivers/alsa2-output.c:446
+msgid "Unable to prepare ALSA channel.\n"
+msgstr "Nemô¾em pripravi» kanál ALSA.\n"
+
+#: app/drivers/alsa2-input.c:455 app/drivers/alsa2-output.c:459
+msgid "Alsa setup error.\n"
+msgstr "Chyba nastavenia ALSA.\n"
+
+#: app/drivers/esd-output.c:97
+msgid ""
+"Note that the ESD output is unusable in\n"
+"interactive mode because of the latency added\n"
+"by ESD. Use the OSS or ALSA output plug-ins\n"
+"for serious work."
+msgstr ""
+"Výstup ESD je nepou¾iteµný v\n"
+"interaktívnom re¾ime, kvôli oneskoreniu ESD.\n"
+"Pou¾ite výstupné pluginy OSS alebo ALSA\n"
+"pre riadnu prácu."
+
+#: app/drivers/esd-output.c:162
+#, c-format
+msgid ""
+"Couldn't connect to ESD for sound output:\n"
+"%s"
+msgstr ""
+"Nemô¾em sa pripoji» k ESD pre zvukový výstup:\n"
+"%s"
+
+#: app/drivers/file-output.c:92 app/drivers/file-output.c:297
+msgid "no settings (yet), sorry!"
+msgstr "(zatiaµ) ¾iadne nastavenia, prepáète!"
+
+#: app/drivers/file-output.c:167 app/drivers/file-output.c:374
+#: app/sample-editor.c:1865
+msgid "Can't open file for writing."
+msgstr "Nemô¾em otvori» súbor pre zápis."
+
+#: app/drivers/oss-input.c:113 app/drivers/sun-input.c:107
+msgid "These changes won't take effect until you restart sampling."
+msgstr "Tieto zmeny nadobudnú platnos» a¾ keï znovu spustíte vzorkovanie."
+
+#: app/drivers/oss-input.c:125
+msgid "Input device (e.g. '/dev/dsp'):"
+msgstr "Vstupné zariadenie (napr. '/dev/dsp'):"
+
+#: app/drivers/oss-input.c:236
+#, c-format
+msgid ""
+"Couldn't open %s for sampling:\n"
+"%s"
+msgstr ""
+"Nemô¾em otvori» %s pre vzorkovanie:\n"
+"%s"
+
+#: app/drivers/oss-output.c:185 app/drivers/sun-output.c:174
+#, c-format
+msgid "(%d samples)"
+msgstr "(%d vzoriek)"
+
+#: app/drivers/oss-output.c:219
+msgid "Output device (e.g. '/dev/dsp'):"
+msgstr "Výstupné zariadenie (napr. '/dev/dsp'):"
+
+#: app/drivers/oss-output.c:393
+#, c-format
+msgid ""
+"Couldn't open %s for sound output:\n"
+"%s"
+msgstr ""
+"Nemô¾em otvori» %s pre zvukový výstup:\n"
+"%s"
+
+#: app/drivers/jack-output.c:255
+msgid "transport master"
+msgstr "transport master"
+
+#: app/drivers/jack-output.c:260
+msgid "declick"
+msgstr "declick"
+
+#: app/drivers/jack-output.c:280
+#, c-format
+msgid "Running at %d Hz with %d frames"
+msgstr "Be¾í na %d Hz s %d rámcami"
+
+#: app/drivers/jack-output.c:284
+msgid "Jack server not running?"
+msgstr "Jack server nebe¾í?"
+
+#: app/drivers/jack-output.c:328
+msgid "soundtracker"
+msgstr "soundtracker"
+
+#: app/drivers/jack-output.c:348
+msgid "out_1"
+msgstr "out_1"
+
+#: app/drivers/jack-output.c:349
+msgid "out_2"
+msgstr "out_2"
+
+#: app/drivers/sun-output.c:211
+msgid "Output device (e.g. '/dev/audio'):"
+msgstr "Výstupné zariadenie (napr. '/dev/dsp'):"
+
+#: app/drivers/sun-output.c:391 app/drivers/sun-output.c:462
+#: app/drivers/sun-input.c:231 app/drivers/sun-input.c:313
+#, c-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: app/drivers/sun-output.c:397
+#, c-format
+msgid "%s: Cannot play (%s)"
+msgstr "%s: Nemô¾em prehráva» (%s)"
+
+#: app/drivers/sun-output.c:404 app/drivers/sun-input.c:252
+#, c-format
+msgid "%s: Cannot handle %dHz (%s)"
+msgstr "%s: Nemô¾em spracova» %dHz (%s)"
+
+#: app/drivers/sun-output.c:433 app/drivers/sun-input.c:282
+#, c-format
+msgid "%s: Required sound encoding not supported.\n"
+msgstr "%s: Po¾adované kódovanie zvuku nie je podporované.\n"
+
+#: app/drivers/sun-output.c:456 app/drivers/sun-input.c:307
+#, c-format
+msgid "%s: Cannot set block size (%s)"
+msgstr "%s: Nemô¾em nastavi» veµkos» bloku (%s)"
+
+#: app/drivers/sun-input.c:119
+msgid "Input device (e.g. '/dev/audio'):"
+msgstr "Vstupné zariadenie (napr. '/dev/dsp'):"
+
+#: app/drivers/sun-input.c:244
+#, c-format
+msgid "%s: Cannot record (%s)"
+msgstr "%s: Nemô¾em nahráva» (%s)"
+
+#: app/envelope-box.c:892
+msgid "Length"
+msgstr "Då¾ka"
+
+#: app/envelope-box.c:893
+msgid "Current"
+msgstr "Aktuálna"
+
+#: app/envelope-box.c:894
+msgid "Offset"
+msgstr "Odsadenie"
+
+#: app/envelope-box.c:895
+msgid "Value"
+msgstr "Hodnota"
+
+#: app/envelope-box.c:901 app/playlist.c:551
+msgid "Insert"
+msgstr "Vlo¾i»"
+
+#: app/envelope-box.c:907 app/playlist.c:560
+msgid "Delete"
+msgstr "Zmaza»"
+
+#: app/envelope-box.c:999
+msgid ""
+"Graphical\n"
+"Envelope\n"
+"Editor\n"
+"only in\n"
+"GNOME Version"
+msgstr ""
+"Grafický\n"
+"Editor\n"
+"Obálky\n"
+"len vo verzii\n"
+"pre GNOME"
+
+#: app/envelope-box.c:1014
+msgid "Sustain"
+msgstr "Podr¾a»"
+
+#: app/envelope-box.c:1022
+msgid "Point"
+msgstr "Bod"
+
+#: app/envelope-box.c:1024
+msgid "Loop"
+msgstr "Sluèka"
+
+#: app/envelope-box.c:1032 app/sample-editor.c:277
+msgid "Start"
+msgstr "Zaèiatok"
+
+#: app/envelope-box.c:1033 app/sample-editor.c:278
+msgid "End"
+msgstr "Koniec"
+
+#: app/file-operations.c:168
+msgid "Load Module"
+msgstr "Naèíta» modul"
+
+#: app/file-operations.c:169
+msgid "Save Module"
+msgstr "Ulo¾i» modul"
+
+#: app/file-operations.c:170
+msgid "Render WAV"
+msgstr "Vytvori» WAV"
+
+#: app/file-operations.c:171
+msgid "Save Song"
+msgstr "Ulo¾i» skladbu"
+
+#: app/file-operations.c:172 app/sample-editor.c:385
+msgid "Load Sample"
+msgstr "Naèíta» vzorku"
+
+#: app/file-operations.c:173
+msgid "Save Sample"
+msgstr "Ulo¾i» vzorku"
+
+#: app/file-operations.c:174
+msgid "Load Instrument"
+msgstr "Naèíta» nástroj"
+
+#: app/file-operations.c:175
+msgid "Save Instrument"
+msgstr "Ulo¾i» nástroj"
+
+#: app/file-operations.c:181
+msgid "File"
+msgstr "Súbor"
+
+#: app/file-operations.c:232
+msgid "Operation not supported."
+msgstr "Operácia nie je podporovaná."
+
+#: app/gui-settings.c:96
+#, fuzzy
+msgid "Tracker background"
+msgstr "Frekvencia trackeru"
+
+#: app/gui-settings.c:97
+msgid "Cursor background"
+msgstr ""
+
+#: app/gui-settings.c:98
+#, fuzzy
+msgid "Major lines highlighting"
+msgstr "Zapne zvýrazòovanie riadkov"
+
+#: app/gui-settings.c:99
+#, fuzzy
+msgid "Minor lines highlighting"
+msgstr "Zapne zvýrazòovanie riadkov"
+
+#: app/gui-settings.c:100
+#, fuzzy
+msgid "Selection"
+msgstr "Výber:"
+
+#: app/gui-settings.c:101
+#, fuzzy
+msgid "Notes"
+msgstr "Tón:"
+
+#: app/gui-settings.c:102
+#, fuzzy
+msgid "Delimiters"
+msgstr "Zmaza»"
+
+#: app/gui-settings.c:103
+#, fuzzy
+msgid "Channel numbers"
+msgstr "Kanály:"
+
+#: app/gui-settings.c:104
+msgid "Cursor idle"
+msgstr ""
+
+#: app/gui-settings.c:105
+msgid "Cursor editing"
+msgstr ""
+
+#: app/gui-settings.c:121
+msgid "Scopes Frequency"
+msgstr "Frekvencia monitorov"
+
+#: app/gui-settings.c:124
+msgid "Tracker Frequency"
+msgstr "Frekvencia trackeru"
+
+#: app/gui-settings.c:389 app/gui-settings.c:633
+#, fuzzy
+msgid "Tracker colors configuration"
+msgstr "Nastavenie klávesnice"
+
+#: app/gui-settings.c:391
+#, fuzzy
+msgid "Reset"
+msgstr "Obráti»"
+
+#: app/gui-settings.c:397
+msgid "Reset tracker colors to standard ST"
+msgstr ""
+
+#: app/gui-settings.c:464 app/gui-settings.c:467
+msgid "GUI Configuration"
+msgstr "Nastavenie u¾ivateµského rozhrania"
+
+#: app/gui-settings.c:501
+msgid "Hexadecimal row numbers"
+msgstr "Hexadecimálne èíslovanie riadkov"
+
+#: app/gui-settings.c:508
+msgid "Use upper case letters for hex numbers"
+msgstr "Pou¾i» veµké písmená pre hexadecimálne znaky"
+
+#: app/gui-settings.c:515
+msgid "Asynchronous (IT-style) pattern editing"
+msgstr "Asynchrónna editácia úsekov (¹týl IT)"
+
+#: app/gui-settings.c:522
+msgid "Fxx command updates Tempo/BPM sliders"
+msgstr "Príkazy Fxx upravujú ukazovatele Tempo/BMP"
+
+#: app/gui-settings.c:529
+msgid "Switch to tracker after loading/saving"
+msgstr "Prepnú» do editoru po naèítaní/ulo¾ení"
+
+#: app/gui-settings.c:536
+msgid "Save window geometry on exit"
+msgstr "Ulo¾i» geometriu okien pri ukonèení"
+
+#: app/gui-settings.c:543
+msgid "Use note name B instead of H"
+msgstr "Pou¾i» názov noty B miesto H"
+
+#: app/gui-settings.c:550
+msgid "Save and restore permanent channels"
+msgstr ""
+
+#: app/gui-settings.c:564
+msgid "Scopes buffer size [MB]"
+msgstr "Veµkos» vyrovnávacej pamäte pre monitory [MB]"
+
+#: app/gui-settings.c:583
+msgid "Track line format:"
+msgstr "Formát riadku skladby:"
+
+#: app/gui-settings.c:632
+msgid "Col. scheme"
+msgstr ""
+
+#: app/gui-subs.c:33 app/gui.c:2400
+msgid "Ready."
+msgstr "Pripravený."
+
+#: app/gui-subs.c:34
+msgid "Playing song..."
+msgstr "Prehrávam skladbu..."
+
+#: app/gui-subs.c:35
+msgid "Playing pattern..."
+msgstr "Prehrávam úsek..."
+
+#: app/gui-subs.c:36
+msgid "Loading module..."
+msgstr "Naèítavam modul..."
+
+#: app/gui-subs.c:37
+msgid "Module loaded."
+msgstr "Modul naèítaný."
+
+#: app/gui-subs.c:38
+msgid "Saving module..."
+msgstr "Ukladám modul..."
+
+#: app/gui-subs.c:39
+msgid "Module saved."
+msgstr "Modul ulo¾ený."
+
+#: app/gui-subs.c:40
+msgid "Loading sample..."
+msgstr "Naèítavam vzorku..."
+
+#: app/gui-subs.c:41
+msgid "Sample loaded."
+msgstr "Vzorka naèítaná."
+
+#: app/gui-subs.c:42
+msgid "Saving sample..."
+msgstr "Ukladám vzorku..."
+
+#: app/gui-subs.c:43
+msgid "Sample saved."
+msgstr "Vzorka ulo¾ená."
+
+#: app/gui-subs.c:44
+msgid "Loading instrument..."
+msgstr "Naèítavam nástroj..."
+
+#: app/gui-subs.c:45
+msgid "Instrument loaded."
+msgstr "Nástroj naèítaný."
+
+#: app/gui-subs.c:46
+msgid "Saving instrument..."
+msgstr "Ukladám nástroj..."
+
+#: app/gui-subs.c:47
+msgid "Instrument saved."
+msgstr "Nástroj ulo¾ený."
+
+#: app/gui-subs.c:48
+msgid "Saving song..."
+msgstr "Ukladám skladbu..."
+
+#: app/gui-subs.c:49
+msgid "Song saved."
+msgstr "Skladba ulo¾ená."
+
+#: app/gui-subs.c:586 app/gui-subs.c:657
+msgid "Question"
+msgstr "Otázka"
+
+#: app/gui-subs.c:595
+msgid "Yes"
+msgstr "Áno"
+
+#: app/gui-subs.c:603
+msgid "No"
+msgstr "Nie"
+
+#: app/gui-subs.c:610 app/gui-subs.c:674 app/sample-editor.c:1527
+#: app/sample-editor.c:1702 app/sample-editor.c:2029 app/sample-editor.c:2490
+#: app/midi-settings-050.c:637 app/midi-settings-09x.c:640
+msgid "Cancel"
+msgstr "Storno"
+
+#: app/gui-subs.c:692
+msgid "Warning"
+msgstr "Varovanie"
+
+#: app/gui-subs.c:718
+msgid "Error!"
+msgstr "Chyba!"
+
+#: app/gui.c:143
+msgid "Tempo"
+msgstr "Tempo"
+
+#: app/gui.c:248 app/gui.c:258 app/gui.c:2105
+msgid "Row highlighting configuration"
+msgstr "Nastavenie zvýrazòovania riadkov"
+
+#: app/gui.c:277 app/sample-editor.c:2251
+msgid "Close"
+msgstr "Zatvori»"
+
+#: app/gui.c:304
+#, fuzzy
+msgid "Highlight rows (major / minor):"
+msgstr "Zvýrazni» riadky:"
+
+#: app/gui.c:481
+msgid ""
+"Odd pattern rows contain data which will be lost after shrinking.\n"
+"Do you want to continue anyway?"
+msgstr ""
+
+#: app/gui.c:509
+msgid ""
+"The pattern is too long for expanding.\n"
+"Some data at the end of the pattern will be lost.\n"
+"Do you want to continue anyway?"
+msgstr ""
+
+#: app/gui.c:558 app/instrument-editor.c:213 app/sample-editor.c:1727
+#: app/sample-editor.c:1923 app/sample-editor.c:1968
+msgid "No file selected."
+msgstr "Nebol zvolený ¾iadny súbor."
+
+#: app/gui.c:566
+msgid ""
+"Are you sure you want to free the current project?\n"
+"All changes will be lost!"
+msgstr ""
+"Naozaj chcete zavrie» súèasný projekt?\n"
+"V¹etky zmeny budú stratené!"
+
+#: app/gui.c:580 app/gui.c:595 app/gui.c:610 app/gui.c:628
+#: app/sample-editor.c:1937 app/sample-editor.c:1987
+msgid "Are you sure you want to overwrite the file?"
+msgstr "Naozaj chcete prepísa» tento súbor?"
+
+#: app/gui.c:641
+msgid "Error when opening pattern file!"
+msgstr "Chyba pri otváraní súboru úseku!"
+
+#: app/gui.c:654
+msgid ""
+"The length of the pattern being loaded doesn't match with that of current "
+"pattern in module.\n"
+"Do you want to change the current pattern length?"
+msgstr ""
+"Då¾ka naèítavaného úseku nezodpovedá då¾ke aktuálneho úseku v module.\n"
+"Chcete upravi» då¾ku aktuálneho úseku?"
+
+#: app/gui.c:1731
+msgid "SoundTracker Startup"
+msgstr "©tart SoundTrackeru"
+
+#: app/gui.c:1791 app/gui.c:1828
+msgid "Loading..."
+msgstr "Naèítavam..."
+
+#: app/gui.c:1817
+msgid "Use SoundTracker!"
+msgstr "Pou¾íva» SoundTracker!"
+
+#: app/gui.c:1888
+msgid "Load XM..."
+msgstr "Naèíta» XM..."
+
+#: app/gui.c:1890
+msgid "Save XM..."
+msgstr "Ulo¾i» XM..."
+
+#: app/gui.c:1893
+msgid "Render module as WAV..."
+msgstr "Ulo¾i» modul ako WAV..."
+
+#: app/gui.c:1896
+msgid "Save song as XM..."
+msgstr "Ulo¾i» skladbu ako XM..."
+
+#: app/gui.c:1898
+msgid "Load current pattern..."
+msgstr "Naèíta» aktuálny úsek..."
+
+#: app/gui.c:1900
+msgid "Save current pattern..."
+msgstr "Ulo¾i» aktuálny úsek..."
+
+#: app/gui.c:1971
+msgid "Play Song"
+msgstr "Prehra» skladbu"
+
+#: app/gui.c:1983
+msgid "Play Pattern"
+msgstr "Prehra» úsek"
+
+#: app/gui.c:1995
+msgid "Stop"
+msgstr "Zastavi»"
+
+#: app/gui.c:2000
+msgid "Pat"
+msgstr "Úsek"
+
+#: app/gui.c:2006
+msgid "Edited pattern"
+msgstr "Upravovaný úsek"
+
+#: app/gui.c:2019
+msgid "When enabled, browsing the playlist does not change the edited pattern."
+msgstr "Ak je toto zapnuté, prezeranie playlistu nemení upravovaný úsek."
+
+#: app/gui.c:2035
+msgid "Number of Channels:"
+msgstr "Poèet kanálov:"
+
+#: app/gui.c:2052
+msgid "Pattern Length"
+msgstr "Då¾ka úseku"
+
+#: app/gui.c:2087
+msgid "Set preferred accidental type"
+msgstr "Zvoµte preferovaný náhodný typ"
+
+#: app/gui.c:2093
+msgid "Measure"
+msgstr "Miera"
+
+#: app/gui.c:2094
+msgid "Enable row highlighting"
+msgstr "Zapne zvýrazòovanie riadkov"
+
+#: app/gui.c:2121
+msgid "Other..."
+msgstr "Ïal¹ie..."
+
+#: app/gui.c:2158
+#, fuzzy
+msgid "Change effect column editing direction"
+msgstr "Zmeni» _smer editácie ståpca efektov"
+
+#: app/gui.c:2190
+msgid "Global amplification"
+msgstr "Celkové zosilnenie"
+
+#: app/gui.c:2226
+msgid "Pitchbend"
+msgstr "Úprava vý¹ky tónu"
+
+#: app/gui.c:2234
+msgid "Reset pitchbend to its normal value"
+msgstr "Vráti» ukazovateµ zmeny vý¹ky tónu na pôvodnú hodnotu"
+
+#: app/gui.c:2246
+msgid "Editing"
+msgstr "Editácia"
+
+#: app/gui.c:2253
+msgid "Octave"
+msgstr "Oktáva"
+
+#: app/gui.c:2262
+msgid "Jump"
+msgstr "Preskoèi»"
+
+#: app/gui.c:2271
+msgid "Instr"
+msgstr "Nástroj"
+
+#: app/gui.c:2287
+msgid "Sample"
+msgstr "Vzorka"
+
+#: app/gui.c:2326
+msgid "Welcome to SoundTracker!"
+msgstr "Vitajte v SoundTrackeri!"
+
+#: app/gui.c:2354
+msgid "%M:%S"
+msgstr "%M:%S"
+
+#: app/instrument-editor.c:82
+msgid "VolFade"
+msgstr "VolFade"
+
+#: app/instrument-editor.c:83
+msgid "VibSpeed"
+msgstr "VibSpeed"
+
+#: app/instrument-editor.c:84
+msgid "VibDepth"
+msgstr "VibDepth"
+
+#: app/instrument-editor.c:85
+msgid "VibSweep"
+msgstr "VibSweep"
+
+#: app/instrument-editor.c:164 app/instrument-editor.c:187
+msgid "Can't open file."
+msgstr "Nemô¾em otvori» súbor."
+
+#: app/instrument-editor.c:230
+msgid "Sine"
+msgstr "Sínus"
+
+#: app/instrument-editor.c:230
+msgid "Square"
+msgstr "©tvorec"
+
+#: app/instrument-editor.c:230
+msgid "Saw Down"
+msgstr "Píla dolná"
+
+#: app/instrument-editor.c:230
+msgid "Saw Up"
+msgstr "Píla horná"
+
+#: app/instrument-editor.c:234
+msgid "Instrument Editor"
+msgstr "Editor nástrojov"
+
+#: app/instrument-editor.c:243
+msgid "Volume envelope"
+msgstr "Obálka hlasitosti"
+
+#: app/instrument-editor.c:251
+msgid "Panning envelope"
+msgstr "Obálka vyvá¾enia"
+
+#: app/instrument-editor.c:268
+msgid "Load Instrument..."
+msgstr "Naèíta» nástroj..."
+
+#: app/instrument-editor.c:270
+msgid "Save Instrument..."
+msgstr "Ulo¾i» nástroj..."
+
+#: app/instrument-editor.c:272
+msgid "Load XI"
+msgstr "Naèíta» XI"
+
+#: app/instrument-editor.c:278
+msgid "Save XI"
+msgstr "Ulo¾i» XI"
+
+#: app/instrument-editor.c:297
+msgid "Vibrato Type:"
+msgstr "Typ vibrata:"
+
+#: app/instrument-editor.c:369
+msgid "Note:"
+msgstr "Tón:"
+
+#: app/instrument-editor.c:387
+msgid "Initialize"
+msgstr "Inicializova»"
+
+#: app/keys.c:58
+msgid "<none>"
+msgstr "<¾iadny>"
+
+#: app/keys.c:130
+msgid "The key that inserts the special keyoff note for FastTracker modules."
+msgstr ""
+"Klávesa, ktorá vlo¾í ¹peciálnu \"keyoff\" notu pre moduly FastTrackeru."
+
+#: app/keys.c:132
+msgid "The key that increases \"jump\" value."
+msgstr "Klávesa, ktorá zvý¹i hodnotu skoku."
+
+#: app/keys.c:134
+msgid "The key that decreases \"jump\" value."
+msgstr "Klávesa, ktorá zní¾i hodnotu skoku."
+
+#: app/keys.c:146
+msgid "Upper Octave Keys..."
+msgstr "Klávesy vy¹¹ej oktávy..."
+
+#: app/keys.c:147
+msgid ""
+"These are the keys on the upper half of the keyboard. The c key is normally "
+"the key to the right of the TAB key. The rest of the keys should be ordered "
+"in a piano keyboard fashion, including the number keys row above."
+msgstr ""
+"Toto sú klávesy v hornej polovici klávesnice. Tón C je zvyèajne na klávese "
+"napravo od tabulátora. Zvy¹ok kláves by mal by» usporiadaný ako na klavíri, "
+"vèetne radu èíselných kláves v hornom riadku."
+
+#: app/keys.c:153
+msgid "Lower Octave Keys..."
+msgstr "Klávesy ni¾¹ej oktávy..."
+
+#: app/keys.c:154
+msgid ""
+"These are the keys on the lower half of the keyboard. The c key is normally "
+"the first character key to the right of the left Shift key. The rest of the "
+"keys should be ordered in a piano keyboard fashion, including the row above."
+msgstr ""
+"Toto sú klávesy v hornej polovici klávesnice. Tón C je zvyèajne na klávese "
+"napravo od tabulátora. Zvy¹ok kláves by mal by» usporiadaný ako na klavíri, "
+"vèetne radu èíselných kláves v hornom riadku. Toto sú klávesy v spodnej "
+"polovici klávesnice. Tón C je zvyèajne na prvej klávese napravo od µavého "
+"Shift-u. Zvy¹ok kláves by mal by» usporiadaný ako na klavíri, vèetne radu "
+"kláves v druhom riadku odspodu."
+
+#: app/keys.c:160
+msgid "Other Keys..."
+msgstr "Ïal¹ie klávesy..."
+
+#: app/keys.c:161
+msgid "Various other keys"
+msgstr "Rôzne ïal¹ie klávesy"
+
+#: app/keys.c:526
+msgid "Function"
+msgstr "Funkcia"
+
+#: app/keys.c:527
+msgid "Assignment"
+msgstr "Priradenie"
+
+#: app/keys.c:536 app/keys.c:539
+msgid "Keyboard Configuration"
+msgstr "Nastavenie klávesnice"
+
+#: app/keys.c:583
+msgid "Key Group Explanation"
+msgstr "Popis skupiny kláves"
+
+#: app/keys.c:600
+msgid "Key Explanation"
+msgstr "Popis klávesy"
+
+#: app/keys.c:631
+msgid "Modifiers:"
+msgstr "Modifikátory:"
+
+#: app/keys.c:657
+msgid "Learn selected key"
+msgstr "Nauèi» sa zvolenú klávesu"
+
+#: app/keys.c:663
+msgid "Learn all keys"
+msgstr "Nauèi» sa v¹etky klávesy"
+
+#: app/keys.c:669
+msgid ""
+"Please press the desired key combination!\n"
+"Click into left list to cancel"
+msgstr ""
+"Prosím stlaète po¾adovanú kombináciu kláves!\n"
+"Pre storno kliknite do zoznamu naµavo"
+
+#: app/keys.c:767
+msgid ""
+"The keyboard configuration file is defective.\n"
+"Please use the Keyboard Configuration dialog."
+msgstr ""
+"Súbor s nastavením klávesnice je po¹kodený.\n"
+"Prosím pou¾ite voµbu \"Nastavenie klávesnice\"."
+
+#: app/keys.c:996
+#, c-format
+msgid "CH%02d"
+msgstr "CH%02d"
+
+#: app/keys.c:997
+#, c-format
+msgid "Fast jump to channel %d"
+msgstr "Rýchly skok do kanálu %d"
+
+#: app/keys.c:1072
+msgid ""
+"Automatic key configuration unsuccessful.\n"
+"Please use the Keyboard Configuration dialog\n"
+"in the Settings menu."
+msgstr ""
+"Automatické nastavenie kláves neúspe¹né.\n"
+"Prosím pou¾ite voµbu \"Nastavenie klávesnice\"\n"
+"v menu \"Nastavenia\"."
+
+#: app/menubar.c:104 app/sample-editor.c:2482 app/midi-settings-050.c:635
+#: app/midi-settings-09x.c:638
+msgid "Ok"
+msgstr "Ok"
+
+#: app/menubar.c:140
+msgid ""
+"Are you sure you want to do this?\n"
+"All changes will be lost!"
+msgstr ""
+"Naozaj to chcete urobi»?\n"
+"V¹etky zmeny budú stratené!"
+
+#: app/menubar.c:162
+msgid ""
+"Are you sure you want to quit?\n"
+"All changes will be lost!"
+msgstr ""
+"Naozaj chcete ukonèi» program?\n"
+"V¹etky zmeny budú stratené!"
+
+#: app/menubar.c:419
+msgid "_Open..."
+msgstr "_Otvori»..."
+
+#: app/menubar.c:421
+msgid "Save _as..."
+msgstr "Ulo¾i» _ako..."
+
+#: app/menubar.c:427
+msgid "Save Module as _WAV..."
+msgstr "Ulo¾i» modul ako _WAV..."
+
+#: app/menubar.c:429
+msgid "Save XM without samples..."
+msgstr "Ulo¾i» _XM bez vzoriek..."
+
+#: app/menubar.c:434
+msgid "_Quit"
+msgstr "U_konèi»"
+
+#: app/menubar.c:441
+msgid "Clear _All"
+msgstr "Vyèisti» _v¹etko"
+
+#: app/menubar.c:443
+msgid "Clear _Patterns Only"
+msgstr "Vyèisti» len ú_seky"
+
+#: app/menubar.c:448
+msgid "_Optimize Module"
+msgstr "_Optimalizova» modul"
+
+#: app/menubar.c:455 app/menubar.c:466 app/menubar.c:522 app/menubar.c:556
+msgid "C_ut"
+msgstr "Vys_trihnú»"
+
+#: app/menubar.c:457 app/menubar.c:468 app/menubar.c:524 app/menubar.c:558
+msgid "_Copy"
+msgstr "_Kopírova»"
+
+#: app/menubar.c:459 app/menubar.c:470 app/menubar.c:560
+msgid "_Paste"
+msgstr "V_lo¾i»"
+
+#: app/menubar.c:475
+msgid "_Kill notes"
+msgstr "_Odstráni» noty pod kurzorom"
+
+#: app/menubar.c:480
+msgid "_Insert track"
+msgstr "Vlo¾i» _stopu"
+
+#: app/menubar.c:482
+msgid "_Delete track"
+msgstr "O_dstráni» stopu"
+
+#: app/menubar.c:487
+msgid "Increment cmd value"
+msgstr "Zvý¹i» hodnotu príkazu"
+
+#: app/menubar.c:489
+msgid "Decrement cmd value"
+msgstr "Zní¾i» hodnotu príkazu"
+
+#: app/menubar.c:496
+msgid "_Mark mode"
+msgstr "_Znaèkovací re¾im"
+
+#: app/menubar.c:498 app/menubar.c:554
+msgid "C_lear block marks"
+msgstr "_Odstráni» blokové znaèky"
+
+#: app/menubar.c:503 app/menubar.c:562
+msgid "_Interpolate effects"
+msgstr "_Interpolova» efekty"
+
+#: app/menubar.c:508
+msgid "Transpose half-note up"
+msgstr "Posunú» o poltón nahor"
+
+#: app/menubar.c:510
+msgid "Transpose half-note down"
+msgstr "Posunú» o poltón nadol"
+
+#: app/menubar.c:512
+msgid "Transpose octave up"
+msgstr "Posunú» o oktávu nahor"
+
+#: app/menubar.c:514
+msgid "Transpose octave down"
+msgstr "Posunú» o oktávu nadol"
+
+#: app/menubar.c:526
+#, fuzzy
+msgid "P_aste"
+msgstr "Vlo¾i»"
+
+#: app/menubar.c:531
+msgid "_Jazz Edit Mode"
+msgstr "_Jazzový re¾im editácie"
+
+#: app/menubar.c:534
+msgid "_Record keyreleases"
+msgstr ""
+
+#: app/menubar.c:539
+msgid "Transp_osition..."
+msgstr "_Posun..."
+
+#: app/menubar.c:544 app/menubar.c:569 app/menubar.c:707
+msgid "_Pattern"
+msgstr "Ús_ek"
+
+#: app/menubar.c:545 app/menubar.c:570 app/menubar.c:708
+msgid "_Track"
+msgstr "_Stopa"
+
+#: app/menubar.c:546 app/menubar.c:571
+msgid "_Selection"
+msgstr "_Výber"
+
+#: app/menubar.c:578
+msgid "_Find Unused Pattern"
+msgstr "Ná_jdi nepou¾itý úsek"
+
+#: app/menubar.c:580
+msgid "_Copy Current to Unused Pattern"
+msgstr "_Kopírova» aktuálny úsek do nepou¾itého"
+
+#: app/menubar.c:585
+msgid "C_lear Unused Patterns"
+msgstr "_Vyèisti» nepou¾ité úseky"
+
+#: app/menubar.c:587
+msgid "_Pack Patterns"
+msgstr "Z_bali» úseky"
+
+#: app/menubar.c:592
+msgid "_Save Current Pattern"
+msgstr "_Ulo¾i» aktuálny úsek"
+
+#: app/menubar.c:594
+msgid "L_oad Pattern"
+msgstr "_Naèíta» úsek"
+
+#: app/menubar.c:599
+#, fuzzy
+msgid "Sh_rink Current Pattern"
+msgstr "Aktuálny úsek"
+
+#: app/menubar.c:601
+#, fuzzy
+msgid "_Expand Current Pattern"
+msgstr "_Ulo¾i» aktuálny úsek"
+
+#: app/menubar.c:608
+msgid "_Toggle Current Channel Permanentness"
+msgstr ""
+
+#: app/menubar.c:610
+msgid "Toggle _All Channels Permanentness"
+msgstr ""
+
+#: app/menubar.c:618
+msgid "_Load XI..."
+msgstr "_Naèíta» XI..."
+
+#: app/menubar.c:620
+msgid "_Save XI..."
+msgstr "_Ulo¾i» XI..."
+
+#: app/menubar.c:625
+msgid "_Clear Current"
+msgstr "_Vyèisti» aktuálny"
+
+#: app/menubar.c:630
+msgid "_Delete Unused Instruments"
+msgstr "_Odstráni» nepou¾ité nástroje"
+
+#: app/menubar.c:637
+msgid "_Flicker-free scrolling"
+msgstr "Posúvanie bez _kmitania"
+
+#: app/menubar.c:640
+msgid "_Previous font"
+msgstr "_Predchádzajúce písmo"
+
+#: app/menubar.c:642
+msgid "_Next font"
+msgstr "Ï_al¹ie písmo"
+
+#: app/menubar.c:647
+msgid "Change preferred _accidental type"
+msgstr "Zmeni» uprednostòovaný _náhodný typ"
+
+#: app/menubar.c:649
+msgid "Change effect column editing _direction"
+msgstr "Zmeni» _smer editácie ståpca efektov"
+
+#: app/menubar.c:657
+msgid "Display _Oscilloscopes"
+msgstr "Zobrazi» o_sciloskopy"
+
+#: app/menubar.c:660
+msgid "_Tracker"
+msgstr "_Tracker"
+
+#: app/menubar.c:664
+msgid "_Keyboard Configuration..."
+msgstr "Nastavenie _klávesnice..."
+
+#: app/menubar.c:666
+msgid "_Audio Configuration..."
+msgstr "Nastavenie _zvuku..."
+
+#: app/menubar.c:668
+msgid "_GUI Configuration..."
+msgstr "Nastavenie _ovládania..."
+
+#: app/menubar.c:674
+msgid "_MIDI Configuration..."
+msgstr "Nastavenie _MIDI..."
+
+#: app/menubar.c:679
+msgid "Disable splash screen"
+msgstr "Z_akáza» úvodné okno"
+
+#: app/menubar.c:681
+msgid "_Save Settings now"
+msgstr "_Ulo¾i» nastavenia"
+
+#: app/menubar.c:683
+msgid "Save Settings on _Exit"
+msgstr "U_lo¾i» nastavenia pri ukonèení"
+
+#: app/menubar.c:690
+msgid "_About..."
+msgstr "_O programe..."
+
+#: app/menubar.c:695
+msgid "Show _Tips..."
+msgstr "Zobrazi» _pomôcky..."
+
+#: app/menubar.c:697
+msgid "_XM Effects..."
+msgstr "Efekty _XM..."
+
+#: app/menubar.c:704
+msgid "_File"
+msgstr "_Súbor"
+
+#: app/menubar.c:705
+msgid "_Module"
+msgstr "_Modul"
+
+#: app/menubar.c:706
+msgid "_Edit"
+msgstr "Úp_ravy"
+
+#: app/menubar.c:709
+msgid "_Instrument"
+msgstr "_Nástroj"
+
+#: app/menubar.c:710
+msgid "_Settings"
+msgstr "N_astavenia"
+
+#: app/menubar.c:711
+msgid "_Help"
+msgstr "_Pomocník"
+
+#: app/mixers/integer32.c:493
+msgid "Integers mixer, no interpolation, no filters, maximum sample length 1M"
+msgstr "Celoèíselný mixér"
+
+#: app/module-info.c:120
+msgid "Instrument Name"
+msgstr "Názov nástroja"
+
+#: app/module-info.c:120
+msgid "#smpl"
+msgstr "#smpl"
+
+#: app/module-info.c:121
+msgid "Sample Name"
+msgstr "Názov vzorky"
+
+#: app/module-info.c:128
+msgid "Linear"
+msgstr "Lineárne"
+
+#: app/module-info.c:128 app/sample-editor.c:237
+msgid "Amiga"
+msgstr "Amiga"
+
+#: app/module-info.c:133
+msgid "Module Info"
+msgstr "Informácie o module"
+
+#: app/module-info.c:167
+msgid "Songname:"
+msgstr "Názov skladby:"
+
+#: app/module-info.c:182
+msgid "Frequencies:"
+msgstr "Frekvencie:"
+
+#: app/module-info.c:187
+msgid "ProTracker Mode"
+msgstr "Re¾im ProTracker"
+
+#: app/module-info.c:403
+#, c-format
+msgid ""
+"Unused patterns: %d (used: %d)\n"
+"Unused instruments: %d (used: %d)\n"
+"\n"
+"Clear unused and reorder playlist?\n"
+msgstr ""
+"Nepou¾ité úseky: %d (pou¾ité: %d)\n"
+"Nepou¾ité nástroje: %d (pou¾ité: %d)\n"
+"\n"
+"Vyèisti» nepou¾ité a prerovna» playlist?\n"
+
+#: app/playlist.c:553
+msgid "Insert pattern that is being edited"
+msgstr "Vlo¾te úsek, ktorý sa práve upravuje"
+
+#: app/playlist.c:562
+msgid "Remove current playlist entry"
+msgstr "Odstráni aktuálnu polo¾ku playlistu"
+
+#: app/playlist.c:570
+msgid "Add + Cpy"
+msgstr "Prida» + Kopírova»"
+
+#: app/playlist.c:572
+msgid ""
+"Add a free pattern behind current position, and copy current pattern to it"
+msgstr "Pridá èistý úsek za aktuálnu pozíciu a nakopíruje doò aktuálny úsek"
+
+#: app/playlist.c:575
+msgid "Add Free"
+msgstr "Prida» èistý"
+
+#: app/playlist.c:577
+msgid "Add a free pattern behind current position"
+msgstr "Pridá èistý úsek za aktuálnu pozíciu"
+
+#: app/playlist.c:587
+#, fuzzy
+msgid "Len"
+msgstr "Då¾ka"
+
+#: app/playlist.c:601
+msgid "Song length"
+msgstr "Då¾ka skladby"
+
+#: app/playlist.c:607
+#, fuzzy
+msgid "Rstrt"
+msgstr "Nástroj"
+
+#: app/playlist.c:620
+msgid "Song restart position"
+msgstr "Pozícia návratu"
+
+#: app/preferences.c:75
+#, fuzzy
+msgid ""
+"A directory called '.soundtracker2' has been created in your\n"
+"home directory to store configuration files.\n"
+msgstr ""
+"Vo va¹om domovskom adresári bol vytvorený adresár názvom '.soundtracker' "
+"kvôli ulo¾eniu konfiguraèných súborov.\n"
+
+#: app/sample-editor.c:236
+msgid "No loop"
+msgstr "Bez sluèky"
+
+#: app/sample-editor.c:238
+msgid "PingPong"
+msgstr "PingPong"
+
+#: app/sample-editor.c:242 app/sample-editor.c:1581
+msgid "8 bits"
+msgstr "8 bitov"
+
+#: app/sample-editor.c:243 app/sample-editor.c:1581
+msgid "16 bits"
+msgstr "16 bitov"
+
+#: app/sample-editor.c:249
+msgid "Sample Editor"
+msgstr "Editor vzoriek"
+
+#: app/sample-editor.c:289 app/midi-settings-050.c:504
+#: app/midi-settings-09x.c:507
+msgid "Volume"
+msgstr "Hlasitos»"
+
+#: app/sample-editor.c:290
+msgid "Panning"
+msgstr "Vyvá¾enie"
+
+#: app/sample-editor.c:291
+msgid "Finetune"
+msgstr "Doladenie"
+
+#: app/sample-editor.c:311
+msgid "Selection:"
+msgstr "Výber:"
+
+#: app/sample-editor.c:315 app/track-editor.c:200 app/track-editor.c:210
+msgid "None"
+msgstr "Niè"
+
+#: app/sample-editor.c:321
+msgid "All"
+msgstr "V¹etko"
+
+#: app/sample-editor.c:342
+msgid "Length:"
+msgstr "Då¾ka:"
+
+#: app/sample-editor.c:358
+msgid "Set as loop"
+msgstr "Nastavi» ako sluèku"
+
+#: app/sample-editor.c:366
+msgid "RelNote"
+msgstr "Relatívny tón"
+
+#: app/sample-editor.c:377
+msgid "Load Sample..."
+msgstr "Naèíta» vzorku..."
+
+#: app/sample-editor.c:379
+msgid "Save WAV..."
+msgstr "Ulo¾i» WAV..."
+
+#: app/sample-editor.c:381
+msgid "Save region as WAV..."
+msgstr "Ulo¾i» oblas» ako WAV..."
+
+#: app/sample-editor.c:394
+msgid "Save WAV"
+msgstr "Ulo¾i» WAV"
+
+#: app/sample-editor.c:404
+msgid "Save Region"
+msgstr "Ulo¾i» oblas»"
+
+#: app/sample-editor.c:415
+msgid "Monitor"
+msgstr "Monitor"
+
+#: app/sample-editor.c:421
+msgid "Volume Ramp"
+msgstr "Krivka hlasitosti"
+
+#: app/sample-editor.c:427
+#, fuzzy
+msgid "Trim"
+msgstr "Tremor"
+
+#: app/sample-editor.c:438
+msgid "Zoom to selection"
+msgstr "Priblí¾i» zvolené"
+
+#: app/sample-editor.c:444
+msgid "Show all"
+msgstr "Zobrazi» v¹etko"
+
+#: app/sample-editor.c:450
+msgid "Zoom in (+50%)"
+msgstr "Priblí¾i» (+50%)"
+
+#: app/sample-editor.c:456
+msgid "Zoom out (-50%)"
+msgstr "Oddiali» (-50%)"
+
+#: app/sample-editor.c:462
+msgid "Reverse"
+msgstr "Obráti»"
+
+#: app/sample-editor.c:472
+msgid "Cut"
+msgstr "Vystrihnú»"
+
+#: app/sample-editor.c:478
+msgid "Remove"
+msgstr "Odstráni»"
+
+#: app/sample-editor.c:484
+msgid "Copy"
+msgstr "Kopírova»"
+
+#: app/sample-editor.c:490
+msgid "Paste"
+msgstr "Vlo¾i»"
+
+#: app/sample-editor.c:496
+msgid "Clear Sample"
+msgstr "Vyèisti» vzorku"
+
+#: app/sample-editor.c:502
+#, fuzzy
+msgid "Crop"
+msgstr "Kopírova»"
+
+#: app/sample-editor.c:571
+msgid "(no selection)"
+msgstr "(bez výberu)"
+
+#: app/sample-editor.c:1076
+msgid "Out of memory for copybuffer.\n"
+msgstr "Do¹la pamä» pre vyrovnávaciu pamä» kopírovania.\n"
+
+#: app/sample-editor.c:1195
+msgid "<just pasted>"
+msgstr "<práve vlo¾ené>"
+
+#: app/sample-editor.c:1308
+msgid "Out of memory for sample data."
+msgstr "Do¹la pamä» pre data vzorky."
+
+#: app/sample-editor.c:1324 app/sample-editor.c:1336
+msgid "Read error."
+msgstr "Chyba pri èítaní"
+
+#: app/sample-editor.c:1483
+msgid "Load stereo sample"
+msgstr "Naèíta» stereo vzorku"
+
+#: app/sample-editor.c:1491
+msgid ""
+"You have selected a stereo sample!\n"
+"(SoundTracker can only handle mono samples!)\n"
+"\n"
+"Please choose which channel to load:"
+msgstr ""
+"Zvolili ste si stereo vzorku!\n"
+"(SoundTracker doká¾e pracova» len s mono vzorkami!)\n"
+"\n"
+"Zvoµte ktorý kanál naèíta»:"
+
+#: app/sample-editor.c:1502
+msgid "Left"
+msgstr "¥avý"
+
+#: app/sample-editor.c:1508
+msgid "Mix"
+msgstr "Zmie¹a»"
+
+#: app/sample-editor.c:1514
+msgid "Right"
+msgstr "Pravý"
+
+#: app/sample-editor.c:1582
+msgid "Signed"
+msgstr "Podpísaná"
+
+#: app/sample-editor.c:1582
+msgid "Unsigned"
+msgstr "Nepodpísaná"
+
+#: app/sample-editor.c:1583
+msgid "Little-Endian"
+msgstr "Little-Endian"
+
+#: app/sample-editor.c:1583
+msgid "Big-Endian"
+msgstr "Big-Endian"
+
+#: app/sample-editor.c:1584
+msgid "Mono"
+msgstr "Mono"
+
+#: app/sample-editor.c:1584
+msgid "Stereo"
+msgstr "Stereo"
+
+#: app/sample-editor.c:1596
+msgid "Load raw sample"
+msgstr "Naèíta» surovú vzorku"
+
+#: app/sample-editor.c:1604
+msgid ""
+"You have selected a sample that is not\n"
+"in a known format. You can load the raw data now.\n"
+"\n"
+"Please choose a format:"
+msgstr ""
+"Zvolili ste vzorku ktorá nie je v známom\n"
+"formáte. Mô¾ete teraz naèíta» surové data.\n"
+"\n"
+"Prosím zvoµte formát:"
+
+#: app/sample-editor.c:1630
+msgid "Word format:"
+msgstr "Slovný formát:"
+
+#: app/sample-editor.c:1677
+msgid "Sampling Rate:"
+msgstr "Vzorkovacia frekvencia:"
+
+#: app/sample-editor.c:1688
+msgid "8363"
+msgstr "8363"
+
+#: app/sample-editor.c:1696 app/sample-editor.c:2014
+msgid "OK"
+msgstr "OK"
+
+#: app/sample-editor.c:1756
+msgid "Can't read sample"
+msgstr "Nemô¾em naèíta» vzorku"
+
+#: app/sample-editor.c:1769
+msgid "Sample is too long for current mixer module. Loading anyway."
+msgstr ""
+"Vzorka je príli¹ dlhá pre aktuálny modul mixéru. Napriek tomu naèítavam."
+
+#: app/sample-editor.c:1793
+msgid "Can only handle 8 and 16 bit samples with up to 2 channels"
+msgstr "Je mo¾né pracova» iba s 8 a 16 bitovými vzorkami s najviac 2 kanálmi"
+
+#: app/sample-editor.c:1978
+msgid "Please select region first."
+msgstr "Prosím najprv zvoµte oblas»."
+
+#: app/sample-editor.c:2022
+msgid "Start sampling"
+msgstr "Zaèa» vzorkovanie"
+
+#: app/sample-editor.c:2052
+msgid "No sampling driver available"
+msgstr "Nie je dostupný ¾iadny vzorkovací ovládaè"
+
+#: app/sample-editor.c:2062 app/sample-editor.c:2065
+msgid "Sampling Window"
+msgstr "Okno vzorkovania"
+
+#: app/sample-editor.c:2114
+msgid "Out of memory while sampling!"
+msgstr "Pri vzorkovaní do¹la pamä»!"
+
+#: app/sample-editor.c:2165
+msgid "<just sampled>"
+msgstr "<práve navzorkované>"
+
+#: app/sample-editor.c:2196
+msgid "Recorded sample is too long for current mixer module. Using it anyway."
+msgstr ""
+"Nahratá vzorka je príli¹ dlhá pre aktuálny modul mixéru. Napriek tomu bude "
+"pou¾itá."
+
+#: app/sample-editor.c:2249
+msgid "Normalize"
+msgstr "Normalizova»"
+
+#: app/sample-editor.c:2250
+msgid "Execute"
+msgstr "Vykona»"
+
+#: app/sample-editor.c:2260 app/sample-editor.c:2263
+msgid "Volume Ramping"
+msgstr "Krivka hlasitosti"
+
+#: app/sample-editor.c:2279
+msgid "Perform linear volume fade on Selection"
+msgstr "Pou¾i» lineárne zni¾ovanie hlasitosti na výber"
+
+#: app/sample-editor.c:2291
+msgid "Left [%]:"
+msgstr "¥avý [%]:"
+
+#: app/sample-editor.c:2294 app/sample-editor.c:2311
+msgid "H"
+msgstr "H"
+
+#: app/sample-editor.c:2300 app/sample-editor.c:2317
+msgid "D"
+msgstr "D"
+
+#: app/sample-editor.c:2308
+msgid "Right [%]:"
+msgstr "Pravý [%]:"
+
+#: app/sample-editor.c:2452 app/sample-editor.c:2463
+msgid "Trim parameters"
+msgstr ""
+
+#: app/sample-editor.c:2508
+msgid "Trim at the beginning"
+msgstr ""
+
+#: app/sample-editor.c:2515
+msgid "Trim at the end"
+msgstr ""
+
+#: app/sample-editor.c:2522
+msgid "Threshold (dB)"
+msgstr ""
+
+#: app/tips-dialog.c:50
+msgid ""
+"Welcome to SoundTracker!\n"
+"\n"
+"If you are new to this type of program, you will want to get hold of\n"
+"some XM or MOD files first and play with them."
+msgstr ""
+"Vitajte v SoundTrackeri!\n"
+"\n"
+"Ak takýto program pou¾ívate po prvý krát, mali by ste si najskôr\n"
+"zohna» nejaké súbory XM alebo MOD a pohra» sa s nimi."
+
+#: app/tips-dialog.c:55
+msgid ""
+"You can make SoundTracker's edit mode more responsive to keyboard\n"
+"input by decreasing the mixing buffer size of the \"Editing\" object in\n"
+"the Audio Configuration."
+msgstr ""
+"Editaèný re¾im SoundTrackeru bude citlivej¹í na vstup z klávesnice, ak\n"
+"zní¾ite veµkos» vyrovnávacej pamäte mixéru vo výstupe pre editáciu\n"
+"v Nastavení zvuku."
+
+#: app/tips-dialog.c:59
+msgid ""
+"You can adjust the loop points in the sample editor by holding Shift\n"
+"and using the left and right mousebuttons.\n"
+msgstr ""
+"Mô¾ete upravi» krajné body sluèky v editore vzoriek podr¾aním klávesy\n"
+"Shift a stláèaním µavého a pravého tlaèítka na my¹i.\n"
+
+#: app/tips-dialog.c:62
+msgid ""
+"If you want to know more about tracking, and how the various commands\n"
+"work, have a look at http://www.united-trackers.org/"
+msgstr ""
+"Ak sa chcete dozvedie» viac o \"trackingu\" a ako pracujú rôzne príkazy,\n"
+"pozrite sa na http://www.united-trackers.org/"
+
+#: app/tips-dialog.c:65
+msgid ""
+"You can assign samples of an instrument to the individual keys by\n"
+"activating its sample and then clicking on the keyboard in the\n"
+"instrument editor page."
+msgstr ""
+"Mô¾ete priradi» jednotlivé vzor jednotlivým klávesom tým,\n"
+"¾e aktivujete vzorku a kliknete na klávesnicu v editore\n"
+"nástrojov."
+
+#: app/tips-dialog.c:69
+msgid ""
+"Is your cursor trapped in a number entry field?\n"
+"Just press Return or Tab to free yourself!"
+msgstr ""
+"Ak vá¹ kurzor uviazol v políèku pre zadávanie èísel,\n"
+"stlaète Enter alebo Tab pre uvoµnenie kurzoru."
+
+#: app/tips-dialog.c:81
+msgid "SoundTracker Tip of the day"
+msgstr "SoundTracker - Tip dòa"
+
+#: app/tips-dialog.c:154
+msgid "Previous Tip"
+msgstr "Predchádzajúci tip"
+
+#: app/tips-dialog.c:162
+msgid "Next Tip"
+msgstr "Ïal¹í tip"
+
+#: app/tips-dialog.c:174
+msgid "Show tip next time"
+msgstr "Zobrazi» tip nabudúce"
+
+#: app/track-editor.c:115
+msgid "Arpeggio"
+msgstr "Arpeggio"
+
+#: app/track-editor.c:116
+msgid "Porta up"
+msgstr "Porta nahor"
+
+#: app/track-editor.c:117
+msgid "Porta down"
+msgstr "Porta nadol"
+
+#: app/track-editor.c:118 app/track-editor.c:182
+msgid "Tone porta"
+msgstr "Tone porta"
+
+#: app/track-editor.c:119 app/track-editor.c:178
+msgid "Vibrato"
+msgstr "Vibrato"
+
+#: app/track-editor.c:120
+msgid "Tone porta + Volume slide"
+msgstr "Tone porta + Volume slide"
+
+#: app/track-editor.c:121
+msgid "Vibrato + Volume slide"
+msgstr "Vibrato + Volume slide"
+
+#: app/track-editor.c:122
+msgid "Tremolo"
+msgstr "Tremolo"
+
+#: app/track-editor.c:123 app/track-editor.c:179
+msgid "Set panning"
+msgstr "Nastavi» vyvá¾enie"
+
+#: app/track-editor.c:124 app/track-editor.c:126
+msgid "Position jump"
+msgstr "Skok na pozíciu"
+
+#: app/track-editor.c:125 app/track-editor.c:127 app/track-editor.c:203
+msgid "Set volume"
+msgstr "Nastavi» hlasitos»"
+
+#: app/track-editor.c:128
+msgid "Pattern break"
+msgstr "Zakonèi» úsek"
+
+#: app/track-editor.c:130
+msgid "Set tempo/bpm"
+msgstr "Nastavi» tempo/BPM"
+
+#: app/track-editor.c:131
+msgid "Set global volume"
+msgstr "Nastavi» celkovú hlasitos»"
+
+#: app/track-editor.c:132
+msgid "Global volume slide"
+msgstr "Celkový posun hlasitosti"
+
+#: app/track-editor.c:135
+msgid "Key off"
+msgstr "Key off"
+
+#: app/track-editor.c:136
+msgid "Set envelop position"
+msgstr "Nastavi» pozíciu obálky"
+
+#: app/track-editor.c:140
+msgid "Panning slide"
+msgstr "Posun vyvá¾enia"
+
+#: app/track-editor.c:141
+msgid "LP filter resonance"
+msgstr "Rezonancia LP filtra"
+
+#: app/track-editor.c:142
+msgid "Multi retrig note"
+msgstr "Viacnásobná nota"
+
+#: app/track-editor.c:144
+msgid "Tremor"
+msgstr "Tremor"
+
+#: app/track-editor.c:150
+msgid "LP filter cutoff"
+msgstr "Cutoff LP filtra"
+
+#: app/track-editor.c:155
+msgid "Fine porta up"
+msgstr "Jemné porta nahor"
+
+#: app/track-editor.c:156
+msgid "Fine porta down"
+msgstr "Jemné porta dole"
+
+#: app/track-editor.c:157
+msgid "Set gliss control"
+msgstr "Nastavi» ovládanie gliss"
+
+#: app/track-editor.c:158
+msgid "Set vibrato control"
+msgstr "Nastavi» ovládanie vibrata"
+
+#: app/track-editor.c:159
+msgid "Set finetune"
+msgstr "Nastavi» jemné doladenie"
+
+#: app/track-editor.c:160
+msgid "Set loop begin/loop"
+msgstr "Nastavi» zaèiatok/koniec sluèky"
+
+#: app/track-editor.c:161
+msgid "Set tremolo control"
+msgstr "Nastavi» ovládanie tremolo"
+
+#: app/track-editor.c:163
+msgid "Retrig note"
+msgstr "Znovu zahra» notu"
+
+#: app/track-editor.c:164 app/track-editor.c:176
+msgid "Fine volume slide up"
+msgstr "Jemné pridanie hlasitosti"
+
+#: app/track-editor.c:165 app/track-editor.c:175
+msgid "Fine volume slide down"
+msgstr "Jemné ubratie hlasitosti"
+
+#: app/track-editor.c:166
+msgid "Note cut"
+msgstr "Ukonèenie noty"
+
+#: app/track-editor.c:167
+msgid "Note delay"
+msgstr "Oneskorenie noty"
+
+#: app/track-editor.c:168
+msgid "Pattern delay"
+msgstr "Oneskorenie úseku"
+
+#: app/track-editor.c:173
+msgid "Volume slide down"
+msgstr "Ubratie hlasitosti"
+
+#: app/track-editor.c:174
+msgid "Volume slide up"
+msgstr "Pridanie hlasitosti"
+
+#: app/track-editor.c:177
+msgid "Set vibrato speed"
+msgstr "Nastavi» rýchlos» vibrato"
+
+#: app/track-editor.c:180
+msgid "Panning slide left"
+msgstr "Posun vyvá¾enia doµava"
+
+#: app/track-editor.c:181
+msgid "Panning slide right"
+msgstr "Posun vyvá¾enia doprava"
+
+#: app/track-editor.c:186
+msgid "sine"
+msgstr "sínus"
+
+#: app/track-editor.c:187
+msgid "ramp down"
+msgstr "naklonená rovina"
+
+#: app/track-editor.c:188
+msgid "square"
+msgstr "¹tvorec"
+
+#: app/track-editor.c:233 app/track-editor.c:239 app/track-editor.c:256
+#: app/track-editor.c:262
+msgid "None ]"
+msgstr "®iadne ]"
+
+#: app/track-editor.c:362
+msgid "Jazz Edit:"
+msgstr "Jazzová editácia:"
+
+#: app/track-editor.c:407
+msgid "Tracker"
+msgstr "Tracker"
+
+#: app/tracker-settings.c:261
+msgid "Font list"
+msgstr "Zoznam písiem"
+
+#: app/tracker-settings.c:281
+msgid "Add font"
+msgstr "Prida» písmo"
+
+#: app/tracker-settings.c:287
+msgid "Delete font"
+msgstr "Ubra» písmo"
+
+#: app/tracker-settings.c:293
+msgid "Apply font"
+msgstr "Pou¾i» písmo"
+
+#: app/tracker-settings.c:309
+msgid "Select font..."
+msgstr "Zvoµte písmo..."
+
+#: app/transposition.c:198
+msgid "Whole Song"
+msgstr "Celá pieseò"
+
+#: app/transposition.c:199
+msgid "All Patterns"
+msgstr "V¹etky úseky"
+
+#: app/transposition.c:200
+msgid "Current Pattern"
+msgstr "Aktuálny úsek"
+
+#: app/transposition.c:201
+msgid "Current Track"
+msgstr "Aktuálna stopa"
+
+#: app/transposition.c:205
+msgid "Current Instrument"
+msgstr "Aktuálny nástroj"
+
+#: app/transposition.c:206
+msgid "All Instruments"
+msgstr "V¹etky nástroje"
+
+#: app/transposition.c:210
+msgid "Half note up"
+msgstr "O poltón nahor"
+
+#: app/transposition.c:211
+msgid "Half note down"
+msgstr "O poltón nadol"
+
+#: app/transposition.c:212
+msgid "Octave up"
+msgstr "O oktávu nahor"
+
+#: app/transposition.c:213
+msgid "Octave down"
+msgstr "O oktávu nadol"
+
+#: app/transposition.c:216
+msgid "Exchange 1 <-> 2"
+msgstr "Zameni» 1 <-> 2"
+
+#: app/transposition.c:217
+msgid "Change 1 -> 2"
+msgstr "Zmeni» 1 -> 2"
+
+#: app/transposition.c:226 app/transposition.c:229
+msgid "Transposition Tools"
+msgstr "Nástroje prenotovania"
+
+#: app/transposition.c:250
+msgid "Scope of the operation:"
+msgstr "Rozsah operácie:"
+
+#: app/transposition.c:257
+msgid "Note Transposition"
+msgstr "Prenotovanie"
+
+#: app/transposition.c:288
+msgid "Instrument Changing"
+msgstr "Zmena nástroja"
+
+#: app/transposition.c:303
+msgid "Instrument 1:"
+msgstr "Nástroj 1:"
+
+#: app/transposition.c:305 app/transposition.c:315
+msgid "Current instrument"
+msgstr "Aktuálny nástroj"
+
+#: app/transposition.c:313
+msgid "Instrument 2:"
+msgstr "Nástroj 2:"
+
+#: app/xm.c:197
+#, c-format
+msgid "Pattern length out of range: %d.\n"
+msgstr "Då¾ka úseku je mimo hranice: %d.\n"
+
+#: app/xm.c:548
+msgid "File is no XI instrument."
+msgstr "Súbor nie je XI nástroj."
+
+#: app/xm.c:558
+#, c-format
+msgid "Unknown XI version 0x%x\n"
+msgstr "Neznáma verzia XI 0x%x\n"
+
+#: app/xm.c:588
+#, c-format
+msgid "Invalid vibtype %d, using Sine.\n"
+msgstr "Neplatný typ vibrata %d, bude pou¾itý sínus.\n"
+
+#: app/xm.c:860 app/xm.c:985
+msgid "Error while loading patterns."
+msgstr "Chyba pri naèítavaní úsekov."
+
+#: app/xm.c:928
+msgid "Can't open file"
+msgstr "Nemô¾em otvori» súbor"
+
+#: app/xm.c:991
+msgid "Error while loading instruments."
+msgstr "Chyba pri naèítavaní nástrojov."
+
+#: app/xm.c:1002
+#, c-format
+msgid ""
+"Module contains sample(s) that are too long for the current mixer.\n"
+"Maximum sample length is %d."
+msgstr ""
+"Modul obsahuje vzorky, ktoré sú pridlhé pre aktuálny mixér.\n"
+"Maximálna då¾ka vzorky je %d."
+
+#: app/xm.c:1400
+msgid "Not FastTracker XM and not supported MOD format!"
+msgstr "Toto nie je XM formát FastTrackeru ani podporovaný formát MOD!"
+
+#: app/xm.c:1415 app/xm.c:1436
+msgid "Error when file reading or unexpected end of file"
+msgstr "Chyba pri naèítavaní alebo neoèakávaný koniec súboru"
+
+#: app/xm.c:1419
+msgid "Incorrect or unsupported version of pattern file!"
+msgstr "Nesprávna alebo nepodporovaná verzia úsekového súboru!"
+
+#: app/xm.c:1423
+msgid "Incorrect pattern length!"
+msgstr "Nesprávna då¾ka úseku!"
+
+#: app/xm.c:1469
+msgid "Error during saving pattern!"
+msgstr "Chyba pri ukladaní úseku!"
+
+#: app/midi-settings-050.c:497 app/midi-settings-09x.c:500
+msgid "Auto connect"
+msgstr "Automatické pripojenie"
+
+#: app/midi-settings-050.c:512 app/midi-settings-09x.c:515
+msgid "Channel"
+msgstr "Kanál"
+
+#: app/midi-settings-050.c:521 app/midi-settings-09x.c:524
+msgid "Client number"
+msgstr "Èíslo klienta"
+
+#: app/midi-settings-050.c:531 app/midi-settings-09x.c:534
+msgid "Port number"
+msgstr "Èíslo portu"
+
+#: app/midi-settings-050.c:549 app/midi-settings-09x.c:552
+msgid "Input"
+msgstr "Vstup"
+
+#: app/midi-settings-050.c:558 app/midi-settings-09x.c:561
+msgid "For future development"
+msgstr "Pre budúci vývoj"
+
+#: app/midi-settings-050.c:564 app/midi-settings-09x.c:567
+msgid "Output"
+msgstr "Výstup"
+
+#: app/midi-settings-050.c:575 app/midi-settings-09x.c:578
+msgid "Debug level"
+msgstr "Úroveò ladenia"
+
+#: app/midi-settings-050.c:587 app/midi-settings-09x.c:590
+msgid "Misc"
+msgstr "Rôzne"
+
+#: app/midi-settings-050.c:631 app/midi-settings-09x.c:634
+msgid "MIDI Configuration"
+msgstr "Nastavenie MIDI"
+
+#: app/midi-settings-050.c:636 app/midi-settings-09x.c:639
+msgid "Apply"
+msgstr "Pou¾i»"
+
+#~ msgid "Drivers"
+#~ msgstr "Ovládaèe"
+
+#~ msgid "Up"
+#~ msgstr "Nahor"
+
+#~ msgid "Down"
+#~ msgstr "Nadol"
+
+#~ msgid "Horizontal effect column editing"
+#~ msgstr "Zmení smer upravovania ståpca efektov"
+
+#~ msgid "Pattern"
+#~ msgstr "Úsek"
+
+#~ msgid "PatLength"
+#~ msgstr "Då¾kaÚseku"
+
+#~ msgid "_Accidentals"
+#~ msgstr "_Náhodnosti"
+
+#~ msgid "# _Accidentals"
+#~ msgstr "# _Náhodnosti"

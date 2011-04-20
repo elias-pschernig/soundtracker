@@ -1,0 +1,1027 @@
+
+kb-x86-asm.o:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000000 <kbasm_post_mixing>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	53                   	push   %ebx
+   4:	51                   	push   %ecx
+   5:	52                   	push   %edx
+   6:	56                   	push   %esi
+   7:	57                   	push   %edi
+   8:	9b db e3             	finit  
+   b:	8b 75 08             	mov    0x8(%ebp),%esi
+   e:	8b 7d 0c             	mov    0xc(%ebp),%edi
+  11:	8b 4d 10             	mov    0x10(%ebp),%ecx
+  14:	01 c9                	add    %ecx,%ecx
+  16:	d9 45 14             	flds   0x14(%ebp)
+  19:	e8 07 00 00 00       	call   25 <clipstereo>
+  1e:	5f                   	pop    %edi
+  1f:	5e                   	pop    %esi
+  20:	5a                   	pop    %edx
+  21:	59                   	pop    %ecx
+  22:	5b                   	pop    %ebx
+  23:	c9                   	leave  
+  24:	c3                   	ret    
+
+00000025 <clipstereo>:
+  25:	d9 05 0c 00 00 00    	flds   0xc
+  2b:	d9 05 08 00 00 00    	flds   0x8
+  31:	66 bb ff 7f          	mov    $0x7fff,%bx
+  35:	66 ba 01 80          	mov    $0x8001,%dx
+  39:	89 2d 14 00 00 00    	mov    %ebp,0x14
+  3f:	31 ed                	xor    %ebp,%ebp
+
+00000041 <.lp>:
+  41:	d9 06                	flds   (%esi)
+  43:	d8 cb                	fmul   %st(3),%st
+  45:	d8 d1                	fcom   %st(1)
+  47:	df e0                	fnstsw %ax
+  49:	9e                   	sahf   
+  4a:	77 15                	ja     61 <.max>
+  4c:	d8 d2                	fcom   %st(2)
+  4e:	9b df e0             	fstsw  %ax
+  51:	9e                   	sahf   
+  52:	72 15                	jb     69 <.min>
+  54:	df 1f                	fistp  (%edi)
+
+00000056 <.next>:
+  56:	83 c6 04             	add    $0x4,%esi
+  59:	83 c7 02             	add    $0x2,%edi
+  5c:	49                   	dec    %ecx
+  5d:	75 e2                	jne    41 <.lp>
+  5f:	eb 10                	jmp    71 <.ende>
+
+00000061 <.max>:
+  61:	dd d8                	fstp   %st(0)
+  63:	66 89 1f             	mov    %bx,(%edi)
+  66:	45                   	inc    %ebp
+  67:	eb ed                	jmp    56 <.next>
+
+00000069 <.min>:
+  69:	dd d8                	fstp   %st(0)
+  6b:	66 89 17             	mov    %dx,(%edi)
+  6e:	45                   	inc    %ebp
+  6f:	eb e5                	jmp    56 <.next>
+
+00000071 <.ende>:
+  71:	89 e8                	mov    %ebp,%eax
+  73:	8b 2d 14 00 00 00    	mov    0x14,%ebp
+  79:	dd d8                	fstp   %st(0)
+  7b:	dd d8                	fstp   %st(0)
+  7d:	dd d8                	fstp   %st(0)
+  7f:	c3                   	ret    
+
+00000080 <kbasm_mix>:
+  80:	55                   	push   %ebp
+  81:	89 e5                	mov    %esp,%ebp
+  83:	50                   	push   %eax
+  84:	53                   	push   %ebx
+  85:	51                   	push   %ecx
+  86:	52                   	push   %edx
+  87:	56                   	push   %esi
+  88:	57                   	push   %edi
+  89:	9b db e3             	finit  
+  8c:	89 2d 14 00 00 00    	mov    %ebp,0x14
+  92:	8b 6d 08             	mov    0x8(%ebp),%ebp
+  95:	8b 45 00             	mov    0x0(%ebp),%eax
+  98:	8b 5d 04             	mov    0x4(%ebp),%ebx
+  9b:	a3 08 00 00 00       	mov    %eax,0x8
+  a0:	89 1d 0c 00 00 00    	mov    %ebx,0xc
+  a6:	8b 45 08             	mov    0x8(%ebp),%eax
+  a9:	8b 5d 0c             	mov    0xc(%ebp),%ebx
+  ac:	a3 00 00 00 00       	mov    %eax,0x0
+  b1:	89 1d 04 00 00 00    	mov    %ebx,0x4
+  b7:	8b 45 2c             	mov    0x2c(%ebp),%eax
+  ba:	a3 20 00 00 00       	mov    %eax,0x20
+  bf:	8b 45 30             	mov    0x30(%ebp),%eax
+  c2:	a3 24 00 00 00       	mov    %eax,0x24
+  c7:	8b 45 34             	mov    0x34(%ebp),%eax
+  ca:	a3 28 00 00 00       	mov    %eax,0x28
+  cf:	8b 45 38             	mov    0x38(%ebp),%eax
+  d2:	a3 2c 00 00 00       	mov    %eax,0x2c
+  d7:	8b 4d 3c             	mov    0x3c(%ebp),%ecx
+  da:	89 0d 1c 00 00 00    	mov    %ecx,0x1c
+  e0:	8b 5d 18             	mov    0x18(%ebp),%ebx
+  e3:	8b 75 1c             	mov    0x1c(%ebp),%esi
+  e6:	8b 45 10             	mov    0x10(%ebp),%eax
+  e9:	8b 55 14             	mov    0x14(%ebp),%edx
+  ec:	8b 7d 20             	mov    0x20(%ebp),%edi
+  ef:	8b 4d 24             	mov    0x24(%ebp),%ecx
+  f2:	8b 6d 40             	mov    0x40(%ebp),%ebp
+  f5:	81 c5 00 00 00 00    	add    $0x0,%ebp
+  fb:	8b 6d 00             	mov    0x0(%ebp),%ebp
+  fe:	ff d5                	call   *%ebp
+ 100:	8b 2d 14 00 00 00    	mov    0x14,%ebp
+ 106:	8b 6d 08             	mov    0x8(%ebp),%ebp
+ 109:	89 45 10             	mov    %eax,0x10(%ebp)
+ 10c:	89 55 14             	mov    %edx,0x14(%ebp)
+ 10f:	89 7d 20             	mov    %edi,0x20(%ebp)
+ 112:	a1 28 00 00 00       	mov    0x28,%eax
+ 117:	89 45 34             	mov    %eax,0x34(%ebp)
+ 11a:	a1 2c 00 00 00       	mov    0x2c,%eax
+ 11f:	89 45 38             	mov    %eax,0x38(%ebp)
+ 122:	a1 08 00 00 00       	mov    0x8,%eax
+ 127:	8b 1d 0c 00 00 00    	mov    0xc,%ebx
+ 12d:	89 45 00             	mov    %eax,0x0(%ebp)
+ 130:	89 5d 04             	mov    %ebx,0x4(%ebp)
+ 133:	8b 2d 14 00 00 00    	mov    0x14,%ebp
+ 139:	5f                   	pop    %edi
+ 13a:	5e                   	pop    %esi
+ 13b:	5a                   	pop    %edx
+ 13c:	59                   	pop    %ecx
+ 13d:	5b                   	pop    %ebx
+ 13e:	58                   	pop    %eax
+ 13f:	c9                   	leave  
+ 140:	c3                   	ret    
+
+00000141 <kbasm_mix_cubic_noscopes_unfiltered_forward_noramp>:
+ 141:	d9 05 08 00 00 00    	flds   0x8
+ 147:	d9 05 0c 00 00 00    	flds   0xc
+ 14d:	89 c5                	mov    %eax,%ebp
+ 14f:	d1 ed                	shr    %ebp
+ 151:	89 d0                	mov    %edx,%eax
+ 153:	c1 e8 18             	shr    $0x18,%eax
+
+00000156 <cubicmixer0>:
+ 156:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 15d:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 164:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ 16b:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 172:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ 179:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 180:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ 187:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 18e:	d9 ca                	fxch   %st(2)
+ 190:	de c3                	faddp  %st,%st(3)
+ 192:	01 f2                	add    %esi,%edx
+ 194:	8d 7f 08             	lea    0x8(%edi),%edi
+ 197:	de c2                	faddp  %st,%st(2)
+ 199:	11 dd                	adc    %ebx,%ebp
+ 19b:	89 d0                	mov    %edx,%eax
+ 19d:	de c1                	faddp  %st,%st(1)
+ 19f:	c1 e8 18             	shr    $0x18,%eax
+ 1a2:	d9 c2                	fld    %st(2)
+ 1a4:	d8 c9                	fmul   %st(1),%st
+ 1a6:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 1a9:	d9 c9                	fxch   %st(1)
+ 1ab:	d8 ca                	fmul   %st(2),%st
+ 1ad:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 1b0:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 1b3:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 1b6:	49                   	dec    %ecx
+ 1b7:	75 9d                	jne    156 <cubicmixer0>
+ 1b9:	d1 e5                	shl    %ebp
+ 1bb:	89 e8                	mov    %ebp,%eax
+ 1bd:	c3                   	ret    
+
+000001be <kbasm_mix_cubic_noscopes_unfiltered_backward_noramp>:
+ 1be:	d9 05 08 00 00 00    	flds   0x8
+ 1c4:	d9 05 0c 00 00 00    	flds   0xc
+ 1ca:	89 c5                	mov    %eax,%ebp
+ 1cc:	d1 ed                	shr    %ebp
+ 1ce:	89 d0                	mov    %edx,%eax
+ 1d0:	f7 d8                	neg    %eax
+ 1d2:	c1 e8 18             	shr    $0x18,%eax
+
+000001d5 <cubicmixer1>:
+ 1d5:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 1dc:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 1e3:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ 1ea:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 1f1:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ 1f8:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 1ff:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ 206:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 20d:	d9 ca                	fxch   %st(2)
+ 20f:	de c3                	faddp  %st,%st(3)
+ 211:	01 f2                	add    %esi,%edx
+ 213:	8d 7f 08             	lea    0x8(%edi),%edi
+ 216:	de c2                	faddp  %st,%st(2)
+ 218:	11 dd                	adc    %ebx,%ebp
+ 21a:	89 d0                	mov    %edx,%eax
+ 21c:	de c1                	faddp  %st,%st(1)
+ 21e:	f7 d8                	neg    %eax
+ 220:	c1 e8 18             	shr    $0x18,%eax
+ 223:	d9 c2                	fld    %st(2)
+ 225:	d8 c9                	fmul   %st(1),%st
+ 227:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 22a:	d9 c9                	fxch   %st(1)
+ 22c:	d8 ca                	fmul   %st(2),%st
+ 22e:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 231:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 234:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 237:	49                   	dec    %ecx
+ 238:	75 9b                	jne    1d5 <cubicmixer1>
+ 23a:	d1 e5                	shl    %ebp
+ 23c:	89 e8                	mov    %ebp,%eax
+ 23e:	c3                   	ret    
+
+0000023f <kbasm_mix_cubic_noscopes_filtered_forward_noramp>:
+ 23f:	d9 05 08 00 00 00    	flds   0x8
+ 245:	d9 05 0c 00 00 00    	flds   0xc
+ 24b:	89 c5                	mov    %eax,%ebp
+ 24d:	d1 ed                	shr    %ebp
+ 24f:	89 d0                	mov    %edx,%eax
+ 251:	c1 e8 18             	shr    $0x18,%eax
+
+00000254 <cubicmixer2>:
+ 254:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 25b:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 262:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ 269:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 270:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ 277:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 27e:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ 285:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 28c:	d9 ca                	fxch   %st(2)
+ 28e:	de c3                	faddp  %st,%st(3)
+ 290:	01 f2                	add    %esi,%edx
+ 292:	8d 7f 08             	lea    0x8(%edi),%edi
+ 295:	de c2                	faddp  %st,%st(2)
+ 297:	11 dd                	adc    %ebx,%ebp
+ 299:	89 d0                	mov    %edx,%eax
+ 29b:	de c1                	faddp  %st,%st(1)
+ 29d:	d8 25 28 00 00 00    	fsubs  0x28
+ 2a3:	d8 0d 20 00 00 00    	fmuls  0x20
+ 2a9:	d9 05 2c 00 00 00    	flds   0x2c
+ 2af:	d8 0d 24 00 00 00    	fmuls  0x24
+ 2b5:	de c1                	faddp  %st,%st(1)
+ 2b7:	d9 15 2c 00 00 00    	fsts   0x2c
+ 2bd:	d8 0d 20 00 00 00    	fmuls  0x20
+ 2c3:	d8 05 28 00 00 00    	fadds  0x28
+ 2c9:	d9 15 28 00 00 00    	fsts   0x28
+ 2cf:	c1 e8 18             	shr    $0x18,%eax
+ 2d2:	d9 c2                	fld    %st(2)
+ 2d4:	d8 c9                	fmul   %st(1),%st
+ 2d6:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 2d9:	d9 c9                	fxch   %st(1)
+ 2db:	d8 ca                	fmul   %st(2),%st
+ 2dd:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 2e0:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 2e3:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 2e6:	49                   	dec    %ecx
+ 2e7:	0f 85 67 ff ff ff    	jne    254 <cubicmixer2>
+ 2ed:	d1 e5                	shl    %ebp
+ 2ef:	89 e8                	mov    %ebp,%eax
+ 2f1:	c3                   	ret    
+
+000002f2 <kbasm_mix_cubic_noscopes_filtered_backward_noramp>:
+ 2f2:	d9 05 08 00 00 00    	flds   0x8
+ 2f8:	d9 05 0c 00 00 00    	flds   0xc
+ 2fe:	89 c5                	mov    %eax,%ebp
+ 300:	d1 ed                	shr    %ebp
+ 302:	89 d0                	mov    %edx,%eax
+ 304:	f7 d8                	neg    %eax
+ 306:	c1 e8 18             	shr    $0x18,%eax
+ 309:	8d b4 26 00 00 00 00 	lea    0x0(%esi),%esi
+
+00000310 <cubicmixer3>:
+ 310:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 317:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 31e:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ 325:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 32c:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ 333:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 33a:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ 341:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 348:	d9 ca                	fxch   %st(2)
+ 34a:	de c3                	faddp  %st,%st(3)
+ 34c:	01 f2                	add    %esi,%edx
+ 34e:	8d 7f 08             	lea    0x8(%edi),%edi
+ 351:	de c2                	faddp  %st,%st(2)
+ 353:	11 dd                	adc    %ebx,%ebp
+ 355:	89 d0                	mov    %edx,%eax
+ 357:	de c1                	faddp  %st,%st(1)
+ 359:	f7 d8                	neg    %eax
+ 35b:	d8 25 28 00 00 00    	fsubs  0x28
+ 361:	d8 0d 20 00 00 00    	fmuls  0x20
+ 367:	d9 05 2c 00 00 00    	flds   0x2c
+ 36d:	d8 0d 24 00 00 00    	fmuls  0x24
+ 373:	de c1                	faddp  %st,%st(1)
+ 375:	d9 15 2c 00 00 00    	fsts   0x2c
+ 37b:	d8 0d 20 00 00 00    	fmuls  0x20
+ 381:	d8 05 28 00 00 00    	fadds  0x28
+ 387:	d9 15 28 00 00 00    	fsts   0x28
+ 38d:	c1 e8 18             	shr    $0x18,%eax
+ 390:	d9 c2                	fld    %st(2)
+ 392:	d8 c9                	fmul   %st(1),%st
+ 394:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 397:	d9 c9                	fxch   %st(1)
+ 399:	d8 ca                	fmul   %st(2),%st
+ 39b:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 39e:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 3a1:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 3a4:	49                   	dec    %ecx
+ 3a5:	0f 85 65 ff ff ff    	jne    310 <cubicmixer3>
+ 3ab:	d1 e5                	shl    %ebp
+ 3ad:	89 e8                	mov    %ebp,%eax
+ 3af:	c3                   	ret    
+
+000003b0 <kbasm_mix_cubic_scopes_unfiltered_forward_noramp>:
+ 3b0:	d9 05 08 00 00 00    	flds   0x8
+ 3b6:	d9 05 0c 00 00 00    	flds   0xc
+ 3bc:	89 c5                	mov    %eax,%ebp
+ 3be:	d1 ed                	shr    %ebp
+ 3c0:	89 d0                	mov    %edx,%eax
+ 3c2:	c1 e8 18             	shr    $0x18,%eax
+ 3c5:	89 25 18 00 00 00    	mov    %esp,0x18
+ 3cb:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+
+000003d1 <cubicmixer4>:
+ 3d1:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 3d8:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 3df:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ 3e6:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 3ed:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ 3f4:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 3fb:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ 402:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 409:	d9 ca                	fxch   %st(2)
+ 40b:	de c3                	faddp  %st,%st(3)
+ 40d:	01 f2                	add    %esi,%edx
+ 40f:	8d 7f 08             	lea    0x8(%edi),%edi
+ 412:	de c2                	faddp  %st,%st(2)
+ 414:	11 dd                	adc    %ebx,%ebp
+ 416:	89 d0                	mov    %edx,%eax
+ 418:	de c1                	faddp  %st,%st(1)
+ 41a:	c1 e8 18             	shr    $0x18,%eax
+ 41d:	d9 c1                	fld    %st(1)
+ 41f:	d8 c3                	fadd   %st(3),%st
+ 421:	d8 c9                	fmul   %st(1),%st
+ 423:	df 1c 24             	fistp  (%esp)
+ 426:	8d 64 24 02          	lea    0x2(%esp),%esp
+ 42a:	d9 c2                	fld    %st(2)
+ 42c:	d8 c9                	fmul   %st(1),%st
+ 42e:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 431:	d9 c9                	fxch   %st(1)
+ 433:	d8 ca                	fmul   %st(2),%st
+ 435:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 438:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 43b:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 43e:	49                   	dec    %ecx
+ 43f:	75 90                	jne    3d1 <cubicmixer4>
+ 441:	d1 e5                	shl    %ebp
+ 443:	89 e8                	mov    %ebp,%eax
+ 445:	8b 25 18 00 00 00    	mov    0x18,%esp
+ 44b:	c3                   	ret    
+
+0000044c <kbasm_mix_cubic_scopes_unfiltered_backward_noramp>:
+ 44c:	d9 05 08 00 00 00    	flds   0x8
+ 452:	d9 05 0c 00 00 00    	flds   0xc
+ 458:	89 c5                	mov    %eax,%ebp
+ 45a:	d1 ed                	shr    %ebp
+ 45c:	89 d0                	mov    %edx,%eax
+ 45e:	f7 d8                	neg    %eax
+ 460:	c1 e8 18             	shr    $0x18,%eax
+ 463:	89 25 18 00 00 00    	mov    %esp,0x18
+ 469:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+ 46f:	90                   	nop    
+
+00000470 <cubicmixer5>:
+ 470:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 477:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 47e:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ 485:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 48c:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ 493:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 49a:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ 4a1:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 4a8:	d9 ca                	fxch   %st(2)
+ 4aa:	de c3                	faddp  %st,%st(3)
+ 4ac:	01 f2                	add    %esi,%edx
+ 4ae:	8d 7f 08             	lea    0x8(%edi),%edi
+ 4b1:	de c2                	faddp  %st,%st(2)
+ 4b3:	11 dd                	adc    %ebx,%ebp
+ 4b5:	89 d0                	mov    %edx,%eax
+ 4b7:	de c1                	faddp  %st,%st(1)
+ 4b9:	f7 d8                	neg    %eax
+ 4bb:	c1 e8 18             	shr    $0x18,%eax
+ 4be:	d9 c1                	fld    %st(1)
+ 4c0:	d8 c3                	fadd   %st(3),%st
+ 4c2:	d8 c9                	fmul   %st(1),%st
+ 4c4:	df 1c 24             	fistp  (%esp)
+ 4c7:	8d 64 24 02          	lea    0x2(%esp),%esp
+ 4cb:	d9 c2                	fld    %st(2)
+ 4cd:	d8 c9                	fmul   %st(1),%st
+ 4cf:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 4d2:	d9 c9                	fxch   %st(1)
+ 4d4:	d8 ca                	fmul   %st(2),%st
+ 4d6:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 4d9:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 4dc:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 4df:	49                   	dec    %ecx
+ 4e0:	75 8e                	jne    470 <cubicmixer5>
+ 4e2:	d1 e5                	shl    %ebp
+ 4e4:	89 e8                	mov    %ebp,%eax
+ 4e6:	8b 25 18 00 00 00    	mov    0x18,%esp
+ 4ec:	c3                   	ret    
+
+000004ed <kbasm_mix_cubic_scopes_filtered_forward_noramp>:
+ 4ed:	d9 05 08 00 00 00    	flds   0x8
+ 4f3:	d9 05 0c 00 00 00    	flds   0xc
+ 4f9:	89 c5                	mov    %eax,%ebp
+ 4fb:	d1 ed                	shr    %ebp
+ 4fd:	89 d0                	mov    %edx,%eax
+ 4ff:	c1 e8 18             	shr    $0x18,%eax
+ 502:	89 25 18 00 00 00    	mov    %esp,0x18
+ 508:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+ 50e:	66                   	data16
+ 50f:	90                   	nop    
+
+00000510 <cubicmixer6>:
+ 510:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 517:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 51e:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ 525:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 52c:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ 533:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 53a:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ 541:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 548:	d9 ca                	fxch   %st(2)
+ 54a:	de c3                	faddp  %st,%st(3)
+ 54c:	01 f2                	add    %esi,%edx
+ 54e:	8d 7f 08             	lea    0x8(%edi),%edi
+ 551:	de c2                	faddp  %st,%st(2)
+ 553:	11 dd                	adc    %ebx,%ebp
+ 555:	89 d0                	mov    %edx,%eax
+ 557:	de c1                	faddp  %st,%st(1)
+ 559:	d8 25 28 00 00 00    	fsubs  0x28
+ 55f:	d8 0d 20 00 00 00    	fmuls  0x20
+ 565:	d9 05 2c 00 00 00    	flds   0x2c
+ 56b:	d8 0d 24 00 00 00    	fmuls  0x24
+ 571:	de c1                	faddp  %st,%st(1)
+ 573:	d9 15 2c 00 00 00    	fsts   0x2c
+ 579:	d8 0d 20 00 00 00    	fmuls  0x20
+ 57f:	d8 05 28 00 00 00    	fadds  0x28
+ 585:	d9 15 28 00 00 00    	fsts   0x28
+ 58b:	c1 e8 18             	shr    $0x18,%eax
+ 58e:	d9 c1                	fld    %st(1)
+ 590:	d8 c3                	fadd   %st(3),%st
+ 592:	d8 c9                	fmul   %st(1),%st
+ 594:	df 1c 24             	fistp  (%esp)
+ 597:	8d 64 24 02          	lea    0x2(%esp),%esp
+ 59b:	d9 c2                	fld    %st(2)
+ 59d:	d8 c9                	fmul   %st(1),%st
+ 59f:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 5a2:	d9 c9                	fxch   %st(1)
+ 5a4:	d8 ca                	fmul   %st(2),%st
+ 5a6:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 5a9:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 5ac:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 5af:	49                   	dec    %ecx
+ 5b0:	0f 85 5a ff ff ff    	jne    510 <cubicmixer6>
+ 5b6:	d1 e5                	shl    %ebp
+ 5b8:	89 e8                	mov    %ebp,%eax
+ 5ba:	8b 25 18 00 00 00    	mov    0x18,%esp
+ 5c0:	c3                   	ret    
+
+000005c1 <kbasm_mix_cubic_scopes_filtered_backward_noramp>:
+ 5c1:	d9 05 08 00 00 00    	flds   0x8
+ 5c7:	d9 05 0c 00 00 00    	flds   0xc
+ 5cd:	89 c5                	mov    %eax,%ebp
+ 5cf:	d1 ed                	shr    %ebp
+ 5d1:	89 d0                	mov    %edx,%eax
+ 5d3:	f7 d8                	neg    %eax
+ 5d5:	c1 e8 18             	shr    $0x18,%eax
+ 5d8:	89 25 18 00 00 00    	mov    %esp,0x18
+ 5de:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+
+000005e4 <cubicmixer7>:
+ 5e4:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 5eb:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 5f2:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ 5f9:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 600:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ 607:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 60e:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ 615:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 61c:	d9 ca                	fxch   %st(2)
+ 61e:	de c3                	faddp  %st,%st(3)
+ 620:	01 f2                	add    %esi,%edx
+ 622:	8d 7f 08             	lea    0x8(%edi),%edi
+ 625:	de c2                	faddp  %st,%st(2)
+ 627:	11 dd                	adc    %ebx,%ebp
+ 629:	89 d0                	mov    %edx,%eax
+ 62b:	de c1                	faddp  %st,%st(1)
+ 62d:	f7 d8                	neg    %eax
+ 62f:	d8 25 28 00 00 00    	fsubs  0x28
+ 635:	d8 0d 20 00 00 00    	fmuls  0x20
+ 63b:	d9 05 2c 00 00 00    	flds   0x2c
+ 641:	d8 0d 24 00 00 00    	fmuls  0x24
+ 647:	de c1                	faddp  %st,%st(1)
+ 649:	d9 15 2c 00 00 00    	fsts   0x2c
+ 64f:	d8 0d 20 00 00 00    	fmuls  0x20
+ 655:	d8 05 28 00 00 00    	fadds  0x28
+ 65b:	d9 15 28 00 00 00    	fsts   0x28
+ 661:	c1 e8 18             	shr    $0x18,%eax
+ 664:	d9 c1                	fld    %st(1)
+ 666:	d8 c3                	fadd   %st(3),%st
+ 668:	d8 c9                	fmul   %st(1),%st
+ 66a:	df 1c 24             	fistp  (%esp)
+ 66d:	8d 64 24 02          	lea    0x2(%esp),%esp
+ 671:	d9 c2                	fld    %st(2)
+ 673:	d8 c9                	fmul   %st(1),%st
+ 675:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 678:	d9 c9                	fxch   %st(1)
+ 67a:	d8 ca                	fmul   %st(2),%st
+ 67c:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 67f:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 682:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 685:	49                   	dec    %ecx
+ 686:	0f 85 58 ff ff ff    	jne    5e4 <cubicmixer7>
+ 68c:	d1 e5                	shl    %ebp
+ 68e:	89 e8                	mov    %ebp,%eax
+ 690:	8b 25 18 00 00 00    	mov    0x18,%esp
+ 696:	c3                   	ret    
+
+00000697 <kbasm_mix_cubic_noscopes_unfiltered_forward>:
+ 697:	d9 05 08 00 00 00    	flds   0x8
+ 69d:	d9 05 0c 00 00 00    	flds   0xc
+ 6a3:	89 c5                	mov    %eax,%ebp
+ 6a5:	d1 ed                	shr    %ebp
+ 6a7:	89 d0                	mov    %edx,%eax
+ 6a9:	c1 e8 18             	shr    $0x18,%eax
+ 6ac:	8d 74 26 00          	lea    0x0(%esi),%esi
+
+000006b0 <cubicmixer8>:
+ 6b0:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 6b7:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 6be:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ 6c5:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 6cc:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ 6d3:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 6da:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ 6e1:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 6e8:	d9 ca                	fxch   %st(2)
+ 6ea:	de c3                	faddp  %st,%st(3)
+ 6ec:	01 f2                	add    %esi,%edx
+ 6ee:	8d 7f 08             	lea    0x8(%edi),%edi
+ 6f1:	de c2                	faddp  %st,%st(2)
+ 6f3:	11 dd                	adc    %ebx,%ebp
+ 6f5:	89 d0                	mov    %edx,%eax
+ 6f7:	de c1                	faddp  %st,%st(1)
+ 6f9:	c1 e8 18             	shr    $0x18,%eax
+ 6fc:	d9 c1                	fld    %st(1)
+ 6fe:	d9 c3                	fld    %st(3)
+ 700:	d8 ca                	fmul   %st(2),%st
+ 702:	d9 cc                	fxch   %st(4)
+ 704:	d8 05 00 00 00 00    	fadds  0x0
+ 70a:	d9 ca                	fxch   %st(2)
+ 70c:	de c9                	fmulp  %st,%st(1)
+ 70e:	d9 ca                	fxch   %st(2)
+ 710:	d8 05 04 00 00 00    	fadds  0x4
+ 716:	d9 cb                	fxch   %st(3)
+ 718:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 71b:	d9 ca                	fxch   %st(2)
+ 71d:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 720:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 723:	d9 c9                	fxch   %st(1)
+ 725:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 728:	d9 c9                	fxch   %st(1)
+ 72a:	49                   	dec    %ecx
+ 72b:	75 83                	jne    6b0 <cubicmixer8>
+ 72d:	d9 1d 0c 00 00 00    	fstps  0xc
+ 733:	d9 1d 08 00 00 00    	fstps  0x8
+ 739:	d1 e5                	shl    %ebp
+ 73b:	89 e8                	mov    %ebp,%eax
+ 73d:	c3                   	ret    
+
+0000073e <kbasm_mix_cubic_noscopes_unfiltered_backward>:
+ 73e:	d9 05 08 00 00 00    	flds   0x8
+ 744:	d9 05 0c 00 00 00    	flds   0xc
+ 74a:	89 c5                	mov    %eax,%ebp
+ 74c:	d1 ed                	shr    %ebp
+ 74e:	89 d0                	mov    %edx,%eax
+ 750:	f7 d8                	neg    %eax
+ 752:	c1 e8 18             	shr    $0x18,%eax
+
+00000755 <cubicmixer9>:
+ 755:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 75c:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 763:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ 76a:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 771:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ 778:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 77f:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ 786:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 78d:	d9 ca                	fxch   %st(2)
+ 78f:	de c3                	faddp  %st,%st(3)
+ 791:	01 f2                	add    %esi,%edx
+ 793:	8d 7f 08             	lea    0x8(%edi),%edi
+ 796:	de c2                	faddp  %st,%st(2)
+ 798:	11 dd                	adc    %ebx,%ebp
+ 79a:	89 d0                	mov    %edx,%eax
+ 79c:	de c1                	faddp  %st,%st(1)
+ 79e:	f7 d8                	neg    %eax
+ 7a0:	c1 e8 18             	shr    $0x18,%eax
+ 7a3:	d9 c1                	fld    %st(1)
+ 7a5:	d9 c3                	fld    %st(3)
+ 7a7:	d8 ca                	fmul   %st(2),%st
+ 7a9:	d9 cc                	fxch   %st(4)
+ 7ab:	d8 05 00 00 00 00    	fadds  0x0
+ 7b1:	d9 ca                	fxch   %st(2)
+ 7b3:	de c9                	fmulp  %st,%st(1)
+ 7b5:	d9 ca                	fxch   %st(2)
+ 7b7:	d8 05 04 00 00 00    	fadds  0x4
+ 7bd:	d9 cb                	fxch   %st(3)
+ 7bf:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 7c2:	d9 ca                	fxch   %st(2)
+ 7c4:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 7c7:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 7ca:	d9 c9                	fxch   %st(1)
+ 7cc:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 7cf:	d9 c9                	fxch   %st(1)
+ 7d1:	49                   	dec    %ecx
+ 7d2:	75 81                	jne    755 <cubicmixer9>
+ 7d4:	d9 1d 0c 00 00 00    	fstps  0xc
+ 7da:	d9 1d 08 00 00 00    	fstps  0x8
+ 7e0:	d1 e5                	shl    %ebp
+ 7e2:	89 e8                	mov    %ebp,%eax
+ 7e4:	c3                   	ret    
+
+000007e5 <kbasm_mix_cubic_noscopes_filtered_forward>:
+ 7e5:	d9 05 08 00 00 00    	flds   0x8
+ 7eb:	d9 05 0c 00 00 00    	flds   0xc
+ 7f1:	89 c5                	mov    %eax,%ebp
+ 7f3:	d1 ed                	shr    %ebp
+ 7f5:	89 d0                	mov    %edx,%eax
+ 7f7:	c1 e8 18             	shr    $0x18,%eax
+ 7fa:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+
+00000800 <cubicmixer10>:
+ 800:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 807:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 80e:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ 815:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 81c:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ 823:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 82a:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ 831:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 838:	d9 ca                	fxch   %st(2)
+ 83a:	de c3                	faddp  %st,%st(3)
+ 83c:	01 f2                	add    %esi,%edx
+ 83e:	8d 7f 08             	lea    0x8(%edi),%edi
+ 841:	de c2                	faddp  %st,%st(2)
+ 843:	11 dd                	adc    %ebx,%ebp
+ 845:	89 d0                	mov    %edx,%eax
+ 847:	de c1                	faddp  %st,%st(1)
+ 849:	d8 25 28 00 00 00    	fsubs  0x28
+ 84f:	d8 0d 20 00 00 00    	fmuls  0x20
+ 855:	d9 05 2c 00 00 00    	flds   0x2c
+ 85b:	d8 0d 24 00 00 00    	fmuls  0x24
+ 861:	de c1                	faddp  %st,%st(1)
+ 863:	d9 15 2c 00 00 00    	fsts   0x2c
+ 869:	d8 0d 20 00 00 00    	fmuls  0x20
+ 86f:	d8 05 28 00 00 00    	fadds  0x28
+ 875:	d9 15 28 00 00 00    	fsts   0x28
+ 87b:	c1 e8 18             	shr    $0x18,%eax
+ 87e:	d9 c1                	fld    %st(1)
+ 880:	d9 c3                	fld    %st(3)
+ 882:	d8 ca                	fmul   %st(2),%st
+ 884:	d9 cc                	fxch   %st(4)
+ 886:	d8 05 00 00 00 00    	fadds  0x0
+ 88c:	d9 ca                	fxch   %st(2)
+ 88e:	de c9                	fmulp  %st,%st(1)
+ 890:	d9 ca                	fxch   %st(2)
+ 892:	d8 05 04 00 00 00    	fadds  0x4
+ 898:	d9 cb                	fxch   %st(3)
+ 89a:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 89d:	d9 ca                	fxch   %st(2)
+ 89f:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 8a2:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 8a5:	d9 c9                	fxch   %st(1)
+ 8a7:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 8aa:	d9 c9                	fxch   %st(1)
+ 8ac:	49                   	dec    %ecx
+ 8ad:	0f 85 4d ff ff ff    	jne    800 <cubicmixer10>
+ 8b3:	d9 1d 0c 00 00 00    	fstps  0xc
+ 8b9:	d9 1d 08 00 00 00    	fstps  0x8
+ 8bf:	d1 e5                	shl    %ebp
+ 8c1:	89 e8                	mov    %ebp,%eax
+ 8c3:	c3                   	ret    
+
+000008c4 <kbasm_mix_cubic_noscopes_filtered_backward>:
+ 8c4:	d9 05 08 00 00 00    	flds   0x8
+ 8ca:	d9 05 0c 00 00 00    	flds   0xc
+ 8d0:	89 c5                	mov    %eax,%ebp
+ 8d2:	d1 ed                	shr    %ebp
+ 8d4:	89 d0                	mov    %edx,%eax
+ 8d6:	f7 d8                	neg    %eax
+ 8d8:	c1 e8 18             	shr    $0x18,%eax
+ 8db:	90                   	nop    
+ 8dc:	8d 74 26 00          	lea    0x0(%esi),%esi
+
+000008e0 <cubicmixer11>:
+ 8e0:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 8e7:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 8ee:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ 8f5:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 8fc:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ 903:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 90a:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ 911:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 918:	d9 ca                	fxch   %st(2)
+ 91a:	de c3                	faddp  %st,%st(3)
+ 91c:	01 f2                	add    %esi,%edx
+ 91e:	8d 7f 08             	lea    0x8(%edi),%edi
+ 921:	de c2                	faddp  %st,%st(2)
+ 923:	11 dd                	adc    %ebx,%ebp
+ 925:	89 d0                	mov    %edx,%eax
+ 927:	de c1                	faddp  %st,%st(1)
+ 929:	f7 d8                	neg    %eax
+ 92b:	d8 25 28 00 00 00    	fsubs  0x28
+ 931:	d8 0d 20 00 00 00    	fmuls  0x20
+ 937:	d9 05 2c 00 00 00    	flds   0x2c
+ 93d:	d8 0d 24 00 00 00    	fmuls  0x24
+ 943:	de c1                	faddp  %st,%st(1)
+ 945:	d9 15 2c 00 00 00    	fsts   0x2c
+ 94b:	d8 0d 20 00 00 00    	fmuls  0x20
+ 951:	d8 05 28 00 00 00    	fadds  0x28
+ 957:	d9 15 28 00 00 00    	fsts   0x28
+ 95d:	c1 e8 18             	shr    $0x18,%eax
+ 960:	d9 c1                	fld    %st(1)
+ 962:	d9 c3                	fld    %st(3)
+ 964:	d8 ca                	fmul   %st(2),%st
+ 966:	d9 cc                	fxch   %st(4)
+ 968:	d8 05 00 00 00 00    	fadds  0x0
+ 96e:	d9 ca                	fxch   %st(2)
+ 970:	de c9                	fmulp  %st,%st(1)
+ 972:	d9 ca                	fxch   %st(2)
+ 974:	d8 05 04 00 00 00    	fadds  0x4
+ 97a:	d9 cb                	fxch   %st(3)
+ 97c:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ 97f:	d9 ca                	fxch   %st(2)
+ 981:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ 984:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ 987:	d9 c9                	fxch   %st(1)
+ 989:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ 98c:	d9 c9                	fxch   %st(1)
+ 98e:	49                   	dec    %ecx
+ 98f:	0f 85 4b ff ff ff    	jne    8e0 <cubicmixer11>
+ 995:	d9 1d 0c 00 00 00    	fstps  0xc
+ 99b:	d9 1d 08 00 00 00    	fstps  0x8
+ 9a1:	d1 e5                	shl    %ebp
+ 9a3:	89 e8                	mov    %ebp,%eax
+ 9a5:	c3                   	ret    
+
+000009a6 <kbasm_mix_cubic_scopes_unfiltered_forward>:
+ 9a6:	d9 05 08 00 00 00    	flds   0x8
+ 9ac:	d9 05 0c 00 00 00    	flds   0xc
+ 9b2:	89 c5                	mov    %eax,%ebp
+ 9b4:	d1 ed                	shr    %ebp
+ 9b6:	89 d0                	mov    %edx,%eax
+ 9b8:	c1 e8 18             	shr    $0x18,%eax
+ 9bb:	89 25 18 00 00 00    	mov    %esp,0x18
+ 9c1:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+
+000009c7 <cubicmixer12>:
+ 9c7:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ 9ce:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 9d5:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ 9dc:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 9e3:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ 9ea:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 9f1:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ 9f8:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ 9ff:	d9 ca                	fxch   %st(2)
+ a01:	de c3                	faddp  %st,%st(3)
+ a03:	01 f2                	add    %esi,%edx
+ a05:	8d 7f 08             	lea    0x8(%edi),%edi
+ a08:	de c2                	faddp  %st,%st(2)
+ a0a:	11 dd                	adc    %ebx,%ebp
+ a0c:	89 d0                	mov    %edx,%eax
+ a0e:	de c1                	faddp  %st,%st(1)
+ a10:	c1 e8 18             	shr    $0x18,%eax
+ a13:	d9 c1                	fld    %st(1)
+ a15:	d8 c3                	fadd   %st(3),%st
+ a17:	d8 c9                	fmul   %st(1),%st
+ a19:	df 1c 24             	fistp  (%esp)
+ a1c:	8d 64 24 02          	lea    0x2(%esp),%esp
+ a20:	d9 c1                	fld    %st(1)
+ a22:	d9 c3                	fld    %st(3)
+ a24:	d8 ca                	fmul   %st(2),%st
+ a26:	d9 cc                	fxch   %st(4)
+ a28:	d8 05 00 00 00 00    	fadds  0x0
+ a2e:	d9 ca                	fxch   %st(2)
+ a30:	de c9                	fmulp  %st,%st(1)
+ a32:	d9 ca                	fxch   %st(2)
+ a34:	d8 05 04 00 00 00    	fadds  0x4
+ a3a:	d9 cb                	fxch   %st(3)
+ a3c:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ a3f:	d9 ca                	fxch   %st(2)
+ a41:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ a44:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ a47:	d9 c9                	fxch   %st(1)
+ a49:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ a4c:	d9 c9                	fxch   %st(1)
+ a4e:	49                   	dec    %ecx
+ a4f:	0f 85 72 ff ff ff    	jne    9c7 <cubicmixer12>
+ a55:	d9 1d 0c 00 00 00    	fstps  0xc
+ a5b:	d9 1d 08 00 00 00    	fstps  0x8
+ a61:	d1 e5                	shl    %ebp
+ a63:	89 e8                	mov    %ebp,%eax
+ a65:	8b 25 18 00 00 00    	mov    0x18,%esp
+ a6b:	c3                   	ret    
+
+00000a6c <kbasm_mix_cubic_scopes_unfiltered_backward>:
+ a6c:	d9 05 08 00 00 00    	flds   0x8
+ a72:	d9 05 0c 00 00 00    	flds   0xc
+ a78:	89 c5                	mov    %eax,%ebp
+ a7a:	d1 ed                	shr    %ebp
+ a7c:	89 d0                	mov    %edx,%eax
+ a7e:	f7 d8                	neg    %eax
+ a80:	c1 e8 18             	shr    $0x18,%eax
+ a83:	89 25 18 00 00 00    	mov    %esp,0x18
+ a89:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+ a8f:	90                   	nop    
+
+00000a90 <cubicmixer13>:
+ a90:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ a97:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ a9e:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ aa5:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ aac:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ ab3:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ aba:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ ac1:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ ac8:	d9 ca                	fxch   %st(2)
+ aca:	de c3                	faddp  %st,%st(3)
+ acc:	01 f2                	add    %esi,%edx
+ ace:	8d 7f 08             	lea    0x8(%edi),%edi
+ ad1:	de c2                	faddp  %st,%st(2)
+ ad3:	11 dd                	adc    %ebx,%ebp
+ ad5:	89 d0                	mov    %edx,%eax
+ ad7:	de c1                	faddp  %st,%st(1)
+ ad9:	f7 d8                	neg    %eax
+ adb:	c1 e8 18             	shr    $0x18,%eax
+ ade:	d9 c1                	fld    %st(1)
+ ae0:	d8 c3                	fadd   %st(3),%st
+ ae2:	d8 c9                	fmul   %st(1),%st
+ ae4:	df 1c 24             	fistp  (%esp)
+ ae7:	8d 64 24 02          	lea    0x2(%esp),%esp
+ aeb:	d9 c1                	fld    %st(1)
+ aed:	d9 c3                	fld    %st(3)
+ aef:	d8 ca                	fmul   %st(2),%st
+ af1:	d9 cc                	fxch   %st(4)
+ af3:	d8 05 00 00 00 00    	fadds  0x0
+ af9:	d9 ca                	fxch   %st(2)
+ afb:	de c9                	fmulp  %st,%st(1)
+ afd:	d9 ca                	fxch   %st(2)
+ aff:	d8 05 04 00 00 00    	fadds  0x4
+ b05:	d9 cb                	fxch   %st(3)
+ b07:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ b0a:	d9 ca                	fxch   %st(2)
+ b0c:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ b0f:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ b12:	d9 c9                	fxch   %st(1)
+ b14:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ b17:	d9 c9                	fxch   %st(1)
+ b19:	49                   	dec    %ecx
+ b1a:	0f 85 70 ff ff ff    	jne    a90 <cubicmixer13>
+ b20:	d9 1d 0c 00 00 00    	fstps  0xc
+ b26:	d9 1d 08 00 00 00    	fstps  0x8
+ b2c:	d1 e5                	shl    %ebp
+ b2e:	89 e8                	mov    %ebp,%eax
+ b30:	8b 25 18 00 00 00    	mov    0x18,%esp
+ b36:	c3                   	ret    
+
+00000b37 <kbasm_mix_cubic_scopes_filtered_forward>:
+ b37:	d9 05 08 00 00 00    	flds   0x8
+ b3d:	d9 05 0c 00 00 00    	flds   0xc
+ b43:	89 c5                	mov    %eax,%ebp
+ b45:	d1 ed                	shr    %ebp
+ b47:	89 d0                	mov    %edx,%eax
+ b49:	c1 e8 18             	shr    $0x18,%eax
+ b4c:	89 25 18 00 00 00    	mov    %esp,0x18
+ b52:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+
+00000b58 <cubicmixer14>:
+ b58:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ b5f:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ b66:	df 04 6d 02 00 00 00 	fild   0x2(,%ebp,2)
+ b6d:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ b74:	df 04 6d 04 00 00 00 	fild   0x4(,%ebp,2)
+ b7b:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ b82:	df 04 6d 06 00 00 00 	fild   0x6(,%ebp,2)
+ b89:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ b90:	d9 ca                	fxch   %st(2)
+ b92:	de c3                	faddp  %st,%st(3)
+ b94:	01 f2                	add    %esi,%edx
+ b96:	8d 7f 08             	lea    0x8(%edi),%edi
+ b99:	de c2                	faddp  %st,%st(2)
+ b9b:	11 dd                	adc    %ebx,%ebp
+ b9d:	89 d0                	mov    %edx,%eax
+ b9f:	de c1                	faddp  %st,%st(1)
+ ba1:	d8 25 28 00 00 00    	fsubs  0x28
+ ba7:	d8 0d 20 00 00 00    	fmuls  0x20
+ bad:	d9 05 2c 00 00 00    	flds   0x2c
+ bb3:	d8 0d 24 00 00 00    	fmuls  0x24
+ bb9:	de c1                	faddp  %st,%st(1)
+ bbb:	d9 15 2c 00 00 00    	fsts   0x2c
+ bc1:	d8 0d 20 00 00 00    	fmuls  0x20
+ bc7:	d8 05 28 00 00 00    	fadds  0x28
+ bcd:	d9 15 28 00 00 00    	fsts   0x28
+ bd3:	c1 e8 18             	shr    $0x18,%eax
+ bd6:	d9 c1                	fld    %st(1)
+ bd8:	d8 c3                	fadd   %st(3),%st
+ bda:	d8 c9                	fmul   %st(1),%st
+ bdc:	df 1c 24             	fistp  (%esp)
+ bdf:	8d 64 24 02          	lea    0x2(%esp),%esp
+ be3:	d9 c1                	fld    %st(1)
+ be5:	d9 c3                	fld    %st(3)
+ be7:	d8 ca                	fmul   %st(2),%st
+ be9:	d9 cc                	fxch   %st(4)
+ beb:	d8 05 00 00 00 00    	fadds  0x0
+ bf1:	d9 ca                	fxch   %st(2)
+ bf3:	de c9                	fmulp  %st,%st(1)
+ bf5:	d9 ca                	fxch   %st(2)
+ bf7:	d8 05 04 00 00 00    	fadds  0x4
+ bfd:	d9 cb                	fxch   %st(3)
+ bff:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ c02:	d9 ca                	fxch   %st(2)
+ c04:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ c07:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ c0a:	d9 c9                	fxch   %st(1)
+ c0c:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ c0f:	d9 c9                	fxch   %st(1)
+ c11:	49                   	dec    %ecx
+ c12:	0f 85 40 ff ff ff    	jne    b58 <cubicmixer14>
+ c18:	d9 1d 0c 00 00 00    	fstps  0xc
+ c1e:	d9 1d 08 00 00 00    	fstps  0x8
+ c24:	d1 e5                	shl    %ebp
+ c26:	89 e8                	mov    %ebp,%eax
+ c28:	8b 25 18 00 00 00    	mov    0x18,%esp
+ c2e:	c3                   	ret    
+
+00000c2f <kbasm_mix_cubic_scopes_filtered_backward>:
+ c2f:	d9 05 08 00 00 00    	flds   0x8
+ c35:	d9 05 0c 00 00 00    	flds   0xc
+ c3b:	89 c5                	mov    %eax,%ebp
+ c3d:	d1 ed                	shr    %ebp
+ c3f:	89 d0                	mov    %edx,%eax
+ c41:	f7 d8                	neg    %eax
+ c43:	c1 e8 18             	shr    $0x18,%eax
+ c46:	89 25 18 00 00 00    	mov    %esp,0x18
+ c4c:	8b 25 1c 00 00 00    	mov    0x1c,%esp
+
+00000c52 <cubicmixer15>:
+ c52:	df 04 6d 00 00 00 00 	fild   0x0(,%ebp,2)
+ c59:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ c60:	df 04 6d fe ff ff ff 	fild   0xfffffffe(,%ebp,2)
+ c67:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ c6e:	df 04 6d fc ff ff ff 	fild   0xfffffffc(,%ebp,2)
+ c75:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ c7c:	df 04 6d fa ff ff ff 	fild   0xfffffffa(,%ebp,2)
+ c83:	d8 0c 85 00 00 00 00 	fmuls  0x0(,%eax,4)
+ c8a:	d9 ca                	fxch   %st(2)
+ c8c:	de c3                	faddp  %st,%st(3)
+ c8e:	01 f2                	add    %esi,%edx
+ c90:	8d 7f 08             	lea    0x8(%edi),%edi
+ c93:	de c2                	faddp  %st,%st(2)
+ c95:	11 dd                	adc    %ebx,%ebp
+ c97:	89 d0                	mov    %edx,%eax
+ c99:	de c1                	faddp  %st,%st(1)
+ c9b:	f7 d8                	neg    %eax
+ c9d:	d8 25 28 00 00 00    	fsubs  0x28
+ ca3:	d8 0d 20 00 00 00    	fmuls  0x20
+ ca9:	d9 05 2c 00 00 00    	flds   0x2c
+ caf:	d8 0d 24 00 00 00    	fmuls  0x24
+ cb5:	de c1                	faddp  %st,%st(1)
+ cb7:	d9 15 2c 00 00 00    	fsts   0x2c
+ cbd:	d8 0d 20 00 00 00    	fmuls  0x20
+ cc3:	d8 05 28 00 00 00    	fadds  0x28
+ cc9:	d9 15 28 00 00 00    	fsts   0x28
+ ccf:	c1 e8 18             	shr    $0x18,%eax
+ cd2:	d9 c1                	fld    %st(1)
+ cd4:	d8 c3                	fadd   %st(3),%st
+ cd6:	d8 c9                	fmul   %st(1),%st
+ cd8:	df 1c 24             	fistp  (%esp)
+ cdb:	8d 64 24 02          	lea    0x2(%esp),%esp
+ cdf:	d9 c1                	fld    %st(1)
+ ce1:	d9 c3                	fld    %st(3)
+ ce3:	d8 ca                	fmul   %st(2),%st
+ ce5:	d9 cc                	fxch   %st(4)
+ ce7:	d8 05 00 00 00 00    	fadds  0x0
+ ced:	d9 ca                	fxch   %st(2)
+ cef:	de c9                	fmulp  %st,%st(1)
+ cf1:	d9 ca                	fxch   %st(2)
+ cf3:	d8 05 04 00 00 00    	fadds  0x4
+ cf9:	d9 cb                	fxch   %st(3)
+ cfb:	d8 47 f8             	fadds  0xfffffff8(%edi)
+ cfe:	d9 ca                	fxch   %st(2)
+ d00:	d8 47 fc             	fadds  0xfffffffc(%edi)
+ d03:	d9 5f fc             	fstps  0xfffffffc(%edi)
+ d06:	d9 c9                	fxch   %st(1)
+ d08:	d9 5f f8             	fstps  0xfffffff8(%edi)
+ d0b:	d9 c9                	fxch   %st(1)
+ d0d:	49                   	dec    %ecx
+ d0e:	0f 85 3e ff ff ff    	jne    c52 <cubicmixer15>
+ d14:	d9 1d 0c 00 00 00    	fstps  0xc
+ d1a:	d9 1d 08 00 00 00    	fstps  0x8
+ d20:	d1 e5                	shl    %ebp
+ d22:	89 e8                	mov    %ebp,%eax
+ d24:	8b 25 18 00 00 00    	mov    0x18,%esp
+ d2a:	c3                   	ret    

@@ -1,0 +1,2183 @@
+# Norwegian messages for soundtracker.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Petter Johan Olsen <petter.olsen@cc.uit.no>, 2003.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: soundtracker 0.6.7\n"
+"Report-Msgid-Bugs-To: soundtracker-discuss@soundtracker.org\n"
+"POT-Creation-Date: 2008-01-14 13:34+0300\n"
+"PO-Revision-Date: 2003-05-21 12:30+0100\n"
+"Last-Translator: Petter Johan Olsen <petter.olsen@cc.uit.no>\n"
+"Language-Team: Petter Johan Olsen <petter.olsen@cc.uit.no>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: app/audioconfig.c:63
+msgid "Playback Output"
+msgstr "Innstillinger for avspilling"
+
+#: app/audioconfig.c:70
+msgid "Editing Output"
+msgstr "Innstillinger for redigering"
+
+#: app/audioconfig.c:77
+msgid "Sampling"
+msgstr "Innstillinger for lydopptak"
+
+#: app/audioconfig.c:203
+msgid "Driver Module"
+msgstr "Lyddriver"
+
+#: app/audioconfig.c:253
+msgid "Mixer Module"
+msgstr "Mikserdriver"
+
+#: app/audioconfig.c:254
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: app/audioconfig.c:264 app/audioconfig.c:267
+msgid "Audio Configuration"
+msgstr "Lydoppsett"
+
+#: app/audioconfig.c:291
+msgid "Mixers"
+msgstr "Miksere"
+
+#: app/drivers/alsa-input.c:126 app/drivers/alsa-output.c:135
+#: app/drivers/alsa2-input.c:126 app/drivers/alsa2-output.c:136
+#, c-format
+msgid "(%d bytes)"
+msgstr "(%d byte)"
+
+#: app/drivers/alsa-input.c:129 app/drivers/alsa2-input.c:129
+#, c-format
+msgid "Estimated audio delay: %f microseconds"
+msgstr "Beregnet latenstid: %f mikrosekunder"
+
+#: app/drivers/alsa-input.c:194 app/drivers/alsa-output.c:200
+#: app/drivers/alsa2-input.c:194 app/drivers/alsa2-output.c:199
+#: app/drivers/oss-output.c:207 app/drivers/sun-output.c:199
+msgid "These changes won't take effect until you restart playing."
+msgstr "Du må starte avspilling på nytt før endringene trer i kraft"
+
+#: app/drivers/alsa-input.c:206 app/drivers/alsa-output.c:212
+#: app/drivers/alsa2-input.c:206 app/drivers/alsa2-output.c:211
+#: app/drivers/oss-output.c:235 app/drivers/sun-output.c:227
+#: app/sample-editor.c:1619
+msgid "Resolution:"
+msgstr "Oppløsning:"
+
+#: app/drivers/alsa-input.c:216 app/drivers/alsa-output.c:222
+#: app/drivers/alsa2-input.c:216 app/drivers/alsa2-output.c:221
+#: app/drivers/oss-output.c:245 app/drivers/sun-output.c:238
+#: app/sample-editor.c:1649
+msgid "Channels:"
+msgstr "Kanaler:"
+
+#: app/drivers/alsa-input.c:226 app/drivers/alsa-output.c:232
+#: app/drivers/alsa2-input.c:226 app/drivers/alsa2-output.c:231
+#: app/drivers/oss-output.c:255 app/drivers/sun-output.c:249
+msgid "Frequency [Hz]:"
+msgstr "Frekvens (Hz):"
+
+#: app/drivers/alsa-input.c:236 app/drivers/alsa-output.c:242
+#: app/drivers/alsa2-input.c:236 app/drivers/alsa2-output.c:241
+#: app/drivers/oss-output.c:265 app/drivers/sun-output.c:260
+msgid "Buffer Size:"
+msgstr "Bufferstørrelse:"
+
+#: app/drivers/alsa-input.c:269 app/drivers/alsa-output.c:275
+#: app/drivers/alsa2-input.c:269 app/drivers/alsa2-output.c:274
+msgid "ALSA card number:"
+msgstr "ALSA-kortnummer:"
+
+#: app/drivers/alsa-input.c:284 app/drivers/alsa-output.c:290
+#: app/drivers/alsa2-input.c:284 app/drivers/alsa2-output.c:289
+msgid "ALSA device number:"
+msgstr "ALSA-enhetsnummer:"
+
+#: app/drivers/alsa-input.c:375
+#, c-format
+msgid ""
+"Couldn't open ALSA device for sound input (card:%d, device:%d):\n"
+"%s"
+msgstr ""
+"Kunne ikke åpne ALSA-enhet for lydopptak (kort:%d, enhet:%d):\n"
+"%s"
+
+#: app/drivers/alsa-input.c:427 app/drivers/alsa-output.c:427
+#: app/drivers/oss-input.c:269 app/drivers/oss-output.c:426
+msgid "Required sound output format not supported.\n"
+msgstr "Nødvendig avspillingsformat støttes ikke.\n"
+
+#: app/drivers/alsa-input.c:440 app/drivers/alsa-output.c:442
+msgid "Required sound output parameters not supported.\n"
+msgstr "Nødvendige avspillingsparametre støttes ikke.\n"
+
+#: app/drivers/alsa-output.c:138 app/drivers/alsa2-output.c:139
+#: app/drivers/oss-output.c:151 app/drivers/sun-output.c:139
+#, c-format
+msgid "Estimated audio delay: %f milliseconds"
+msgstr "Beregnet latenstid: %f millisekunder"
+
+#: app/drivers/alsa-output.c:378 app/drivers/alsa2-input.c:376
+#: app/drivers/alsa2-output.c:380
+#, c-format
+msgid ""
+"Couldn't open ALSA device for sound output (card:%d, device:%d):\n"
+"%s"
+msgstr ""
+"Kunne ikke åpne ALSA-enhet for lydavspilling (kort:%d, enhet:%d):\n"
+"%s"
+
+#: app/drivers/alsa2-input.c:437 app/drivers/alsa2-output.c:441
+msgid "Required output-channel parameters not supported.\n"
+msgstr "Nødvendige avspillingsparametre støttes ikke.\n"
+
+#: app/drivers/alsa2-input.c:442 app/drivers/alsa2-output.c:446
+msgid "Unable to prepare ALSA channel.\n"
+msgstr "Kunne ikke klargjøre ALSA-kanal.\n"
+
+#: app/drivers/alsa2-input.c:455 app/drivers/alsa2-output.c:459
+msgid "Alsa setup error.\n"
+msgstr "ALSA-oppsett mislyktes.\n"
+
+#: app/drivers/esd-output.c:97
+msgid ""
+"Note that the ESD output is unusable in\n"
+"interactive mode because of the latency added\n"
+"by ESD. Use the OSS or ALSA output plug-ins\n"
+"for serious work."
+msgstr ""
+"Merk at ESD-avspilling er ubrukelig i\n"
+"interaktiv modus på grunn av den ekstra\n"
+"latenstiden som ESD lager. Bruk OSS eller ALSA\n"
+"hvis du vil tracke seriøst."
+
+#: app/drivers/esd-output.c:162
+#, c-format
+msgid ""
+"Couldn't connect to ESD for sound output:\n"
+"%s"
+msgstr ""
+"Kunne ikke koble til ESD for lydavspilling:\n"
+"%s"
+
+#: app/drivers/file-output.c:92 app/drivers/file-output.c:297
+msgid "no settings (yet), sorry!"
+msgstr "ingen innstillinger (enda), beklager!"
+
+#: app/drivers/file-output.c:167 app/drivers/file-output.c:374
+#: app/sample-editor.c:1865
+msgid "Can't open file for writing."
+msgstr "Kan ikke skrive til fil."
+
+#: app/drivers/oss-input.c:113 app/drivers/sun-input.c:107
+msgid "These changes won't take effect until you restart sampling."
+msgstr "Endringene trer i kraft neste gang du starter lydopptak."
+
+#: app/drivers/oss-input.c:125
+msgid "Input device (e.g. '/dev/dsp'):"
+msgstr "Innspillingsenhet (f.eks. '/dev/dsp'):"
+
+#: app/drivers/oss-input.c:236
+#, c-format
+msgid ""
+"Couldn't open %s for sampling:\n"
+"%s"
+msgstr ""
+"Kunne ikke åpne %s for innspilling:\n"
+"%s"
+
+#: app/drivers/oss-output.c:185 app/drivers/sun-output.c:174
+#, c-format
+msgid "(%d samples)"
+msgstr "(%d sampler)"
+
+#: app/drivers/oss-output.c:219
+msgid "Output device (e.g. '/dev/dsp'):"
+msgstr "Avspillingsenhet (f.eks. '/dev/dsp'):"
+
+#: app/drivers/oss-output.c:393
+#, c-format
+msgid ""
+"Couldn't open %s for sound output:\n"
+"%s"
+msgstr ""
+"Kunne ikke åpne %s for lydavspilling:\n"
+"%s"
+
+#: app/drivers/jack-output.c:255
+msgid "transport master"
+msgstr "transport-leder"
+
+#: app/drivers/jack-output.c:260
+msgid "declick"
+msgstr "declick"
+
+#: app/drivers/jack-output.c:280
+#, c-format
+msgid "Running at %d Hz with %d frames"
+msgstr "Kjører i %d Hz med %d frames"
+
+#: app/drivers/jack-output.c:284
+msgid "Jack server not running?"
+msgstr "Kjører Jack-tjeneren?"
+
+#: app/drivers/jack-output.c:328
+msgid "soundtracker"
+msgstr "soundtracker"
+
+#: app/drivers/jack-output.c:348
+msgid "out_1"
+msgstr "ut_1"
+
+#: app/drivers/jack-output.c:349
+msgid "out_2"
+msgstr "ut_2"
+
+#: app/drivers/sun-output.c:211
+msgid "Output device (e.g. '/dev/audio'):"
+msgstr "Avspillingsenhet (f.eks. '/dev/audio'):"
+
+#: app/drivers/sun-output.c:391 app/drivers/sun-output.c:462
+#: app/drivers/sun-input.c:231 app/drivers/sun-input.c:313
+#, c-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: app/drivers/sun-output.c:397
+#, c-format
+msgid "%s: Cannot play (%s)"
+msgstr "%s: Kan ikke spille av (%s)"
+
+#: app/drivers/sun-output.c:404 app/drivers/sun-input.c:252
+#, c-format
+msgid "%s: Cannot handle %dHz (%s)"
+msgstr "%s: Kan ikke håndtere %dHz (%s)"
+
+#: app/drivers/sun-output.c:433 app/drivers/sun-input.c:282
+#, c-format
+msgid "%s: Required sound encoding not supported.\n"
+msgstr "%s: Nødvendig lydkodeformat støttes ikke.\n"
+
+#: app/drivers/sun-output.c:456 app/drivers/sun-input.c:307
+#, c-format
+msgid "%s: Cannot set block size (%s)"
+msgstr "%s: Kan ikke sette blokkstørrelse (%s)"
+
+#: app/drivers/sun-input.c:119
+msgid "Input device (e.g. '/dev/audio'):"
+msgstr "Innspillingsenhet (f.eks. '/dev/audio'):"
+
+#: app/drivers/sun-input.c:244
+#, c-format
+msgid "%s: Cannot record (%s)"
+msgstr "%s: Kan ikke spille inn (%s)"
+
+#: app/envelope-box.c:892
+msgid "Length"
+msgstr "Lengde"
+
+#: app/envelope-box.c:893
+msgid "Current"
+msgstr "Posisjon"
+
+#: app/envelope-box.c:894
+msgid "Offset"
+msgstr "Startpunkt"
+
+#: app/envelope-box.c:895
+msgid "Value"
+msgstr "Verdi"
+
+#: app/envelope-box.c:901 app/playlist.c:551
+msgid "Insert"
+msgstr "Sett inn"
+
+#: app/envelope-box.c:907 app/playlist.c:560
+msgid "Delete"
+msgstr "Slett"
+
+#: app/envelope-box.c:999
+msgid ""
+"Graphical\n"
+"Envelope\n"
+"Editor\n"
+"only in\n"
+"GNOME Version"
+msgstr ""
+"Grafisk lyd-\n"
+"parameter-\n"
+"redigering\n"
+"finnes bare i\n"
+"GNOME-versjonen"
+
+#: app/envelope-box.c:1014
+msgid "Sustain"
+msgstr "Sustain"
+
+#: app/envelope-box.c:1022
+msgid "Point"
+msgstr "Punkt"
+
+#: app/envelope-box.c:1024
+msgid "Loop"
+msgstr "Gjenta"
+
+#: app/envelope-box.c:1032 app/sample-editor.c:277
+msgid "Start"
+msgstr "Start"
+
+#: app/envelope-box.c:1033 app/sample-editor.c:278
+msgid "End"
+msgstr "Slutt"
+
+#: app/file-operations.c:168
+msgid "Load Module"
+msgstr "Last modul"
+
+#: app/file-operations.c:169
+msgid "Save Module"
+msgstr "Lagre modul"
+
+#: app/file-operations.c:170
+msgid "Render WAV"
+msgstr "Produser WAV"
+
+#: app/file-operations.c:171
+msgid "Save Song"
+msgstr "Lagre sang"
+
+#: app/file-operations.c:172 app/sample-editor.c:385
+msgid "Load Sample"
+msgstr "Last lyd"
+
+#: app/file-operations.c:173
+msgid "Save Sample"
+msgstr "Lagre lyd"
+
+#: app/file-operations.c:174
+msgid "Load Instrument"
+msgstr "Last instrument"
+
+#: app/file-operations.c:175
+msgid "Save Instrument"
+msgstr "Lagre instrument"
+
+#: app/file-operations.c:181
+msgid "File"
+msgstr "Fil"
+
+#: app/file-operations.c:232
+msgid "Operation not supported."
+msgstr "Operasjonen støttes ikke."
+
+#: app/gui-settings.c:96
+#, fuzzy
+msgid "Tracker background"
+msgstr "Oppdateringsfrekvens for tracker"
+
+#: app/gui-settings.c:97
+msgid "Cursor background"
+msgstr ""
+
+#: app/gui-settings.c:98
+msgid "Major lines highlighting"
+msgstr ""
+
+#: app/gui-settings.c:99
+msgid "Minor lines highlighting"
+msgstr ""
+
+#: app/gui-settings.c:100
+#, fuzzy
+msgid "Selection"
+msgstr "Utvalg:"
+
+#: app/gui-settings.c:101
+#, fuzzy
+msgid "Notes"
+msgstr "Note:"
+
+#: app/gui-settings.c:102
+#, fuzzy
+msgid "Delimiters"
+msgstr "Slett"
+
+#: app/gui-settings.c:103
+#, fuzzy
+msgid "Channel numbers"
+msgstr "Kanaler:"
+
+#: app/gui-settings.c:104
+msgid "Cursor idle"
+msgstr ""
+
+#: app/gui-settings.c:105
+msgid "Cursor editing"
+msgstr ""
+
+#: app/gui-settings.c:121
+msgid "Scopes Frequency"
+msgstr "Oppdateringsfrekvens for oscilloskop"
+
+#: app/gui-settings.c:124
+msgid "Tracker Frequency"
+msgstr "Oppdateringsfrekvens for tracker"
+
+#: app/gui-settings.c:389 app/gui-settings.c:633
+#, fuzzy
+msgid "Tracker colors configuration"
+msgstr "Tastaturoppsett"
+
+#: app/gui-settings.c:391
+#, fuzzy
+msgid "Reset"
+msgstr "Reverser"
+
+#: app/gui-settings.c:397
+msgid "Reset tracker colors to standard ST"
+msgstr ""
+
+#: app/gui-settings.c:464 app/gui-settings.c:467
+msgid "GUI Configuration"
+msgstr "GUI-innstillinger"
+
+#: app/gui-settings.c:501
+msgid "Hexadecimal row numbers"
+msgstr "Bruk heksadesimale radnumre"
+
+#: app/gui-settings.c:508
+msgid "Use upper case letters for hex numbers"
+msgstr "Bruk store bokstaver i heksadesimale tall"
+
+#: app/gui-settings.c:515
+msgid "Asynchronous (IT-style) pattern editing"
+msgstr "Asynkron redigering som i Impulse Tracker"
+
+#: app/gui-settings.c:522
+msgid "Fxx command updates Tempo/BPM sliders"
+msgstr "Fxx-kommandoen oppdaterer tempo/BPM-glidere"
+
+#: app/gui-settings.c:529
+msgid "Switch to tracker after loading/saving"
+msgstr "Bytt tilbake til trackervindu etter last/lagre"
+
+#: app/gui-settings.c:536
+msgid "Save window geometry on exit"
+msgstr "Lagre vindusstørrelse/posisjon ved avslutning"
+
+#: app/gui-settings.c:543
+msgid "Use note name B instead of H"
+msgstr "Bruk notenavn B i stedet for H"
+
+#: app/gui-settings.c:550
+msgid "Save and restore permanent channels"
+msgstr ""
+
+#: app/gui-settings.c:564
+msgid "Scopes buffer size [MB]"
+msgstr "Bufferstørrelse for oscilloskop (MB)"
+
+#: app/gui-settings.c:583
+msgid "Track line format:"
+msgstr "Radformat for spor:"
+
+#: app/gui-settings.c:632
+msgid "Col. scheme"
+msgstr ""
+
+#: app/gui-subs.c:33 app/gui.c:2400
+msgid "Ready."
+msgstr "Klar."
+
+#: app/gui-subs.c:34
+msgid "Playing song..."
+msgstr "Spiller sang..."
+
+#: app/gui-subs.c:35
+msgid "Playing pattern..."
+msgstr "Spiller ark..."
+
+#: app/gui-subs.c:36
+msgid "Loading module..."
+msgstr "Laster modul..."
+
+#: app/gui-subs.c:37
+msgid "Module loaded."
+msgstr "Modul lastet."
+
+#: app/gui-subs.c:38
+msgid "Saving module..."
+msgstr "Lagrer modul..."
+
+#: app/gui-subs.c:39
+msgid "Module saved."
+msgstr "Modul lagret."
+
+#: app/gui-subs.c:40
+msgid "Loading sample..."
+msgstr "Laster lyd..."
+
+#: app/gui-subs.c:41
+msgid "Sample loaded."
+msgstr "Lyd lastet."
+
+#: app/gui-subs.c:42
+msgid "Saving sample..."
+msgstr "Lagrer lyd..."
+
+#: app/gui-subs.c:43
+msgid "Sample saved."
+msgstr "Lyd lagret."
+
+#: app/gui-subs.c:44
+msgid "Loading instrument..."
+msgstr "Laster instrument..."
+
+#: app/gui-subs.c:45
+msgid "Instrument loaded."
+msgstr "Instrument lastet."
+
+#: app/gui-subs.c:46
+msgid "Saving instrument..."
+msgstr "Lagrer instrument..."
+
+#: app/gui-subs.c:47
+msgid "Instrument saved."
+msgstr "Instrument lagret."
+
+#: app/gui-subs.c:48
+msgid "Saving song..."
+msgstr "Lagrer sang..."
+
+#: app/gui-subs.c:49
+msgid "Song saved."
+msgstr "Sang lagret."
+
+#: app/gui-subs.c:586 app/gui-subs.c:657
+msgid "Question"
+msgstr "Spørsmål"
+
+#: app/gui-subs.c:595
+msgid "Yes"
+msgstr "Ja"
+
+#: app/gui-subs.c:603
+msgid "No"
+msgstr "Nei"
+
+#: app/gui-subs.c:610 app/gui-subs.c:674 app/sample-editor.c:1527
+#: app/sample-editor.c:1702 app/sample-editor.c:2029 app/sample-editor.c:2490
+#: app/midi-settings-050.c:637 app/midi-settings-09x.c:640
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: app/gui-subs.c:692
+msgid "Warning"
+msgstr "Advarsel"
+
+#: app/gui-subs.c:718
+msgid "Error!"
+msgstr "Feil!"
+
+#: app/gui.c:143
+msgid "Tempo"
+msgstr "Tempo"
+
+#: app/gui.c:248 app/gui.c:258 app/gui.c:2105
+msgid "Row highlighting configuration"
+msgstr ""
+
+#: app/gui.c:277 app/sample-editor.c:2251
+msgid "Close"
+msgstr "Lukk"
+
+#: app/gui.c:304
+#, fuzzy
+msgid "Highlight rows (major / minor):"
+msgstr "Uthev disse radene:"
+
+#: app/gui.c:481
+msgid ""
+"Odd pattern rows contain data which will be lost after shrinking.\n"
+"Do you want to continue anyway?"
+msgstr ""
+
+#: app/gui.c:509
+msgid ""
+"The pattern is too long for expanding.\n"
+"Some data at the end of the pattern will be lost.\n"
+"Do you want to continue anyway?"
+msgstr ""
+
+#: app/gui.c:558 app/instrument-editor.c:213 app/sample-editor.c:1727
+#: app/sample-editor.c:1923 app/sample-editor.c:1968
+msgid "No file selected."
+msgstr ""
+
+#: app/gui.c:566
+msgid ""
+"Are you sure you want to free the current project?\n"
+"All changes will be lost!"
+msgstr ""
+"Er du sikker på at du vil forkaste sangen?\n"
+"Alle endringer vil gå tapt!"
+
+#: app/gui.c:580 app/gui.c:595 app/gui.c:610 app/gui.c:628
+#: app/sample-editor.c:1937 app/sample-editor.c:1987
+msgid "Are you sure you want to overwrite the file?"
+msgstr "Er du sikker på at du vil overskrive filen?"
+
+#: app/gui.c:641
+msgid "Error when opening pattern file!"
+msgstr "Feil under innlesing av ark fra fil!"
+
+#: app/gui.c:654
+msgid ""
+"The length of the pattern being loaded doesn't match with that of current "
+"pattern in module.\n"
+"Do you want to change the current pattern length?"
+msgstr ""
+"Lengden på det innleste arket er forskjellig fra det som er i sangen.\n"
+"Ønsker du å endre lengden på arket i sangen?"
+
+#: app/gui.c:1731
+msgid "SoundTracker Startup"
+msgstr "SoundTracker oppstart"
+
+#: app/gui.c:1791 app/gui.c:1828
+msgid "Loading..."
+msgstr "Laster..."
+
+#: app/gui.c:1817
+msgid "Use SoundTracker!"
+msgstr "Start SoundTracker!"
+
+#: app/gui.c:1888
+msgid "Load XM..."
+msgstr "Last XM..."
+
+#: app/gui.c:1890
+msgid "Save XM..."
+msgstr "Lagre XM..."
+
+#: app/gui.c:1893
+msgid "Render module as WAV..."
+msgstr "Lagre modul som WAV..."
+
+#: app/gui.c:1896
+msgid "Save song as XM..."
+msgstr "Lagre bare sangark som XM..."
+
+#: app/gui.c:1898
+msgid "Load current pattern..."
+msgstr "Last inn nåværende ark..."
+
+#: app/gui.c:1900
+msgid "Save current pattern..."
+msgstr "Lagre gjeldende ark..."
+
+#: app/gui.c:1971
+msgid "Play Song"
+msgstr "Spill sang"
+
+#: app/gui.c:1983
+msgid "Play Pattern"
+msgstr "Spill ark"
+
+#: app/gui.c:1995
+msgid "Stop"
+msgstr "Stopp"
+
+#: app/gui.c:2000
+#, fuzzy
+msgid "Pat"
+msgstr "Lim inn"
+
+#: app/gui.c:2006
+msgid "Edited pattern"
+msgstr ""
+
+#: app/gui.c:2019
+msgid "When enabled, browsing the playlist does not change the edited pattern."
+msgstr ""
+
+#: app/gui.c:2035
+msgid "Number of Channels:"
+msgstr "Antall kanaler:"
+
+#: app/gui.c:2052
+#, fuzzy
+msgid "Pattern Length"
+msgstr "Arklengde"
+
+#: app/gui.c:2087
+msgid "Set preferred accidental type"
+msgstr ""
+
+#: app/gui.c:2093
+#, fuzzy
+msgid "Measure"
+msgstr "firkant"
+
+#: app/gui.c:2094
+msgid "Enable row highlighting"
+msgstr ""
+
+#: app/gui.c:2121
+#, fuzzy
+msgid "Other..."
+msgstr "Andre taster..."
+
+#: app/gui.c:2158
+#, fuzzy
+msgid "Change effect column editing direction"
+msgstr "Flytt markør bortover når effektkolonner redigeres"
+
+#: app/gui.c:2190
+msgid "Global amplification"
+msgstr ""
+
+#: app/gui.c:2226
+msgid "Pitchbend"
+msgstr ""
+
+#: app/gui.c:2234
+msgid "Reset pitchbend to its normal value"
+msgstr ""
+
+#: app/gui.c:2246
+msgid "Editing"
+msgstr "Redigering"
+
+#: app/gui.c:2253
+msgid "Octave"
+msgstr "Oktav"
+
+#: app/gui.c:2262
+msgid "Jump"
+msgstr "Hopp"
+
+#: app/gui.c:2271
+msgid "Instr"
+msgstr "Instr"
+
+#: app/gui.c:2287
+msgid "Sample"
+msgstr "Lyd"
+
+#: app/gui.c:2326
+msgid "Welcome to SoundTracker!"
+msgstr "Velkommen til SoundTracker!"
+
+#: app/gui.c:2354
+msgid "%M:%S"
+msgstr "%M:%S"
+
+#: app/instrument-editor.c:82
+msgid "VolFade"
+msgstr "VolFade"
+
+#: app/instrument-editor.c:83
+msgid "VibSpeed"
+msgstr "VibFart"
+
+#: app/instrument-editor.c:84
+msgid "VibDepth"
+msgstr "VibDybde"
+
+#: app/instrument-editor.c:85
+msgid "VibSweep"
+msgstr "VibSveip"
+
+#: app/instrument-editor.c:164 app/instrument-editor.c:187
+msgid "Can't open file."
+msgstr "Kan ikke åpne fil."
+
+#: app/instrument-editor.c:230
+msgid "Sine"
+msgstr "Sinus"
+
+#: app/instrument-editor.c:230
+msgid "Square"
+msgstr "Firkant"
+
+#: app/instrument-editor.c:230
+msgid "Saw Down"
+msgstr "Trekant ned"
+
+#: app/instrument-editor.c:230
+msgid "Saw Up"
+msgstr "Trekant opp"
+
+#: app/instrument-editor.c:234
+msgid "Instrument Editor"
+msgstr "Instrumentredigering"
+
+#: app/instrument-editor.c:243
+msgid "Volume envelope"
+msgstr "Volumparametre"
+
+#: app/instrument-editor.c:251
+msgid "Panning envelope"
+msgstr "Panoreringsparametre"
+
+#: app/instrument-editor.c:268
+msgid "Load Instrument..."
+msgstr "Last instrument..."
+
+#: app/instrument-editor.c:270
+msgid "Save Instrument..."
+msgstr "Lagre instrument..."
+
+#: app/instrument-editor.c:272
+msgid "Load XI"
+msgstr "Last XI"
+
+#: app/instrument-editor.c:278
+msgid "Save XI"
+msgstr "Lagre XI"
+
+#: app/instrument-editor.c:297
+msgid "Vibrato Type:"
+msgstr "Vibratotype:"
+
+#: app/instrument-editor.c:369
+msgid "Note:"
+msgstr "Note:"
+
+#: app/instrument-editor.c:387
+msgid "Initialize"
+msgstr "Nullstill"
+
+#: app/keys.c:58
+msgid "<none>"
+msgstr "<ingen>"
+
+#: app/keys.c:130
+msgid "The key that inserts the special keyoff note for FastTracker modules."
+msgstr "Tast som setter inn notestopp-kommandoen i FastTracker-moduler."
+
+#: app/keys.c:132
+msgid "The key that increases \"jump\" value."
+msgstr ""
+
+#: app/keys.c:134
+msgid "The key that decreases \"jump\" value."
+msgstr ""
+
+#: app/keys.c:146
+msgid "Upper Octave Keys..."
+msgstr "Taster for øvre oktav..."
+
+#: app/keys.c:147
+msgid ""
+"These are the keys on the upper half of the keyboard. The c key is normally "
+"the key to the right of the TAB key. The rest of the keys should be ordered "
+"in a piano keyboard fashion, including the number keys row above."
+msgstr ""
+"Dette er tastene på øvre halvdel av tastaturet. C-noten er vanligvis tasten "
+"til høyre for TAB-tasten. Resten av tastene bør ligge bortover som på et "
+"piano, inkludert talltastene ovenfor."
+
+#: app/keys.c:153
+msgid "Lower Octave Keys..."
+msgstr "Taster for nedre oktav..."
+
+#: app/keys.c:154
+msgid ""
+"These are the keys on the lower half of the keyboard. The c key is normally "
+"the first character key to the right of the left Shift key. The rest of the "
+"keys should be ordered in a piano keyboard fashion, including the row above."
+msgstr ""
+"Dette er tastene på nedre halvdel av tastaturet. C-noten er vanligvis den "
+"første tasten til høyre for den venstre Shift-tasten. Resten av tastene bør "
+"ligge bortover som på et piano, inkludert raden ovenfor."
+
+#: app/keys.c:160
+msgid "Other Keys..."
+msgstr "Andre taster..."
+
+#: app/keys.c:161
+msgid "Various other keys"
+msgstr "Diverse andre taster"
+
+#: app/keys.c:526
+msgid "Function"
+msgstr "Funksjon"
+
+#: app/keys.c:527
+msgid "Assignment"
+msgstr "Tilordnet"
+
+#: app/keys.c:536 app/keys.c:539
+msgid "Keyboard Configuration"
+msgstr "Tastaturoppsett"
+
+#: app/keys.c:583
+msgid "Key Group Explanation"
+msgstr "Forklaring for tastegruppe"
+
+#: app/keys.c:600
+msgid "Key Explanation"
+msgstr "Forklaring for tast"
+
+#: app/keys.c:631
+msgid "Modifiers:"
+msgstr "Modifikatorer:"
+
+#: app/keys.c:657
+msgid "Learn selected key"
+msgstr "Tilordne funksjon til valgt tast"
+
+#: app/keys.c:663
+msgid "Learn all keys"
+msgstr "Tilordne funksjoner til alle taster"
+
+#: app/keys.c:669
+msgid ""
+"Please press the desired key combination!\n"
+"Click into left list to cancel"
+msgstr ""
+"Vennligst trykk ønsket tastekombinasjon!\n"
+"Klikk i den venstre listen for å avbryte"
+
+#: app/keys.c:767
+msgid ""
+"The keyboard configuration file is defective.\n"
+"Please use the Keyboard Configuration dialog."
+msgstr ""
+"Tastaturkonfigurasjonsfilen er ugyldig.\n"
+"Vennligst konfigurer i Verktøy->Tasteoppsett."
+
+#: app/keys.c:996
+#, c-format
+msgid "CH%02d"
+msgstr ""
+
+#: app/keys.c:997
+#, c-format
+msgid "Fast jump to channel %d"
+msgstr ""
+
+#: app/keys.c:1072
+msgid ""
+"Automatic key configuration unsuccessful.\n"
+"Please use the Keyboard Configuration dialog\n"
+"in the Settings menu."
+msgstr ""
+"Automatisk tasteoppsett mislyktes.\n"
+"Vennligst konfigurer i Verktøy->Tasteoppsett."
+
+#: app/menubar.c:104 app/sample-editor.c:2482 app/midi-settings-050.c:635
+#: app/midi-settings-09x.c:638
+msgid "Ok"
+msgstr "Ok"
+
+#: app/menubar.c:140
+msgid ""
+"Are you sure you want to do this?\n"
+"All changes will be lost!"
+msgstr ""
+"Er du sikker på at du vil gjøre dette?\n"
+"Alle endringer vil gå tapt!"
+
+#: app/menubar.c:162
+msgid ""
+"Are you sure you want to quit?\n"
+"All changes will be lost!"
+msgstr ""
+"Er du sikker på at du vil avslutte?\n"
+"Alle endringer vil gå tapt!"
+
+#: app/menubar.c:419
+msgid "_Open..."
+msgstr "_Åpne..."
+
+#: app/menubar.c:421
+msgid "Save _as..."
+msgstr "Lagre _som..."
+
+#: app/menubar.c:427
+msgid "Save Module as _WAV..."
+msgstr "Lagre modul som _WAV..."
+
+#: app/menubar.c:429
+msgid "Save XM without samples..."
+msgstr "Lagre _XM uten lyder..."
+
+#: app/menubar.c:434
+msgid "_Quit"
+msgstr "_Avslutt"
+
+#: app/menubar.c:441
+msgid "Clear _All"
+msgstr "_Slett alt"
+
+#: app/menubar.c:443
+msgid "Clear _Patterns Only"
+msgstr "Slett _alle ark"
+
+#: app/menubar.c:448
+msgid "_Optimize Module"
+msgstr "_Optimaliser modul"
+
+#: app/menubar.c:455 app/menubar.c:466 app/menubar.c:522 app/menubar.c:556
+msgid "C_ut"
+msgstr "Klipp _ut"
+
+#: app/menubar.c:457 app/menubar.c:468 app/menubar.c:524 app/menubar.c:558
+msgid "_Copy"
+msgstr "_Kopier"
+
+#: app/menubar.c:459 app/menubar.c:470 app/menubar.c:560
+msgid "_Paste"
+msgstr "_Lim inn"
+
+#: app/menubar.c:475
+msgid "_Kill notes"
+msgstr "_Stopp alle noter"
+
+#: app/menubar.c:480
+msgid "_Insert track"
+msgstr "Sett _inn spor"
+
+#: app/menubar.c:482
+msgid "_Delete track"
+msgstr "Sle_tt spor"
+
+#: app/menubar.c:487
+msgid "Increment cmd value"
+msgstr "Øk effektverdi under markør"
+
+#: app/menubar.c:489
+msgid "Decrement cmd value"
+msgstr "Minsk effektverdi under markør"
+
+#: app/menubar.c:496
+msgid "_Mark mode"
+msgstr "_Markeringsmodus"
+
+#: app/menubar.c:498 app/menubar.c:554
+msgid "C_lear block marks"
+msgstr "_Fjern blokkmarkering"
+
+#: app/menubar.c:503 app/menubar.c:562
+msgid "_Interpolate effects"
+msgstr "_Interpoler effekter"
+
+#: app/menubar.c:508
+msgid "Transpose half-note up"
+msgstr "Transponer opp en halvnote"
+
+#: app/menubar.c:510
+msgid "Transpose half-note down"
+msgstr "Transponer ned en halvnote"
+
+#: app/menubar.c:512
+msgid "Transpose octave up"
+msgstr "Transponer opp en oktav"
+
+#: app/menubar.c:514
+msgid "Transpose octave down"
+msgstr "Transponer ned en oktav"
+
+#: app/menubar.c:526
+#, fuzzy
+msgid "P_aste"
+msgstr "Lim inn"
+
+#: app/menubar.c:531
+msgid "_Jazz Edit Mode"
+msgstr "_Jazzredigeringsmodus"
+
+#: app/menubar.c:534
+msgid "_Record keyreleases"
+msgstr ""
+
+#: app/menubar.c:539
+msgid "Transp_osition..."
+msgstr "Transp_oner..."
+
+#: app/menubar.c:544 app/menubar.c:569 app/menubar.c:707
+msgid "_Pattern"
+msgstr "_Ark"
+
+#: app/menubar.c:545 app/menubar.c:570 app/menubar.c:708
+msgid "_Track"
+msgstr "_Spor"
+
+#: app/menubar.c:546 app/menubar.c:571
+msgid "_Selection"
+msgstr "_Utvalg"
+
+#: app/menubar.c:578
+msgid "_Find Unused Pattern"
+msgstr "_Finn ubrukt ark"
+
+#: app/menubar.c:580
+msgid "_Copy Current to Unused Pattern"
+msgstr "_Kopier gjeldende til nytt ark"
+
+#: app/menubar.c:585
+msgid "C_lear Unused Patterns"
+msgstr "_Slett ubrukte ark"
+
+#: app/menubar.c:587
+msgid "_Pack Patterns"
+msgstr "_Komprimer ark"
+
+#: app/menubar.c:592
+msgid "_Save Current Pattern"
+msgstr "_Lagre gjeldende ark"
+
+#: app/menubar.c:594
+msgid "L_oad Pattern"
+msgstr "Last _ark"
+
+#: app/menubar.c:599
+#, fuzzy
+msgid "Sh_rink Current Pattern"
+msgstr "Gjeldende ark"
+
+#: app/menubar.c:601
+#, fuzzy
+msgid "_Expand Current Pattern"
+msgstr "_Lagre gjeldende ark"
+
+#: app/menubar.c:608
+msgid "_Toggle Current Channel Permanentness"
+msgstr ""
+
+#: app/menubar.c:610
+msgid "Toggle _All Channels Permanentness"
+msgstr ""
+
+#: app/menubar.c:618
+msgid "_Load XI..."
+msgstr "_Last XI..."
+
+#: app/menubar.c:620
+msgid "_Save XI..."
+msgstr "L_agre XI..."
+
+#: app/menubar.c:625
+msgid "_Clear Current"
+msgstr "_Slett gjeldende"
+
+#: app/menubar.c:630
+msgid "_Delete Unused Instruments"
+msgstr "Slett _ubrukte instrumenter"
+
+#: app/menubar.c:637
+msgid "_Flicker-free scrolling"
+msgstr "Flimmerfri _rulling"
+
+#: app/menubar.c:640
+msgid "_Previous font"
+msgstr "_Forrige skrifttype"
+
+#: app/menubar.c:642
+msgid "_Next font"
+msgstr "_Neste skrifttype"
+
+#: app/menubar.c:647
+msgid "Change preferred _accidental type"
+msgstr ""
+
+#: app/menubar.c:649
+#, fuzzy
+msgid "Change effect column editing _direction"
+msgstr "Flytt markør bortover når effektkolonner redigeres"
+
+#: app/menubar.c:657
+msgid "Display _Oscilloscopes"
+msgstr "Vis _oscilloskop"
+
+#: app/menubar.c:660
+msgid "_Tracker"
+msgstr "_Tracker"
+
+#: app/menubar.c:664
+msgid "_Keyboard Configuration..."
+msgstr "_Tasteoppsett..."
+
+#: app/menubar.c:666
+msgid "_Audio Configuration..."
+msgstr "_Lydoppsett..."
+
+#: app/menubar.c:668
+msgid "_GUI Configuration..."
+msgstr "_GUI-oppsett..."
+
+#: app/menubar.c:674
+msgid "_MIDI Configuration..."
+msgstr "_MIDI-oppsett..."
+
+#: app/menubar.c:679
+msgid "Disable splash screen"
+msgstr "Ikke bruk velkomstskjerm"
+
+#: app/menubar.c:681
+msgid "_Save Settings now"
+msgstr "_Lagre innstillinger nå"
+
+#: app/menubar.c:683
+msgid "Save Settings on _Exit"
+msgstr "Lagre innstillinger ved _avslutning"
+
+#: app/menubar.c:690
+msgid "_About..."
+msgstr "_Om..."
+
+#: app/menubar.c:695
+msgid "Show _Tips..."
+msgstr "Vis _tips..."
+
+#: app/menubar.c:697
+msgid "_XM Effects..."
+msgstr "_XM-effektoversikt..."
+
+#: app/menubar.c:704
+msgid "_File"
+msgstr "_Fil"
+
+#: app/menubar.c:705
+msgid "_Module"
+msgstr "_Modul"
+
+#: app/menubar.c:706
+msgid "_Edit"
+msgstr "_Rediger"
+
+#: app/menubar.c:709
+msgid "_Instrument"
+msgstr "_Instrument"
+
+#: app/menubar.c:710
+msgid "_Settings"
+msgstr "_Innstillinger"
+
+#: app/menubar.c:711
+msgid "_Help"
+msgstr "_Hjelp"
+
+#: app/mixers/integer32.c:493
+msgid "Integers mixer, no interpolation, no filters, maximum sample length 1M"
+msgstr ""
+"Heltallsmikser, ingen interpolasjon, ingen filtre, maksium lydstørrelse 1M"
+
+#: app/module-info.c:120
+msgid "Instrument Name"
+msgstr "Instrumentnavn"
+
+#: app/module-info.c:120
+msgid "#smpl"
+msgstr "#lyder"
+
+#: app/module-info.c:121
+msgid "Sample Name"
+msgstr "Lydnavn"
+
+#: app/module-info.c:128
+msgid "Linear"
+msgstr "Lineær"
+
+#: app/module-info.c:128 app/sample-editor.c:237
+msgid "Amiga"
+msgstr "Amiga"
+
+#: app/module-info.c:133
+msgid "Module Info"
+msgstr "Modulinfo"
+
+#: app/module-info.c:167
+msgid "Songname:"
+msgstr "Sangnavn:"
+
+#: app/module-info.c:182
+msgid "Frequencies:"
+msgstr "Frekvenser:"
+
+#: app/module-info.c:187
+msgid "ProTracker Mode"
+msgstr "ProTracker-modus"
+
+#: app/module-info.c:403
+#, c-format
+msgid ""
+"Unused patterns: %d (used: %d)\n"
+"Unused instruments: %d (used: %d)\n"
+"\n"
+"Clear unused and reorder playlist?\n"
+msgstr ""
+"Ubrukte ark: %d (brukt: %d)\n"
+"Ubrukte instrumenter: %d (brukt: %d)\n"
+"\n"
+"Slett ubrukte og reorganiser arklisten?\n"
+
+#: app/playlist.c:553
+msgid "Insert pattern that is being edited"
+msgstr "Sett inn ark som blir redigert"
+
+#: app/playlist.c:562
+msgid "Remove current playlist entry"
+msgstr "Fjern oppføring fra arklisten"
+
+#: app/playlist.c:570
+msgid "Add + Cpy"
+msgstr "Ny + Kopi"
+
+#: app/playlist.c:572
+msgid ""
+"Add a free pattern behind current position, and copy current pattern to it"
+msgstr ""
+"Legg til et tomt ark etter nåværende posisjon, og kopier det nåværende arket "
+"dit"
+
+#: app/playlist.c:575
+msgid "Add Free"
+msgstr "Ny"
+
+#: app/playlist.c:577
+msgid "Add a free pattern behind current position"
+msgstr "Legg til et tomt ark etter gjeldende posisjon"
+
+#: app/playlist.c:587
+#, fuzzy
+msgid "Len"
+msgstr "Lengde"
+
+#: app/playlist.c:601
+msgid "Song length"
+msgstr "Sanglengde"
+
+#: app/playlist.c:607
+#, fuzzy
+msgid "Rstrt"
+msgstr "Instr"
+
+#: app/playlist.c:620
+msgid "Song restart position"
+msgstr "Posisjon for sang-restart"
+
+#: app/preferences.c:75
+#, fuzzy
+msgid ""
+"A directory called '.soundtracker2' has been created in your\n"
+"home directory to store configuration files.\n"
+msgstr ""
+"En mappe kalt '.soundtracker' ble laget i din hjemmekatalog\n"
+"for lagring av konfigurasjonsfiler.\n"
+
+#: app/sample-editor.c:236
+msgid "No loop"
+msgstr "Ingen loop"
+
+#: app/sample-editor.c:238
+msgid "PingPong"
+msgstr "PingPong"
+
+#: app/sample-editor.c:242 app/sample-editor.c:1581
+msgid "8 bits"
+msgstr "8 bit"
+
+#: app/sample-editor.c:243 app/sample-editor.c:1581
+msgid "16 bits"
+msgstr "16 bit"
+
+#: app/sample-editor.c:249
+msgid "Sample Editor"
+msgstr "Lydredigering"
+
+#: app/sample-editor.c:289 app/midi-settings-050.c:504
+#: app/midi-settings-09x.c:507
+msgid "Volume"
+msgstr "Volum"
+
+#: app/sample-editor.c:290
+msgid "Panning"
+msgstr "Panorering"
+
+#: app/sample-editor.c:291
+msgid "Finetune"
+msgstr "Finstemming"
+
+#: app/sample-editor.c:311
+msgid "Selection:"
+msgstr "Utvalg:"
+
+#: app/sample-editor.c:315 app/track-editor.c:200 app/track-editor.c:210
+msgid "None"
+msgstr "Ingen"
+
+#: app/sample-editor.c:321
+msgid "All"
+msgstr "Alt"
+
+#: app/sample-editor.c:342
+msgid "Length:"
+msgstr "Lengde:"
+
+#: app/sample-editor.c:358
+msgid "Set as loop"
+msgstr "Sett som loop"
+
+#: app/sample-editor.c:366
+msgid "RelNote"
+msgstr "Basisnote"
+
+#: app/sample-editor.c:377
+msgid "Load Sample..."
+msgstr "Last lyd..."
+
+#: app/sample-editor.c:379
+msgid "Save WAV..."
+msgstr "Lagre WAV..."
+
+#: app/sample-editor.c:381
+msgid "Save region as WAV..."
+msgstr "Lagre område som WAV..."
+
+#: app/sample-editor.c:394
+msgid "Save WAV"
+msgstr "Lagre WAV"
+
+#: app/sample-editor.c:404
+msgid "Save Region"
+msgstr "Lagre område"
+
+#: app/sample-editor.c:415
+msgid "Monitor"
+msgstr "Monitor"
+
+#: app/sample-editor.c:421
+msgid "Volume Ramp"
+msgstr "Endre volum"
+
+#: app/sample-editor.c:427
+#, fuzzy
+msgid "Trim"
+msgstr "Tremor"
+
+#: app/sample-editor.c:438
+msgid "Zoom to selection"
+msgstr "Vis utvalg"
+
+#: app/sample-editor.c:444
+msgid "Show all"
+msgstr "Vis hele"
+
+#: app/sample-editor.c:450
+msgid "Zoom in (+50%)"
+msgstr "Forstørr (+50%)"
+
+#: app/sample-editor.c:456
+msgid "Zoom out (-50%)"
+msgstr "Forminsk (-50%)"
+
+#: app/sample-editor.c:462
+msgid "Reverse"
+msgstr "Reverser"
+
+#: app/sample-editor.c:472
+msgid "Cut"
+msgstr "Klipp ut"
+
+#: app/sample-editor.c:478
+msgid "Remove"
+msgstr "Fjern"
+
+#: app/sample-editor.c:484
+msgid "Copy"
+msgstr "Kopier"
+
+#: app/sample-editor.c:490
+msgid "Paste"
+msgstr "Lim inn"
+
+#: app/sample-editor.c:496
+msgid "Clear Sample"
+msgstr "Slett lyd"
+
+#: app/sample-editor.c:502
+#, fuzzy
+msgid "Crop"
+msgstr "Kopier"
+
+#: app/sample-editor.c:571
+msgid "(no selection)"
+msgstr "(intet utvalg)"
+
+#: app/sample-editor.c:1076
+msgid "Out of memory for copybuffer.\n"
+msgstr "Ikke mer minne i kopibufferet.\n"
+
+#: app/sample-editor.c:1195
+msgid "<just pasted>"
+msgstr "<limt inn>"
+
+#: app/sample-editor.c:1308
+msgid "Out of memory for sample data."
+msgstr "Ikke mer minne for lyddata."
+
+#: app/sample-editor.c:1324 app/sample-editor.c:1336
+msgid "Read error."
+msgstr "Feil ved innlesing."
+
+#: app/sample-editor.c:1483
+msgid "Load stereo sample"
+msgstr "Last stereolyd"
+
+#: app/sample-editor.c:1491
+msgid ""
+"You have selected a stereo sample!\n"
+"(SoundTracker can only handle mono samples!)\n"
+"\n"
+"Please choose which channel to load:"
+msgstr ""
+"Denne lyden er i stereoformat!\n"
+"(SoundTracker takler bare enkeltlyder i mono!)\n"
+"\n"
+"Vennligst velg hvilken kanal du vil laste:"
+
+#: app/sample-editor.c:1502
+msgid "Left"
+msgstr "Venstre"
+
+#: app/sample-editor.c:1508
+msgid "Mix"
+msgstr "Miks"
+
+#: app/sample-editor.c:1514
+msgid "Right"
+msgstr "Høyre"
+
+#: app/sample-editor.c:1582
+msgid "Signed"
+msgstr "Med fortegn"
+
+#: app/sample-editor.c:1582
+msgid "Unsigned"
+msgstr "Uten fortegn"
+
+#: app/sample-editor.c:1583
+msgid "Little-Endian"
+msgstr "Little-Endian"
+
+#: app/sample-editor.c:1583
+msgid "Big-Endian"
+msgstr "Big-Endian"
+
+#: app/sample-editor.c:1584
+msgid "Mono"
+msgstr "Mono"
+
+#: app/sample-editor.c:1584
+msgid "Stereo"
+msgstr "Stereo"
+
+#: app/sample-editor.c:1596
+msgid "Load raw sample"
+msgstr "Last rå lyd"
+
+#: app/sample-editor.c:1604
+msgid ""
+"You have selected a sample that is not\n"
+"in a known format. You can load the raw data now.\n"
+"\n"
+"Please choose a format:"
+msgstr ""
+"Denne lyden er ikke i et kjent format\n"
+"\n"
+"Du må velge et lydformat:"
+
+#: app/sample-editor.c:1630
+msgid "Word format:"
+msgstr "Word-format:"
+
+#: app/sample-editor.c:1677
+msgid "Sampling Rate:"
+msgstr "Opptaksfrekvens:"
+
+#: app/sample-editor.c:1688
+msgid "8363"
+msgstr "8363"
+
+#: app/sample-editor.c:1696 app/sample-editor.c:2014
+msgid "OK"
+msgstr "OK"
+
+#: app/sample-editor.c:1756
+msgid "Can't read sample"
+msgstr "Kan ikke lese lydfil"
+
+#: app/sample-editor.c:1769
+msgid "Sample is too long for current mixer module. Loading anyway."
+msgstr ""
+"Lydfilen er for stor for den gjeldende mikseren, men blir lastet uansett."
+
+#: app/sample-editor.c:1793
+msgid "Can only handle 8 and 16 bit samples with up to 2 channels"
+msgstr "Takler bare 8 eller 16 bit lydfiler med inntil 2 kanaler"
+
+#: app/sample-editor.c:1978
+msgid "Please select region first."
+msgstr "Velg et område først."
+
+#: app/sample-editor.c:2022
+msgid "Start sampling"
+msgstr "Start opptak"
+
+#: app/sample-editor.c:2052
+msgid "No sampling driver available"
+msgstr "Ingen opptaksdriver tilgjengelig"
+
+#: app/sample-editor.c:2062 app/sample-editor.c:2065
+msgid "Sampling Window"
+msgstr "Opptaksvindu"
+
+#: app/sample-editor.c:2114
+msgid "Out of memory while sampling!"
+msgstr "Ikke mer minne igjen for lydinnspilling!"
+
+#: app/sample-editor.c:2165
+msgid "<just sampled>"
+msgstr "<lydopptak>"
+
+#: app/sample-editor.c:2196
+msgid "Recorded sample is too long for current mixer module. Using it anyway."
+msgstr ""
+"Lydopptaket er for stort for den gjeldende mikseren, men bruker den uansett."
+
+#: app/sample-editor.c:2249
+msgid "Normalize"
+msgstr "Normaliser"
+
+#: app/sample-editor.c:2250
+msgid "Execute"
+msgstr "Utfør"
+
+#: app/sample-editor.c:2260 app/sample-editor.c:2263
+msgid "Volume Ramping"
+msgstr "Endre volum"
+
+#: app/sample-editor.c:2279
+msgid "Perform linear volume fade on Selection"
+msgstr "Utfør lineær volumendring på merket område"
+
+#: app/sample-editor.c:2291
+msgid "Left [%]:"
+msgstr "Venstre (%):"
+
+#: app/sample-editor.c:2294 app/sample-editor.c:2311
+msgid "H"
+msgstr "H"
+
+#: app/sample-editor.c:2300 app/sample-editor.c:2317
+msgid "D"
+msgstr "D"
+
+#: app/sample-editor.c:2308
+msgid "Right [%]:"
+msgstr "Høyre (%):"
+
+#: app/sample-editor.c:2452 app/sample-editor.c:2463
+msgid "Trim parameters"
+msgstr ""
+
+#: app/sample-editor.c:2508
+msgid "Trim at the beginning"
+msgstr ""
+
+#: app/sample-editor.c:2515
+msgid "Trim at the end"
+msgstr ""
+
+#: app/sample-editor.c:2522
+msgid "Threshold (dB)"
+msgstr ""
+
+#: app/tips-dialog.c:50
+msgid ""
+"Welcome to SoundTracker!\n"
+"\n"
+"If you are new to this type of program, you will want to get hold of\n"
+"some XM or MOD files first and play with them."
+msgstr ""
+"Velkommen til SoundTracker!\n"
+"\n"
+"Hvis det er første gangen du bruker denne typen program, bør du få tak\n"
+"i noen .XM eller .MOD-filer først og leke deg med dem."
+
+#: app/tips-dialog.c:55
+msgid ""
+"You can make SoundTracker's edit mode more responsive to keyboard\n"
+"input by decreasing the mixing buffer size of the \"Editing\" object in\n"
+"the Audio Configuration."
+msgstr ""
+"Du kan konfigurere SoundTracker til å bli mer responsivt for\n"
+"tastespilling og opptak ved å minske miksebufferet i\n"
+"Redigeringsinnstillingene i Lydoppsettet."
+
+#: app/tips-dialog.c:59
+msgid ""
+"You can adjust the loop points in the sample editor by holding Shift\n"
+"and using the left and right mousebuttons.\n"
+msgstr ""
+"Du kan lett endre loop-punktene i lydredigereren ved å holde Shift\n"
+"og bruke venstre og høyre musknapp.\n"
+
+#: app/tips-dialog.c:62
+msgid ""
+"If you want to know more about tracking, and how the various commands\n"
+"work, have a look at http://www.united-trackers.org/"
+msgstr ""
+"Hvis du vil vite mer om hvordan du bruker trackere og hvordan de\n"
+"ulike kommandoene virker, ta en titt på http://www.united-trackers.org/"
+
+#: app/tips-dialog.c:65
+msgid ""
+"You can assign samples of an instrument to the individual keys by\n"
+"activating its sample and then clicking on the keyboard in the\n"
+"instrument editor page."
+msgstr ""
+"Du kan tilordne de ulike lydene i et instrument til spesifikke taster\n"
+"ved først å velge lyden, og deretter klikke på tangentene nederst på\n"
+"instrumentredigeringssiden."
+
+#: app/tips-dialog.c:69
+msgid ""
+"Is your cursor trapped in a number entry field?\n"
+"Just press Return or Tab to free yourself!"
+msgstr ""
+"Er markøren fanget i et tallfelt?\n"
+"Trykk Enter eller Tab for å komme deg ut!"
+
+#: app/tips-dialog.c:81
+msgid "SoundTracker Tip of the day"
+msgstr "Dagens tips i SoundTracker"
+
+#: app/tips-dialog.c:154
+msgid "Previous Tip"
+msgstr "Forrige tips"
+
+#: app/tips-dialog.c:162
+msgid "Next Tip"
+msgstr "Neste tips"
+
+#: app/tips-dialog.c:174
+msgid "Show tip next time"
+msgstr "Vis tips ved oppstart"
+
+#: app/track-editor.c:115
+msgid "Arpeggio"
+msgstr "Arpeggio"
+
+#: app/track-editor.c:116
+msgid "Porta up"
+msgstr "Porta opp"
+
+#: app/track-editor.c:117
+msgid "Porta down"
+msgstr "Porta ned"
+
+#: app/track-editor.c:118 app/track-editor.c:182
+msgid "Tone porta"
+msgstr "Note porta"
+
+#: app/track-editor.c:119 app/track-editor.c:178
+msgid "Vibrato"
+msgstr "Vibrato"
+
+#: app/track-editor.c:120
+msgid "Tone porta + Volume slide"
+msgstr "Note porta + volumglidning"
+
+#: app/track-editor.c:121
+msgid "Vibrato + Volume slide"
+msgstr "Vibrato + volumglidning"
+
+#: app/track-editor.c:122
+msgid "Tremolo"
+msgstr "Tremolo"
+
+#: app/track-editor.c:123 app/track-editor.c:179
+msgid "Set panning"
+msgstr "Panoreringsposisjon"
+
+#: app/track-editor.c:124 app/track-editor.c:126
+msgid "Position jump"
+msgstr "Hopp til posisjon"
+
+#: app/track-editor.c:125 app/track-editor.c:127 app/track-editor.c:203
+msgid "Set volume"
+msgstr "Sett volum"
+
+#: app/track-editor.c:128
+msgid "Pattern break"
+msgstr "Avbryt ark"
+
+#: app/track-editor.c:130
+msgid "Set tempo/bpm"
+msgstr "Sett tempo/BPM"
+
+#: app/track-editor.c:131
+msgid "Set global volume"
+msgstr "Sett globalt volum"
+
+#: app/track-editor.c:132
+msgid "Global volume slide"
+msgstr "Global volumglidning"
+
+#: app/track-editor.c:135
+msgid "Key off"
+msgstr "Stopp note"
+
+#: app/track-editor.c:136
+msgid "Set envelop position"
+msgstr "Sett parameterposisjon"
+
+#: app/track-editor.c:140
+msgid "Panning slide"
+msgstr "Panoreringsglidning"
+
+#: app/track-editor.c:141
+msgid "LP filter resonance"
+msgstr "Lavpass filter resonans"
+
+#: app/track-editor.c:142
+msgid "Multi retrig note"
+msgstr "Multi retrig note"
+
+#: app/track-editor.c:144
+msgid "Tremor"
+msgstr "Tremor"
+
+#: app/track-editor.c:150
+msgid "LP filter cutoff"
+msgstr "Lavpass filter frekvens"
+
+#: app/track-editor.c:155
+msgid "Fine porta up"
+msgstr "Fin porta opp"
+
+#: app/track-editor.c:156
+msgid "Fine porta down"
+msgstr "Fin porta ned"
+
+#: app/track-editor.c:157
+msgid "Set gliss control"
+msgstr "Sett glissando kontroll"
+
+#: app/track-editor.c:158
+msgid "Set vibrato control"
+msgstr "Sett vibrato kontroll"
+
+#: app/track-editor.c:159
+msgid "Set finetune"
+msgstr "Set finstemming"
+
+#: app/track-editor.c:160
+msgid "Set loop begin/loop"
+msgstr "Set loop start/loop"
+
+#: app/track-editor.c:161
+msgid "Set tremolo control"
+msgstr "Set tremolo kontroll"
+
+#: app/track-editor.c:163
+msgid "Retrig note"
+msgstr "Retrig note"
+
+#: app/track-editor.c:164 app/track-editor.c:176
+msgid "Fine volume slide up"
+msgstr "Fin volumøkning"
+
+#: app/track-editor.c:165 app/track-editor.c:175
+msgid "Fine volume slide down"
+msgstr "Fin volumsenkning"
+
+#: app/track-editor.c:166
+msgid "Note cut"
+msgstr "Stopp note"
+
+#: app/track-editor.c:167
+msgid "Note delay"
+msgstr "Noteforsinkelse"
+
+#: app/track-editor.c:168
+msgid "Pattern delay"
+msgstr "Arkforsinkelse"
+
+#: app/track-editor.c:173
+msgid "Volume slide down"
+msgstr "Volumsenkning"
+
+#: app/track-editor.c:174
+msgid "Volume slide up"
+msgstr "Volumøkning"
+
+#: app/track-editor.c:177
+msgid "Set vibrato speed"
+msgstr "Sett vibratofart"
+
+#: app/track-editor.c:180
+msgid "Panning slide left"
+msgstr "Panorer mot venstre"
+
+#: app/track-editor.c:181
+msgid "Panning slide right"
+msgstr "Panorer mot høyre"
+
+#: app/track-editor.c:186
+msgid "sine"
+msgstr "sinus"
+
+#: app/track-editor.c:187
+msgid "ramp down"
+msgstr "senk"
+
+#: app/track-editor.c:188
+msgid "square"
+msgstr "firkant"
+
+#: app/track-editor.c:233 app/track-editor.c:239 app/track-editor.c:256
+#: app/track-editor.c:262
+msgid "None ]"
+msgstr "Ingen]"
+
+#: app/track-editor.c:362
+msgid "Jazz Edit:"
+msgstr "Jazz-redigering:"
+
+#: app/track-editor.c:407
+msgid "Tracker"
+msgstr "Tracker"
+
+#: app/tracker-settings.c:261
+msgid "Font list"
+msgstr "Skriftliste"
+
+#: app/tracker-settings.c:281
+msgid "Add font"
+msgstr "Legg til skrift"
+
+#: app/tracker-settings.c:287
+msgid "Delete font"
+msgstr "Fjern skrift"
+
+#: app/tracker-settings.c:293
+msgid "Apply font"
+msgstr "Bruk skrift"
+
+#: app/tracker-settings.c:309
+msgid "Select font..."
+msgstr "Velg skrift..."
+
+#: app/transposition.c:198
+msgid "Whole Song"
+msgstr "Hele sangen"
+
+#: app/transposition.c:199
+msgid "All Patterns"
+msgstr "Alle ark"
+
+#: app/transposition.c:200
+msgid "Current Pattern"
+msgstr "Gjeldende ark"
+
+#: app/transposition.c:201
+msgid "Current Track"
+msgstr "Gjeldende spor"
+
+#: app/transposition.c:205
+msgid "Current Instrument"
+msgstr "Gjeldende instrument"
+
+#: app/transposition.c:206
+msgid "All Instruments"
+msgstr "Alle instrumenter"
+
+#: app/transposition.c:210
+msgid "Half note up"
+msgstr "Halvnote opp"
+
+#: app/transposition.c:211
+msgid "Half note down"
+msgstr "Halvnote ned"
+
+#: app/transposition.c:212
+msgid "Octave up"
+msgstr "Oktav opp"
+
+#: app/transposition.c:213
+msgid "Octave down"
+msgstr "Oktav ned"
+
+#: app/transposition.c:216
+msgid "Exchange 1 <-> 2"
+msgstr "Bytt om 1 <-> 2"
+
+#: app/transposition.c:217
+msgid "Change 1 -> 2"
+msgstr "Bytt 1 -> 2"
+
+#: app/transposition.c:226 app/transposition.c:229
+msgid "Transposition Tools"
+msgstr "Transponeringsverktøy"
+
+#: app/transposition.c:250
+msgid "Scope of the operation:"
+msgstr "Operasjonen gjelder:"
+
+#: app/transposition.c:257
+msgid "Note Transposition"
+msgstr "Notetransponering"
+
+#: app/transposition.c:288
+msgid "Instrument Changing"
+msgstr "Instrumentbytte"
+
+#: app/transposition.c:303
+msgid "Instrument 1:"
+msgstr "Instrument 1:"
+
+#: app/transposition.c:305 app/transposition.c:315
+msgid "Current instrument"
+msgstr "Gjeldende instrument"
+
+#: app/transposition.c:313
+msgid "Instrument 2:"
+msgstr "Instrument 2:"
+
+#: app/xm.c:197
+#, c-format
+msgid "Pattern length out of range: %d.\n"
+msgstr "Arklengde ikke gyldig: %d.\n"
+
+#: app/xm.c:548
+msgid "File is no XI instrument."
+msgstr "Filen er ikke et XI-instrument."
+
+#: app/xm.c:558
+#, c-format
+msgid "Unknown XI version 0x%x\n"
+msgstr "Ukjent XI-versjon 0x%x\n"
+
+#: app/xm.c:588
+#, c-format
+msgid "Invalid vibtype %d, using Sine.\n"
+msgstr "Ugyldig vibratotype %d, bruker sinustype.\n"
+
+#: app/xm.c:860 app/xm.c:985
+msgid "Error while loading patterns."
+msgstr "Feil under innlesing av ark."
+
+#: app/xm.c:928
+msgid "Can't open file"
+msgstr "Kan ikke åpne fil"
+
+#: app/xm.c:991
+msgid "Error while loading instruments."
+msgstr "Feil under innlesing av instrumenter."
+
+#: app/xm.c:1002
+#, c-format
+msgid ""
+"Module contains sample(s) that are too long for the current mixer.\n"
+"Maximum sample length is %d."
+msgstr ""
+"Modulen inneholder lyd(er) som er for store for den gjeldende mikseren.\n"
+"Maksimum lydlengde er %d."
+
+#: app/xm.c:1400
+msgid "Not FastTracker XM and not supported MOD format!"
+msgstr "Filen er ikke FastTracker XM eller i et kjent MOD-format!"
+
+#: app/xm.c:1415 app/xm.c:1436
+msgid "Error when file reading or unexpected end of file"
+msgstr "Feil under innlesing eller uventet slutt på fil"
+
+#: app/xm.c:1419
+msgid "Incorrect or unsupported version of pattern file!"
+msgstr "Feil eller ikke støttet versjon av arkfil!"
+
+#: app/xm.c:1423
+msgid "Incorrect pattern length!"
+msgstr "Feil arklengde!"
+
+#: app/xm.c:1469
+msgid "Error during saving pattern!"
+msgstr "Feil under lagring av ark!"
+
+#: app/midi-settings-050.c:497 app/midi-settings-09x.c:500
+msgid "Auto connect"
+msgstr "Automatisk tilkobling"
+
+#: app/midi-settings-050.c:512 app/midi-settings-09x.c:515
+msgid "Channel"
+msgstr "Kanaler"
+
+#: app/midi-settings-050.c:521 app/midi-settings-09x.c:524
+msgid "Client number"
+msgstr "Klientnummer"
+
+#: app/midi-settings-050.c:531 app/midi-settings-09x.c:534
+msgid "Port number"
+msgstr "Port-nummer"
+
+#: app/midi-settings-050.c:549 app/midi-settings-09x.c:552
+msgid "Input"
+msgstr "Innspilling"
+
+#: app/midi-settings-050.c:558 app/midi-settings-09x.c:561
+msgid "For future development"
+msgstr "Reservert"
+
+#: app/midi-settings-050.c:564 app/midi-settings-09x.c:567
+msgid "Output"
+msgstr "Avspilling"
+
+#: app/midi-settings-050.c:575 app/midi-settings-09x.c:578
+msgid "Debug level"
+msgstr "Avlusningsnivå"
+
+#: app/midi-settings-050.c:587 app/midi-settings-09x.c:590
+msgid "Misc"
+msgstr "Forskjellig"
+
+#: app/midi-settings-050.c:631 app/midi-settings-09x.c:634
+msgid "MIDI Configuration"
+msgstr "MIDI-oppsett"
+
+#: app/midi-settings-050.c:636 app/midi-settings-09x.c:639
+msgid "Apply"
+msgstr "Bruk"
+
+#~ msgid "Drivers"
+#~ msgstr "Drivere"
+
+#~ msgid "Up"
+#~ msgstr "Opp"
+
+#~ msgid "Down"
+#~ msgstr "Ned"
+
+#~ msgid "Pattern"
+#~ msgstr "Arknummer"
+
+#~ msgid "_Accidentals"
+#~ msgstr "For_tegn"
+
+#~ msgid "# _Accidentals"
+#~ msgstr "# For_tegn"
+
+#~ msgid "Current pos"
+#~ msgstr "Gjeldende pos"
